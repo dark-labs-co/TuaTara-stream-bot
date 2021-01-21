@@ -1,0 +1,12 @@
+# Blender MTL File: 'rhino 01.blend'
+# Material Count: 1
+
+newmtl Material
+Ns 15.686275
+Ka 1.000000 1.000000 1.000000
+Kd 0.510617 0.510617 0.510617
+Ks 0.608696 0.608696 0.608696
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2

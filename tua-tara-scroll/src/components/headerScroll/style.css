@@ -1,0 +1,43 @@
+.header--wrapper {
+    padding: .25rem 0;
+    position: relative;
+    background:rgba(0, 0, 0, 0.85);
+    color:#fff;
+}
+
+.up{
+    color:#d245f5;
+}
+
+.down{
+    color:#45f55d;
+    /* background-image: linear-gradient(to left, #d245f5, #3254ea); */
+}
+
+.header--label{
+    position: absolute;
+    left:0px;
+    top:0;
+    width: 50px;
+    margin:0;
+    background:#45f55d;
+    padding: .25rem 1rem;
+    z-index: 100;
+    color: rgb(31, 31, 31);
+    font-weight: 700;
+}
+.header--label.down{
+    background:#d245f5;
+}
+
+.scroll--container{
+    display: flex;
+    border-bottom: solid 1px rgb(31, 31, 31);
+}
+
+.scroll--text{
+    display: flex;
+    flex-direction:row;
+    min-width: 200px;
+    margin: auto;
+}

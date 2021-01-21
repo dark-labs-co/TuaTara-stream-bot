@@ -1,0 +1,1 @@
+Crypto market and smart contract aggregator stream bot. Contract to broadcast synthesis. 
