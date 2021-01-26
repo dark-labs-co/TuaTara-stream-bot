@@ -6,39 +6,31 @@ const Run = require("./run")
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 function Index() {
+
     const graphs = async () => {
-        await delay(10000);
+        await delay(40000);
         GraphCollection("ethereum", "ETH");
 
-        await delay(10000);
+        await delay(40000);
         GraphCollection("bitcoin", "BTC");
 
-        await delay(10000);
+        await delay(40000);
         GraphCollection("polkadot", "DOT");
 
-        await delay(10000);
+        await delay(40000);
         GraphCollection("cardano", "ADA");
 
-        await delay(10000);
+        await delay(40000);
         GraphCollection("litecoin", "LTC");
 
-        await delay(10000);
+        await delay(40000);
         GraphCollection("monero", "XMR");
 
-        await delay(10000);
+        await delay(40000);
         GraphCollection("eos", "EOS");
 
-        await delay(10000);
+        await delay(40000);
         GraphCollection("aave", "AAVE");
-
-        await delay(10000);
-        GraphCollection("tezos", "XTZ");
-
-        await delay(10000);
-        GraphCollection("nem", "XEM");
-
-        await delay(10000);
-        GraphCollection("tron", "TRX");
     }
 
     cron.schedule('* * * * *', () => {

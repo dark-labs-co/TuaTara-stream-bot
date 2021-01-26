@@ -12,6 +12,7 @@
   "dependencies": {
     "audiobuffer-to-wav": "^1.0.0",
     "coingecko-api": "^1.0.10",
+    "moment": "^2.29.1",
     "node-cron": "^2.0.3",
     "node-fetch": "^2.6.1",
     "request": "^2.88.2",

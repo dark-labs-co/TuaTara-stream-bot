@@ -31,7 +31,7 @@ const Collection = ({ coinDataMax, coinData30, coinData1, coinDat }) => {
                         color={'green'}
                         height={400}
                         top={0}
-                        bottom={0}
+                        bottom={10}
                     />
                     <h3 className="collection--text">Today</h3>
 

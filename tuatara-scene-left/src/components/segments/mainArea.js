@@ -9,7 +9,10 @@ export default function MainArea() {
     return (
         <div className="display--wrapper">
             <div className="display--container">
-                <h2 className="display--hero-title">Ethereum Percentages | ETH</h2>
+                <h2 className="display--hero-title">Ethereum Breakdown</h2>
+                <div className="display--subHero-container">
+                    <strong>{DataLink.market_data.current_price.usd}</strong>$
+                </div>
                 <MarketCell
                     title='1 Hour'
                     dat={DataLink.market_data.price_change_percentage_1h_in_currency.usd}
@@ -45,7 +48,7 @@ export default function MainArea() {
             </div>
 
 
-            <div className="display-sample--container">
+            {/* <div className="display-sample--container">
                 <div className="display-item">
                     <MarketWatchIcon
                         stroke="#EBEBEB" />
@@ -72,7 +75,7 @@ export default function MainArea() {
                     <MarketWatchIcon
                         stroke="#000" />
                 </div>
-            </div>
+            </div> */}
 
         </div >
     )

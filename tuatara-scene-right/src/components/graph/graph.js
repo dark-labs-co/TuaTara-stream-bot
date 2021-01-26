@@ -25,7 +25,7 @@ const Graph = ({ coinDat, color, height, top, bottom }) => {
         },
         grid: {
             line: {
-                stroke: "lightBlue"
+                stroke: "none"
             }
         }
     };
@@ -45,7 +45,8 @@ const Graph = ({ coinDat, color, height, top, bottom }) => {
                 axisBottom={null}
                 axisRight={null}
                 axisRight={{
-                    enable: true
+                    enable: true,
+                    tickRotation: 0
                 }}
                 offsetType="none"
                 colors="none"
@@ -62,20 +63,21 @@ const Graph = ({ coinDat, color, height, top, bottom }) => {
                 enableGridX={false}
                 motionStiffness={90}
                 motionDamping={15}
+
                 defs={[
                     linearGradientDef('red', [
-                        { offset: 0, color: '#000' },
-                        { offset: 100, color: '#000', opacity: .95 },
+                        { offset: 0, color: '#45f55d' },
+                        { offset: 100, color: '#d5f545', opacity: .95 },
                     ]),
                     linearGradientDef('green', [
-                        { offset: 0, color: '#000' },
-                        { offset: 100, color: '#000', opacity: .95 },
+                        { offset: 0, color: '#45f55d' },
+                        { offset: 100, color: '#d5f545', opacity: .95 },
                     ])
                 ]}
                 fill={[
                     { match: { id: 'ETH' }, id: `${color}` }
                 ]}
-
+                stroke="red"
                 tooltipLabel={{
                     tableCell: {
                         background: 'red',

@@ -5,7 +5,9 @@ import * as THREE from "three";
 import CusSound from '../../audioTemp.wav'
 import DataLink from '../../segment0.json'
 import MainArea from "./mainArea"
-import RhinoAnalyzer from './models/ghostAnalyzer';
+import RhinoAnalyzer from './models/rhinoAnalyzer';
+import GhostAnalyzer from './models/ghostAnalyzer';
+console.log(DataLink.segment)
 
 export default function MarketWatch() {
     const [time, setTime] = ('')
@@ -37,7 +39,7 @@ export default function MarketWatch() {
             <group
                 rotation-x={Math.PI / .1}
                 dispose={null}
-                position={[-6, 2.5, 0]}
+                position={[-1, -2.5, 0]}
                 scale={[.15, .15, .15]}
                 ref={meshG}
             >
@@ -132,7 +134,8 @@ export default function MarketWatch() {
         return (
             <>
                 <positionalAudio ref={sound} args={[listener]} />
-                <RhinoAnalyzer sound={sound} />
+                { DataLink.segment === 'marketWatch' && <RhinoAnalyzer sound={sound} />}
+                { DataLink.segment === 'aave' && <GhostAnalyzer sound={sound} />}
             </>
         );
     }

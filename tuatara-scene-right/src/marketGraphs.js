@@ -44,6 +44,7 @@ function MarketGraph() {
     const [CoinDat1, setCoinDat1] = useState([])
 
     const [data, setData] = useState();
+    const [subCur, setSubCur] = useState({ "symbol": "eth", "currency": "Ethereum" });
 
     const fetchMetrics = (cur) => {
         //? Initiate the CoinGecko API Client
@@ -57,8 +58,8 @@ function MarketGraph() {
                 let dataMax = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: 'max' })
                 let data30 = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: '30' })
                 let data1 = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: '1' })
-                console.log('dataCoin0')
-                console.log(dataCoin0)
+                console.log('data1')
+                console.log(data1)
                 { dataCoin0.code === 200 && setCoinDat(dataCoin0) }
                 { dataMax.code === 200 && setCoinDatMax(dataMax) }
                 { data30.code === 200 && setCoinDat30(data30) }
@@ -70,30 +71,45 @@ function MarketGraph() {
         PriceLogger()
     }
 
+
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    const yourFunction = async () => {
+        await delay(10000);
+        console.log("Waited 5s");
+        setSubCur({ "symbol": "eth", "currency": "Ethereum" })
+        await delay(10000);
+        console.log("Waited 5s");
+        setSubCur({ "symbol": "btc", "currency": "Bitcoin" })
+
+        await delay(10000);
+        setSubCur({ "symbol": "usd", "currency": "USD" })
+    };
+
     useEffect(() => {
         fetchMetrics(Segment1.currency)
+        yourFunction()
     }, []);
-
+    console.log(subCur)
     return (
         <div className="App">
             {CoinDat.code === 200 &&
                 <>
                     <div className="coinPrice--layer--container">
+                        {/* <Icon name="bitcoin" fill="red" /> */}
+                        <h1 className="coinPrice--title-text">{Segment1.currency}</h1>
                         {/* <h2 className="coinPrice--layer--0">{CoinDat.data.market_data.current_price.usd}</h2> */}
-                        <h2 className="coinPrice--layer--1">{CoinDat.data.market_data.current_price.usd}</h2>
-                        <h3 className="coinPrice--layer--cur">{Segment1.symbol} • USD</h3>
+                        <h3 className="coinPrice--layer--cur">{Segment1.symbol} • {subCur.symbol.toUpperCase()}</h3>
+                        <h2 className="coinPrice--layer--1">{CoinDat.data.market_data.current_price[subCur.symbol]}</h2>
                         <div className="collection--text--wrapper">
                             <div className="collection--text--container">
                                 <div className="collection--text--item">
-                                    <p className="collection--text--text"> Low:</p>
-                                    <h4 className="low">{CoinDat.data.market_data.low_24h['usd']}</h4>
+                                    <p className="collection--text--text"> Low</p>
+                                    <h4 className="low">{CoinDat.data.market_data.low_24h[subCur.symbol]}</h4>
                                 </div>
-                                <div>
-                                    <Icon name="bitcoin" fill="red" />
-                                </div>
+
                                 <div className="collection--text--item">
-                                    <p className="collection--text--text">High:</p>
-                                    <h4 className="high">{CoinDat.data.market_data.high_24h['usd']}</h4>
+                                    <p className="collection--text--text">High</p>
+                                    <h4 className="high">{CoinDat.data.market_data.high_24h[subCur.symbol]}</h4>
                                 </div>
                             </div>
                         </div>
@@ -105,6 +121,7 @@ function MarketGraph() {
                     {/* <p>Thumbs down {CoinDat.data.sentiment_votes_down_percentage}</p> */}
                 </>
             }
+            <h3 className="collection--graph--title">Market Data</h3>
             <Collection
                 coinDat={CoinDat}
                 coinDataMax={CoinDatMax}

@@ -7,8 +7,19 @@
   font-display: swap;
 }
 
+#root {
+  background: #000000bd;
+  color: #e6e6e6e3;
+  width: 50vw;
+  height: 1000px;
+}
+
 p{
   font-size:1rem;
+}
+h1{
+  color: #e6e6e6e3;
+
 }
 
 h4{
@@ -16,15 +27,20 @@ h4{
 }
 
 .high{
-  color:#ececec;
+  color:#181818;
+  color: #f8f8f8e3;
   padding:0;  
   margin:0;
+  font-size: 2rem;
 }
 
 .low{
-  color:#ececec;
+  color:#272727;
+  color: #e6e6e6e3;
   padding:0;  
   margin:0;
+  font-size: 2rem;
+
 }
 
 .App {
@@ -34,7 +50,14 @@ h4{
   width: 100vw;
   overflow: hidden;
   font-family: 'Helvetica Neue';
+}
 
+.body{
+  background:transparent;
+}
+
+.body{
+  background:transparent;
 }
 
 .App-logo {
@@ -100,12 +123,21 @@ h4{
 }
 
 .coinPrice--layer--container {
-  margin-top: 4%;
+  margin-top: 0;
   font-size: 30px;
   letter-spacing: 10px;
   width: 50%;
+  height: 250px;
   right: 0;
   position: relative;
+  background: linear-gradient(-90deg, #45f55d 0%, #d5f545 100%); 
+  background: rgba(0, 0, 0, 0.884); 
+}
+
+.coinPrice--title-text {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
 }
 
 .coinPrice--layer--0 {
@@ -118,9 +150,10 @@ h4{
 .coinPrice--layer--1 {
   margin: 0;
   margin-left: 0px;
-  margin-top: -50px;
+  margin-top: 0;
   padding: 10px;
   color: #242424e3;
+  color: #e6e6e6e3;
   text-align: center;
   position: relative;
   z-index: 100;
@@ -130,7 +163,7 @@ h4{
   margin: 0;
   margin-top: 0px;
   margin-left: 0px;
-  margin-top: -20px;
+  margin-top: 0px;
   margin-left: 10px;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -146,5 +179,13 @@ h4{
   z-index: 100;
   position: relative;
   color: #343636;
+  color: #e6e6e6e3;
   font-size: 1.5rem;
+}
+
+.collection--graph--title{
+  margin-left: -50%;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 2rem;
 }

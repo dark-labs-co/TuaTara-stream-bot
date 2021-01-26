@@ -50,7 +50,7 @@ h4{
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,14 +99,7 @@ h4{
   margin-bottom: 0;
 }
 
-.coinPrice--layer--container {
-  margin-top: 4%;
-  font-size: 30px;
-  letter-spacing: 10px;
-  width: 50%;
-  right: 0;
-  position: relative;
-}
+
 
 .coinPrice--layer--0 {
   position: relative;

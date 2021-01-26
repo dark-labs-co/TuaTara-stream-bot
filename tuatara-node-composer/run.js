@@ -2,21 +2,34 @@ const CoinGecko = require('coingecko-api')
 const fetch = require('node-fetch')
 global.fetch = fetch
 global.Headers = fetch.Headers
-var request = require('request')
+const request = require('request')
 const child_process = require("child_process")
 var fs = require('fs')
+let segmentFeed = require("./feedSegment.json")
+
+let segI = segmentFeed.segI
 
 module.exports = function Run() {
-    //? Begin segment process
-    //* Write to tuatara-right
-    fs.writeFile('D:/Projects/TuraTara/Repo/streamBot/tuatara-scene-right/src/segment0.json', '{ "segment": "pause" }', function (err) {
+    //? Reset Segment Index
+    if (segI >= (segmentFeed.segment.length)) {
+        console.log('more than length');
+        console.log(segmentFeed.segment.length);
+        segI = 0
+    }
+
+    //? Check Segment Index
+    console.log(segmentFeed.segment[segI])
+
+    //? Write to tuatara-right
+    //? Pause Audio
+    fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/segment0.json', '{ "segment": "pause" }', function (err) {
         if (err) throw err;
         console.log('Paused TuaTara Right');
     });
 
-    fs.writeFile('D:/Projects/TuraTara/Repo/streamBot/tuatara-scene-left/src/segment0.jsonn', '{ "segment": "marketWatch" }', function (err) {
+    fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/segment0.json', '{ "segment": "pause" }', function (err) {
         if (err) throw err;
-        console.log('Data TuaTara Left');
+        console.log('Paused TuaTara Left');
     });
 
     //? Get Current Market Prices
@@ -38,7 +51,6 @@ module.exports = function Run() {
         console.log(`err ${err}`);
     });
 
-
     //? Get Current Gas Prices
     //? Fetch Etherscan API
     const options = {
@@ -52,7 +64,8 @@ module.exports = function Run() {
         processRes('gas', JSON.parse(response.body));
     });
 
-    let script = ['Hello world, this is what is happening in Dee Fii...']
+    let script = ['Hello world...']
+    // let script = ['Hello world, this is what is happening in Dee Fii...']
 
     let dataSend = {
         price_change_24h: '',
@@ -96,24 +109,22 @@ module.exports = function Run() {
             console.log(`ProposeGasPrice ${proposeGasPrice}`)
             console.log(`FastGasPrice ${fastGasPrice}`)
 
-            let gasScript = `Now for the gas Prices; Safe is ${safeGasPrice} Gwei, Propose is ${proposeGasPrice} Gwei, and Fast is ${fastGasPrice}. The Latest block is number ${lastBlock}. `
-
-            // console.log(script.toString())
+            let gasScript = `The gas Prices... Slow is burning ${safeGasPrice} Gwei, Medium is ${proposeGasPrice} Gwei, and Fast is ${fastGasPrice}... The Latest block is number ${lastBlock}. `
 
             function scriptString(scriptIn, datSend) {
-                console.log(datSend);
                 let scriptToString = (scriptIn.join(''))
-                console.log(datSend)
 
                 dataSend.gas = 'datSend'
 
+                //? Write to text file which is read in textToSpeech.sh
                 fs.writeFile('text.txt', scriptToString, function (err) {
                     if (err) throw err;
                     console.log('Saved!');
                 });
 
-                if (datSend) {
-                    fs.writeFile('D:/Projects/TuraTara/Repo/streamBot/tuatara-scene-left/src/dataLinkRaw.json', JSON.stringify(datSend), function (err) {
+                //? check if there is data and write to scene left
+                if (datSend.market_data) {
+                    fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/dataLinkRaw.json', JSON.stringify(datSend), function (err) {
                         if (err) throw err;
                         console.log('Saved!');
                     });
@@ -121,11 +132,14 @@ module.exports = function Run() {
                 else {
                     console.log('Wait - noData')
                 }
-
-
-                child_process.spawn('D:/Projects/TuraTara/Repo/streamBot/tuatara-node-composer/textToSpeech.sh', [], { shell: process.platform == 'win32' })
+                child_process.spawn('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/textToSpeech.sh', [], { shell: process.platform == 'win32' })
             }
             scriptString(script, dataSend)
+
+            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/feedSegment.json', JSON.stringify({ "segI": (segI++), "segment": segmentFeed.segment }), function (err) {
+                if (err) throw err;
+                console.log('Saved!');
+            })
         }
     }
 }
