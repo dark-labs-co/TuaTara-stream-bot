@@ -1,6 +1,6 @@
 import React from 'react'
-import DataLink from '../../dataLinkRaw.json'
-import MarketWatchIcon from './icon'
+import DataLink from '../../../dataLinkRaw.json'
+import MarketWatchIcon from '../icon'
 import MarketCell from './marketCell'
 
 
@@ -9,7 +9,7 @@ export default function MainArea() {
     return (
         <div className="display--wrapper">
             <div className="display--container">
-                <h2 className="display--hero-title">Ethereum Breakdown</h2>
+                <h2 className="display--hero-title">Market Watch</h2>
                 <div className="display--subHero-container">
                     <strong>{DataLink.market_data.current_price.usd}</strong>$
                 </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import MarketWatchPlainArrow from '../../assets/arrows/marketWatchPlainArrow'
+import MarketWatchPlainArrow from '../../../assets/arrows/marketWatchPlainArrow'
 
 export default function MarketCell({ title, dat }) {
     const [market, setMarket] = useState('')

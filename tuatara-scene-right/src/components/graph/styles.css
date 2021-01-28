@@ -37,6 +37,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .collection--text{
@@ -44,23 +45,25 @@
     margin-bottom: 0;
     padding-bottom: 0;
     font-weight: bold;
+    text-align: center;
 }
 
 .collection--text--wrapper{
-    display: flex;
+    display: inline-flex;
     padding: 0;
     justify-content: center;
     text-align: left;
     flex-direction: row;
     max-width: 500px;
-    margin: auto;
+    margin: 0;
+    margin-top: 30px;
 }
 
 .collection--text--container {
     text-align: left;
     display: flex;
     padding: 0;
-    flex-direction: row;
+    flex-direction: column;
     height: 0;
     justify-content: space-evenly;
     width: 100%;

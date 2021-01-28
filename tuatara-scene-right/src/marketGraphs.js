@@ -6,6 +6,7 @@ import CoinGecko from 'coingecko-api';
 import SuperRare from "./components/superRare/superRare";
 import Uniswap from "./components/uniswap/uniswap";
 import Segment1 from "./segment1.json"
+import CountdownAnimation from "./components/countdownAnimation";
 
 const Icon = ({ name }) => {
     const ImportedIconRef = useRef(null);
@@ -31,7 +32,7 @@ const Icon = ({ name }) => {
     if (!loading && ImportedIconRef.current) {
         const { current: ImportedIcon } = ImportedIconRef;
         console.log(ImportedIconRef)
-        return <div><img src={ImportedIcon.default} /></div>;
+        return <img src={ImportedIcon.default} className="coinPrice--icon-img" />
     }
 
     return null;
@@ -94,13 +95,13 @@ function MarketGraph() {
         <div className="App">
             {CoinDat.code === 200 &&
                 <>
-                    <div className="coinPrice--layer--container">
-                        {/* <Icon name="bitcoin" fill="red" /> */}
-                        <h1 className="coinPrice--title-text">{Segment1.currency}</h1>
+                    <div className={`coinPrice--layer--container ${Segment1.currency}`}>
+                        <Icon name="bitcoin" fill="red" />
+                        <h1 className={`coinPrice--title-text ${Segment1.currency}`}>{Segment1.currency} | {Segment1.symbol}</h1>
                         {/* <h2 className="coinPrice--layer--0">{CoinDat.data.market_data.current_price.usd}</h2> */}
-                        <h3 className="coinPrice--layer--cur">{Segment1.symbol} • {subCur.symbol.toUpperCase()}</h3>
-                        <h2 className="coinPrice--layer--1">{CoinDat.data.market_data.current_price[subCur.symbol]}</h2>
-                        <div className="collection--text--wrapper">
+                        {/* <h3 className="coinPrice--subCur--text">{subCur.symbol.toUpperCase()}</h3> */}
+                        <h2 className="coinPrice--price-text">{CoinDat.data.market_data.current_price[subCur.symbol]}{subCur.symbol.toUpperCase()}</h2>
+                        {/* <div className="collection--text--wrapper">
                             <div className="collection--text--container">
                                 <div className="collection--text--item">
                                     <p className="collection--text--text"> Low</p>
@@ -112,7 +113,8 @@ function MarketGraph() {
                                     <h4 className="high">{CoinDat.data.market_data.high_24h[subCur.symbol]}</h4>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <CountdownAnimation />
                     </div>
                     {/* <h2 className="coinPrice">{CoinDat.data.tickers[0].target}</h2> */}
                     {/* <h1>Ethereum </h1> */}
