@@ -1,0 +1,11 @@
+.scroll-t{
+    position: absolute;
+    top: -400px;
+    right: 500px;
+}
+
+.scroll-b{
+    position: absolute;
+    top: -463px;
+    right: -2500px;
+}

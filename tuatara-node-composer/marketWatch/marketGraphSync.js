@@ -5,10 +5,9 @@ global.Headers = fetch.Headers
 const request = require('request')
 const child_process = require("child_process")
 var fs = require('fs')
-let segmentFeed = require("./feedSegment.json")
 
 // function MarketWatch() {
-module.exports = function MarketWatch() {
+module.exports = function marketGraphSync(cur) {
 
     console.log('marketWatch')
 
@@ -18,7 +17,7 @@ module.exports = function MarketWatch() {
         const CoinGeckoClient = new CoinGecko();
 
         try {
-            let dataEth = await CoinGeckoClient.coins.fetch('ethereum', {});
+            let dataEth = await CoinGeckoClient.coins.fetch(cur, {});
             return dataEth;
         } catch (e) {
             console.log(e);
@@ -99,20 +98,19 @@ module.exports = function MarketWatch() {
                 //? Write to text file which is read in textToSpeech.sh
                 fs.writeFile('text.txt', scriptToString, function (err) {
                     if (err) throw err;
-                    console.log('Saved!');
+                    console.log('Saved-text.txt');
                 });
 
                 //? check if there is data and write to scene left
                 if (datSend.market_data) {
                     fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/dataLinkRaw.json', JSON.stringify(datSend), function (err) {
                         if (err) throw err;
-                        console.log('Saved!');
+                        console.log('Saved-left-dataLinkRaw.json');
                     });
                 }
                 else {
                     console.log('Wait - noData')
                 }
-                child_process.spawn('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/textToSpeech.sh', [], { shell: process.platform == 'win32' })
             }
             scriptString(script, dataSend)
         }

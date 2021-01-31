@@ -1,3 +1,8 @@
+#root{
+    background: rgba(255, 255, 255, 0.65);
+    height: 100vh;
+}
+
 .collection--wrapper{
     width: 100vw;
     height: 100px;
@@ -9,43 +14,52 @@
       "top-r main-area"
       "mid-r main-area"
       "bottom-r main-area";
-    }
+}
 
 .collection--container:nth-of-type(1){
     grid-area: top-r;
     width: 100%;
     height: 100%;
-    max-height: 100px;
+    max-height: 150px;
     margin-top: 100px;
 }
 
 .collection--container:nth-of-type(2){
     grid-area: mid-r;
-    max-height: 100px;
+    max-height: 150px;
     height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
+    display: flex;
 }
 
 .collection--container:nth-of-type(3){
     grid-area: bottom-r;
-    max-height: 100px;
+    max-height: 150px;
     height: 100%;
+    width: 50%;
 }
-    
+.collection--container-half{
+    height: 100%;
+    width:  50%;
+}
 .grid--container{
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.0);
 }
 
 .collection--text{
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding: 5px 0;
     font-weight: bold;
     text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    color: rgba(26, 26, 26, 0.8);
+    font-size: 2rem;
 }
 
 .collection--text--wrapper{
@@ -84,3 +98,36 @@
     padding: 0;
     margin: 0;
 }
+.coinPrice--subCur--text{
+    margin: 0;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    padding: 1rem;
+    font-size: 30px;
+    /* background-image: linear-gradient( #45f5e8, #d2ea32); */
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align:left;
+    z-index: 100;
+    position: relative;
+    color: #343636;
+    /* color: #e6e6e6e3; */
+    font-size: 1.5rem;
+  }
+  
+  .collection--graph--title{
+    margin-bottom: 0;
+    padding: 20px 0;
+    font-size: 4rem;
+    /* color: #e6e6e6e3; */
+    color: #343636;
+    text-align: center;
+    width: 30%;
+  }
+  

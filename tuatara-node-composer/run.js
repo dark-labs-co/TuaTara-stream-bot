@@ -3,12 +3,13 @@ global.fetch = fetch
 global.Headers = fetch.Headers
 var fs = require('fs')
 const segmentFeed = require("./feedSegment.json")
-const MarketWatch = require('./marketWatch')
+const MarketWatch = require('./marketWatch/marketWatch')
+const PostProcess = require('./postProcess')
 const AaveScript = require('./aave/AaveScript')
 
-let segI = segmentFeed.segI
-function Run() {
-    // module.exports = function Run() {
+// function Run() {
+module.exports = function Run() {
+    let segI = segmentFeed.segI
     //? Reset Segment Index
     if (segI >= (segmentFeed.segment.length)) {
         console.log('more than length');
@@ -33,7 +34,9 @@ function Run() {
     });
 
     if (segment === 'marketWatch') {
-        MarketWatch()
+        // MarketWatch()
+        PostProcess()
+
         console.log('Market Watch')
     }
 
@@ -42,9 +45,5 @@ function Run() {
         console.log('aave')
     }
 
-    fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/feedSegment.json', JSON.stringify({ "segI": (segI++), "segment": segmentFeed.segment }), function (err) {
-        if (err) throw err;
-        console.log('Saved!');
-    })
 }
-Run()
+// Run()

@@ -1,38 +1,9 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import "./style.css"
-let d = [
-    {
-        "symbol": "coin0",
-        "coin0_borrow": 6114,
-        "coin0_borrowColor": "hsl(38, 70%, 50%)",
-        "coin0_deposit": 1304,
-        "coin0_depositColor": "#2cb8c3",
-    },
-    {
-        "symbol": "coin1",
-        "coin1_borrow": 6114,
-        "coin1_borrowColor": "hsl(38, 70%, 50%)",
-        "coin1_deposit": 6114,
-        "coin1_depositColor": "hsl(38, 70%, 50%)",
-    },
-    {
-        "symbol": "coin2",
-        "coin2_borrow": 6114,
-        "coin2_borrowColor": "hsl(38, 70%, 50%)",
-        "coin2_deposit": 6114,
-        "coin2_depositColor": "hsl(38, 70%, 50%)",
-    },
+import AaveDataLink from "../../../dataLinkAaveRaw.json"
 
-    {
-        "symbol": "coin3",
-        "coin3_borrow": 6114,
-        "coin3_borrowColor": "hsl(38, 70%, 50%)",
-        "coin3_deposit": 6114,
-        "coin3_depositColor": "hsl(38, 70%, 50%)",
-    },
 
-]
 const theme = {
     axis: {
         domain: {
@@ -43,14 +14,45 @@ const theme = {
         }
     }
 }
-export const AaveBar = ({ data /* see data tab */ }) => (
+export const AaveBar = ({ coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
     <>
         <div className={'aave-bar--wrapper'}>
             <ResponsiveBar
-                data={d}
+                data={[
+                    {
+                        "symbol": "coin0",
+                        "coin0_borrow": (AaveDataLink.lendingData[coinIndex0].borrow * AaveDataLink.lendingData[coinIndex0].vsEth).toFixed(),
+                        "coin0_borrowColor": "hsl(38, 70%, 50%)",
+                        "coin0_deposit": (AaveDataLink.lendingData[coinIndex0].deposit * AaveDataLink.lendingData[coinIndex0].vsEth).toFixed(),
+                        "coin0_depositColor": "#2cb8c3",
+                    },
+                    {
+                        "symbol": "coin1",
+                        "coin1_borrow": (AaveDataLink.lendingData[coinIndex1].borrow * AaveDataLink.lendingData[coinIndex1].vsEth).toFixed(),
+                        "coin1_borrowColor": "hsl(38, 70%, 50%)",
+                        "coin1_deposit": (AaveDataLink.lendingData[coinIndex1].deposit * AaveDataLink.lendingData[coinIndex1].vsEth).toFixed(),
+                        "coin1_depositColor": "hsl(38, 70%, 50%)",
+                    },
+                    {
+                        "symbol": "coin2",
+                        "coin2_borrow": (AaveDataLink.lendingData[coinIndex2].borrow * AaveDataLink.lendingData[coinIndex2].vsEth).toFixed(),
+                        "coin2_borrowColor": "hsl(38, 70%, 50%)",
+                        "coin2_deposit": (AaveDataLink.lendingData[coinIndex2].deposit * AaveDataLink.lendingData[coinIndex2].vsEth).toFixed(),
+                        "coin2_depositColor": "hsl(38, 70%, 50%)",
+                    },
+
+                    {
+                        "symbol": "coin3",
+                        "coin3_borrow": (AaveDataLink.lendingData[coinIndex3].borrow * AaveDataLink.lendingData[coinIndex3].vsEth).toFixed(),
+                        "coin3_borrowColor": "hsl(38, 70%, 50%)",
+                        "coin3_deposit": (AaveDataLink.lendingData[coinIndex3].deposit * AaveDataLink.lendingData[coinIndex3].vsEth).toFixed(),
+                        "coin3_depositColor": "hsl(38, 70%, 50%)",
+                    },
+
+                ]}
                 keys={['coin0_deposit', 'coin0_borrow', 'coin1_deposit', 'coin1_borrow', 'coin2_deposit', 'coin2_borrow', 'coin3_deposit', 'coin3_borrow']}
                 indexBy="symbol"
-                margin={{ top: 10, right: 10, bottom: 10, left: 70 }}
+                margin={{ top: 10, right: 0, bottom: 20, left: 0 }}
                 padding={0.3}
                 valueScale={{ type: 'linear' }}
                 indexScale={{ type: 'band', round: true }}
@@ -150,8 +152,8 @@ export const AaveBar = ({ data /* see data tab */ }) => (
                 axisLeft={null}
                 axisBottom={null}
                 labelSkipWidth={12}
-                labelSkipHeight={12}
-                labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                labelSkipHeight={25}
+                labelTextColor={{ from: 'color', modifiers: [['brighter', 3]] }}
                 legends={[
                     {
                         dataFrom: 'keys',
@@ -182,31 +184,194 @@ export const AaveBar = ({ data /* see data tab */ }) => (
                 enableGridY={false}
             />
         </div>
-        <svg className="aave--graphOverlay-l0" width="3533" height="1452">
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 1449.9)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 1341.35)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 1232.81)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 1124.26)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 1015.72)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 907.173)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 798.627)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 690.082)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 581.536)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 472.991)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 364.446)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#C9C9C9" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(2.30138 0 0 -1 1766.42 255.9)" d="M-765.548 0L765.548 0" fill-rule="evenodd" />
-            <path fill="none" stroke="#323232" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(1 0 0 -1 1448.04 567.258)" d="M481.525 540.453L-480.56 -538.522" fill-rule="evenodd" />
-            <path fill="none" stroke="#323232" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(1 0 0 -1 1706.8 563.481)" d="M223.011 536.839L-228.802 -537.482" fill-rule="evenodd" />
-            <path fill="none" stroke="#323232" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(1 0 0 -1 2001.6 563.905)" d="M-73.3043 540.769L73.3043 -540.769" fill-rule="evenodd" />
-            <path fill="none" stroke="#323232" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(1 0 0 -1 2306.83 565.106)" d="M-371.328 537.164L371.328 -537.164" fill-rule="evenodd" />
-            {/* <path fill="white" transform="matrix(1.00494 0 0 -1.04546 1930.21 289.671)" d="M-959.111 -277.077L959.111 -277.077L959.111 277.077L-959.111 277.077L-959.111 -277.077Z" /> */}
-            <path fill="#646464" transform="matrix(1 0 0 -1 1930.65 179.626)" d="M0 120C-66.2742 120 -120 66.2742 -120 0C-120 -66.2742 -66.2742 -120 0 -120C66.2742 -120 120 -66.2742 120 0C120 66.2742 66.2742 120 0 120Z" />
-            <path fill="#646464" transform="matrix(1 0 0 -1 1930.65 179.626)" d="M0 110C-60.7513 110 -110 60.7513 -110 0C-110 -60.7513 -60.7513 -110 0 -110C60.7513 -110 110 -60.7513 110 0C110 60.7513 60.7513 110 0 110Z" />
-            <path fill="#646464" transform="matrix(1 0 0 -1 1936.81 176.417)" d="M5.53958 13.6022L15.7416 53.7881C16.0134 54.8587 15.6504 55.0472 14.9309 54.2092L-40.441 -10.2827C-41.1605 -11.1207 -40.8484 -11.8001 -39.7438 -11.8001L-6.09253 -11.8001C-4.98796 -11.8001 -4.33108 -12.6632 -4.62534 -13.7278L-15.7009 -53.7989C-15.9951 -54.8635 -15.6497 -55.0478 -14.9293 -54.2105L40.4394 10.1476C41.1598 10.9849 40.8484 11.6637 39.7438 11.6637L7.04745 11.6637C5.94289 11.6637 5.26779 12.5316 5.53958 13.6022Z" />
-            <path fill="none" stroke="#323232" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" transform="matrix(1 0 0 -1 1936.81 176.417)" d="M5.53958 13.6022L15.7416 53.7881C16.0134 54.8587 15.6504 55.0472 14.9309 54.2092L-40.441 -10.2827C-41.1605 -11.1207 -40.8484 -11.8001 -39.7438 -11.8001L-6.09253 -11.8001C-4.98796 -11.8001 -4.33108 -12.6632 -4.62534 -13.7278L-15.7009 -53.7989C-15.9951 -54.8635 -15.6497 -55.0478 -14.9293 -54.2105L40.4394 10.1476C41.1598 10.9849 40.8484 11.6637 39.7438 11.6637L7.04745 11.6637C5.94289 11.6637 5.26779 12.5316 5.53958 13.6022Z" />
+        <div className="aave--coinName-wrapper">
+            <div className="aave--coinName-text">
+                {AaveDataLink.lendingData[coinIndex0].symbol}
+            </div>
+            <div className="aave--coinName-text">
+                {AaveDataLink.lendingData[coinIndex1].symbol}
+
+            </div>
+            <div className="aave--coinName-text">
+                {AaveDataLink.lendingData[coinIndex2].symbol}
+            </div>
+            <div className="aave--coinName-text">
+                {AaveDataLink.lendingData[coinIndex3].symbol}
+            </div>
+        </div>
+        <svg className="aave--graphOverlay-l0" viewBox="0 -50 2000 2000">
+            <defs>
+                <linearGradient id="grad0" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%"
+                        stopColor="#2cb8c3"
+                    />
+                    <stop offset="100%"
+                        stopColor="#b6509e"
+                    />
+                </linearGradient>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%"
+                        stopColor="#b6509e"
+                    />
+                    <stop offset="100%"
+                        stopColor="#2cb8c3"
+                    />
+                </linearGradient>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%"
+                        stopColor="#2cb8c3"
+                    />
+                    <stop offset="100%"
+                        stopColor="#b6509e"
+                    />
+                </linearGradient>
+            </defs>
+            <rect
+                id="rect959"
+                width="1929.358"
+                height="1328.8422"
+                x="1.0963691"
+                y="1.0963691"
+                fill="rgba(255, 255, 255, 0.0)"
+            />
+
+            <path
+                d="M 543.57795,786.43914 H 1432.6474"
+                id="path945-9"
+
+                fill="rgba(255, 255, 255, 0.)" />
+            <g
+                id="g1039"
+                transform="matrix(2.1945262,0,0,2.1945262,519.17703,255.35523)">
+                <circle
+                    id="path988-5-6"
+                    cx="213.4561"
+                    cy="-70.659256"
+                    r="39.970787"
+                    fill="url(#grad0)"
+                />
+                <circle
+                    id="path988"
+                    cx="213.4561"
+                    cy="-70.659256"
+                    r="36.79253"
+
+                    fill="url(#grad1)"
+                />
+                <circle
+                    id="path988-2"
+                    cx="213.4561"
+                    cy="-70.659256"
+                    r="31.577211"
+
+                    fill="url(#grad2)"
+                />
+                <path
+                    d="m 217.91315,-87.255856 -17.50856,19.749139 h 11.77171 l -3.82148,13.44406 18.1528,-20.468299 h -11.5084 z"
+                    id="path986"
+
+                    fill="#fff" />
+            </g>
+            <g
+                stroke="#fff"
+            >
+                <path
+                    d="M 278.76459,1329.9386 H 1874.9386"
+                    id="path939" />
+                <path
+                    d="M 190.41994,1183.3379 H 1756.5655"
+                    id="path941" />
+                <path
+                    d="M 351.87532,1002.2919 H 1608.3672"
+                    id="path943" />
+                <path
+                    d="M 459.78703,879.31011 H 1510.1793"
+                    id="path945" />
+                <path
+                    d="M 815.36107,787.99914 581.3234,1329.9386"
+                    id="path949" />
+                <path
+                    d="M 961.73098,785.83695 893.15833,1331.3558"
+                    id="path951" />
+                <path
+                    d="m 1079.6752,786.54247 69.6662,544.81323"
+                    id="path953" />
+                <path
+                    d="m 1188.6399,787.27944 188.9449,546.64616"
+                    id="path955" />
+                <path
+                    d="m 1302.0859,786.50649 320.9297,543.43211"
+                    id="path957" />
+                <path
+                    d="M 961.73098,785.83695 893.15833,1331.3558"
+                    id="path1045"
+                    stroke="#b6509e"
+                    strokeWidth="5"
+                />
+                <path
+                    d="m 1079.6752,786.54247 69.6662,544.81323"
+                    id="path1045-9"
+                    stroke="#b6509e"
+                    strokeWidth="5"
+                />
+                <path
+                    d="m 1188.6399,787.27944 188.9449,546.64616"
+                    id="path1045-9-1"
+                    stroke="#b6509e"
+                    strokeWidth="5"
+                />
+                <path
+                    d="m 1302.0859,786.50649 320.9297,543.43211"
+                    id="path1045-9-2"
+                    stroke="#b6509e"
+                    strokeWidth="5"
+                />
+
+
+                <path
+                    d="M 815.36107,787.99914 581.3234,1329.9386"
+                    id="path1045-9-7"
+                    stroke="#2cb8c3"
+                    strokeWidth="5"
+                />
+                <path
+                    d="M 676.02194,786.50649 278.76459,1329.9386"
+                    id="path1045-9-0"
+                    stroke="#2cb8c3"
+                    strokeWidth="5"
+                />
+                <path
+                    d="M 543.57795,786.43914 59.088361,1329.8687"
+                    id="path1045-9-2-2-2"
+                    stroke="#2cb8c3"
+                    strokeWidth="5"
+                />
+                <path
+                    d="m 1432.6474,786.43914 442.2213,543.56936"
+                    id="path1045-9-2-2"
+                    stroke="#2cb8c3"
+                    strokeWidth="5"
+                />
+                <path
+                    d="M 543.57795,786.43914 59.088323,1329.8687"
+                    id="path1045-9-2-2-2-7"
+                    stroke="#2cb8c3"
+                    strokeWidth="5"
+                />
+                <path
+                    d="m 1432.6474,786.43914 442.2213,543.56936"
+                    id="path1045-9-2-2-3"
+                    stroke="#b6509e"
+                    strokeWidth="5"
+                />
+            </g>
         </svg>
-
-
+        <div className="footer--wrapper">
+            <div>Totals Calculated in ETHER</div>
+            <div>Borrow</div>
+            <div>Deposit</div>
+        </div>
     </>
 )
+
 

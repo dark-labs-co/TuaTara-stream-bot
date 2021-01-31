@@ -1,8 +1,9 @@
 .header--wrapper {
     padding: .25rem 0;
     position: relative;
-    background:rgba(0, 0, 0, 0.85);
-    color:#fff;
+    background:rgba(0, 0, 0, 0.79);
+    color:rgb(220, 220, 220);
+    font-size:2rem;
 }
 
 .up{

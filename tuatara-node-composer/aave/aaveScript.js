@@ -1,12 +1,19 @@
 const fetch = require('node-fetch')
 const moment = require('moment')
+const CoinGecko = require('coingecko-api')
 global.fetch = fetch
 global.Headers = fetch.Headers
 var myHeaders = new Headers();
 var fs = require('fs');
+const CoinList = require('./coinList.json')
+var async = require("async");
+const child_process = require("child_process")
+const PostProcess = require('../postProcess')
+// function AaveScript() {
 
-function AaveScript() {
-    // module.exports = function AaveScript() {
+
+module.exports = function AaveScript() {
+
     let flashLoanDat = {}
     let rateDat = {
         script: '',
@@ -14,21 +21,29 @@ function AaveScript() {
         symbol: [],
         id: [],
         stableBorrowRate: [],
-        variableBorrowRate: []
+        variableBorrowRate: [],
+        liquidityRate: []
     }
 
-    let borrowDat = {}
-    let depositDat = {}
+    let lendingData = []
 
-    let ETHDat = { borrow: [], deposit: [] }
-    let USDTDat = { borrow: [], deposit: [] }
-    let USDCDat = { borrow: [], deposit: [] }
-    let ENJDat = { borrow: [], deposit: [] }
-    let WBTCDat = { borrow: [], deposit: [] }
-    let TUSDDat = { borrow: [], deposit: [] }
-    let DAIDat = { borrow: [], deposit: [] }
-    let sUSDDat = { borrow: [], deposit: [] }
-    let BUSDDat = { borrow: [], deposit: [] }
+    let coinData = []
+    let rateData = []
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    //? reads coinList.json and returns an object with its key pair 
+
+    function makeCoinDataObj(coinList) {
+        //? parse coinList
+        for (let i = 0; i < coinList.length; i++) {
+            console.log(coinList[i].symbol);
+            coinData.push({ symbol: coinList[i].symbol, borrow: [0], deposit: [0], vsEth: 0 })
+        }
+
+    }
+    makeCoinDataObj(CoinList)
 
     function aaveGraphQuery() {
         let today = new Date();
@@ -41,7 +56,7 @@ function AaveScript() {
 
         let graphql = JSON.stringify({
             query: `{ 
-            flashLoans(first: 100 orderBy:timestamp orderDirection:desc) {
+            flashLoans(first: 1000 orderBy:timestamp orderDirection:desc) {
                 timestamp
                 id
                 target
@@ -51,13 +66,16 @@ function AaveScript() {
                 reserve {
                             id
                             symbol
+                            price {
+                                priceInEth
+                              }
                         }
                     pool {
                         id
                         lendingPool
                     }
             }
-            borrows(first: 100 orderBy:timestamp orderDirection:desc) {
+            borrows(first: 1000 orderBy:timestamp orderDirection:desc) {
                 timestamp
                 id
                 amount
@@ -68,9 +86,12 @@ function AaveScript() {
                 reserve {
                     id
                     symbol
+                    price {
+                        priceInEth
+                      }
                 }
             }
-            deposits(first: 100 orderBy:timestamp orderDirection:desc) {
+            deposits(first: 1000 orderBy:timestamp orderDirection:desc) {
                 timestamp
                 id
                 amount
@@ -80,15 +101,23 @@ function AaveScript() {
                 reserve {
                     id
                     symbol
+                    price {
+                        priceInEth
+                      }
                 }
             }
-            reserves(first:20){
+            reserves(first:22){
                 symbol
                 id
+                name
                 variableBorrowRate
                 stableBorrowRate
-            }
-        }`
+                liquidityRate
+                price {
+                        priceInEth
+                      }
+                }
+            }`
         })
 
         let requestOptions = {
@@ -102,8 +131,8 @@ function AaveScript() {
             .then(response => response.text())
             .then(result => parseAvveQuery(JSON.parse(result), day))
             .catch(error => console.log('error', error));
-
     }
+
 
     function parseAvveQuery(r, d) {
         let flash = r.data.flashLoans
@@ -118,183 +147,108 @@ function AaveScript() {
             let amount = parseInt(flash[i].amount)
 
             if (d == dayString) {
-                console.log(`Flash: ${amount.toFixed()} ${flash[i].reserve.symbol}`)
+                // console.log(`Flash: ${amount.toFixed()} ${flash[i].reserve.symbol}`)
             }
         }
 
         // ? parse Rates
-        for (let j = 0; j < reserve.length; j++) {
-            console.log(reserve[j].symbol)
-            console.log(reserve[j].id)
-            rateDat.symbol.push(reserve[j].symbol)
-            rateDat.id.push(reserve[j].id)
-            rateDat.stableBorrowRate.push(reserve[j].stableBorrowRate)
-            rateDat.variableBorrowRate.push(reserve[j].variableBorrowRate)
-            rateDat.scriptDat.push(`The Annual Variable Borrow Rate for ${reserve[j].symbol} is ${(reserve[j].variableBorrowRate * 100).toFixed(2)}% The Annual Stable Borrow Rate for`)
+        for (let i = 0; i < reserve.length; i++) {
+            // console.log(reserve[i].symbol)
+            // console.log(reserve[i].id)
+            rateDat.symbol.push(reserve[i].symbol)
+            rateDat.id.push(reserve[i].id)
+            rateDat.stableBorrowRate.push(reserve[i].stableBorrowRate)
+            rateDat.variableBorrowRate.push(reserve[i].variableBorrowRate)
+            rateDat.liquidityRate.push(reserve[i].liquidityRate)
+            rateDat.scriptDat.push(`The Annual Variable Borrow Rate for ${reserve[i].symbol} is ${(reserve[i].variableBorrowRate * 100).toFixed(2)}% The Annual Stable Borrow Rate for`)
+
+            rateData.push({
+                "vbr": reserve[i].variableBorrowRate, "symbol": reserve[i].symbol, "name": reserve[i].name, "sbr": reserve[i].stableBorrowRat, "liquidityRate": reserve[i].liquidityRate, "vsEth": reserve[i].price
+            })
         }
 
         //? parse Borrows
-        for (let k = 0; k < borrow.length; k++) {
-            let t = borrow[k].timestamp
+        for (let i = 0; i < borrow.length; i++) {
+            let t = borrow[i].timestamp
             let dayString = moment.unix(t).format("DD");
-            let bAmount = parseInt(borrow[k].amount)
-            let id = parseInt(borrow[k].id)
-            let symbol = borrow[k].reserve.symbol
-
-            // if (d == dayString) {
-            if (symbol === 'ETH') {
-                // borrowDat.id.push(id)
-                ETHDat.borrow.push(bAmount)
+            let bAmount = parseInt(borrow[i].amount)
+            let id = parseInt(borrow[i].id)
+            let symbol = borrow[i].reserve.symbol
+            let priceInEth = borrow[i].reserve.price
+            // coinData.borrow.push(bAmount)
+            for (let i = 0; i < CoinList.length; i++) {
+                //? check if symbol in list matches the returned element and push it to borrow array 
+                if (symbol === CoinList[i].symbol) {
+                    const element = coinData[i];
+                    element.borrow.push(bAmount)
+                    element.vsEth = priceInEth.priceInEth
+                }
+                // console.log(coinData)
             }
-            if (symbol === 'USDC') {
-                // borrowDat.id.push(id)
-                USDCDat.borrow.push(bAmount)
-            }
-            if (symbol === 'ENJ') {
-                // borrowDat.id.push(id)
-                ENJDat.borrow.push(bAmount)
-            }
-            if (symbol === 'WBTC') {
-                // borrowDat.id.push(id)
-                WBTCDat.borrow.push(bAmount)
-            }
-            if (symbol === 'TUSD') {
-                // borrowDat.id.push(id)
-                TUSDDat.borrow.push(bAmount)
-            }
-            if (symbol === 'DAI') {
-                // borrowDat.id.push(id)
-                DAIDat.borrow.push(bAmount)
-            }
-            if (symbol === 'sUSD') {
-                // borrowDat.id.push(id)
-                sUSDDat.borrow.push(bAmount)
-            }
-            if (symbol === 'BUSD') {
-                // borrowDat.id.push(id)
-                BUSDDat.borrow.push(bAmount)
-            }
-            // }
         }
 
         //? parse Deposits
-        for (let j = 0; j < deposit.length; j++) {
-            let t = deposit[j].timestamp
+        for (let i = 0; i < deposit.length; i++) {
+            let t = deposit[i].timestamp
             let dayString = moment.unix(t).format("DD");
-            let dAmount = parseInt(deposit[j].amount)
-            let id = parseInt(deposit[j].id)
-            let symbol = deposit[j].reserve.symbol
+            let bAmount = parseInt(deposit[i].amount)
+            let id = parseInt(deposit[i].id)
+            let symbol = deposit[i].reserve.symbol
+            let priceInEth = deposit[i].reserve.price
 
-            // if (d == dayString) {
-            if (symbol === 'ETH') {
-                // borrowDat.id.push(id)
-                ETHDat.deposit.push(dAmount)
+            for (let i = 0; i < CoinList.length; i++) {
+                //? check if symbol in list matches the returned element and push it to deposit array 
+                if (symbol === CoinList[i].symbol) {
+                    const element = coinData[i];
+                    element.deposit.push(bAmount)
+                    if (element.vsEth <= 0) {
+                        element.vsEth = priceInEth.priceInEth
+                    }
+
+                }
             }
-            if (symbol === 'USDC') {
-                // borrowDat.id.push(id)
-                USDCDat.deposit.push(dAmount)
-            }
-            if (symbol === 'ENJ') {
-                // borrowDat.id.push(id)
-                ENJDat.deposit.push(dAmount)
-            }
-            if (symbol === 'WBTC') {
-                // borrowDat.id.push(id)
-                WBTCDat.deposit.push(dAmount)
-            }
-            if (symbol === 'TUSD') {
-                // borrowDat.id.push(id)
-                TUSDDat.deposit.push(dAmount)
-            }
-            if (symbol === 'DAI') {
-                // borrowDat.id.push(id)
-                DAIDat.deposit.push(dAmount)
-            }
-            if (symbol === 'sUSD') {
-                // borrowDat.id.push(id)
-                sUSDDat.deposit.push(dAmount)
-            }
-            if (symbol === 'BUSD') {
-                // borrowDat.id.push(id)
-                BUSDDat.deposit.push(dAmount)
-            }
-            // }
         }
-        // console.log(borrowDat)
+        // console.log(coinData)
 
-        function getTotal(sym, dat) {
-            let sumB = dat.borrow.reduce(function (a, b) {
-                return a + b;
-            }, 0);
-
-            let sumD = dat.deposit.reduce(function (a, b) {
-                return a + b;
-            }, 0);
-
-
-            if (sym === 'ETH') {
-                borrowDat.total_amount_borrowed_100samp_ETH = sumB
-                depositDat.total_amount_deposited_100samp_ETH = sumD
-            }
-            if (sym === 'USDC') {
-                borrowDat.total_amount_borrowed_100samp_USDC = sumB
-                depositDat.total_amount_deposited_100samp_USDC = sumD
-            }
-            if (sym === 'ENJ') {
-                borrowDat.total_amount_borrowed_100samp_ENJ = sumB
-                depositDat.total_amount_deposited_100samp_ENJ = sumD
-            }
-            if (sym === 'WBTC') {
-                borrowDat.total_amount_borrowed_100samp_WBTC = sumB
-                depositDat.total_amount_deposited_100samp_WBTC = sumD
-            }
-            if (sym === 'TUSD') {
-                borrowDat.total_amount_borrowed_100samp_TUSD = sumB
-                depositDat.total_amount_deposited_100samp_TUSD = sumD
-            }
-            if (sym === 'DAI') {
-                borrowDat.total_amount_borrowed_100samp_DAI = sumB
-                depositDat.total_amount_deposited_100samp_DAI = sumD
-            }
-            if (sym === 'sUSD') {
-                borrowDat.total_amount_borrowed_100samp_sUSD = sumB
-                depositDat.total_amount_deposited_100samp_sUSD = sumD
-            }
-            if (sym === 'BUSD') {
-                borrowDat.total_amount_borrowed_100samp_BUSD = sumB
-                depositDat.total_amount_deposited_100samp_BUSD = sumD
+        //? Array sum helper function
+        function getTotal(dat, lendType) {
+            if (dat && dat[lendType]) {
+                let sumF = dat[lendType].reduce(function (a, b) {
+                    return a + b;
+                }, 0);
+                return (sumF)
             }
         }
 
-        getTotal('ETH', ETHDat)
-        getTotal('USDT', USDTDat)
-        getTotal('USDC', USDCDat)
-        getTotal('ENJ', ENJDat)
-        getTotal('WBTC', WBTCDat)
-        getTotal('TUSD', TUSDDat)
-        getTotal('DAI', DAIDat)
-        getTotal('sUSD', sUSDDat)
-        getTotal('BUSD', BUSDDat)
-
-        writeF(borrowDat);
+        //? push coin data to lending dataset
+        for (let i = 0; i < coinData.length; i++) {
+            const element = coinData[i];
+            lendingData.push({ "name": element.name, "symbol": element.symbol, "borrow": getTotal(element, 'borrow'), "deposit": getTotal(element, 'deposit'), "vsEth": element.vsEth })
+        }
 
         //? Save Local Data
-        function writeF() {
-            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/aave/aData.json', JSON.stringify({ borrowDat, depositDat, rateDat, flashLoanDat }), function (err) {
+        function writeAdata() {
+            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/aave/aData.json', JSON.stringify({ lendingData, rateData, flashLoanDat }), function (err) {
                 if (err) throw err;
-                console.log('Saved!');
+                console.log('Saved-aData');
             });
         }
 
         //? Save scene left Data
-        function writeF() {
-            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/dataLinkAaveRaw.json', JSON.stringify({ borrowDat, depositDat, rateDat, flashLoanDat }), function (err) {
+        function writeAdataLeft() {
+            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/dataLinkAaveRaw.json', JSON.stringify({ lendingData, rateData, flashLoanDat }), function (err) {
                 if (err) throw err;
-                console.log('Saved!');
+                console.log('Saved-tuatara-scene-left/dataLinkAaveRaw');
             });
         }
-    }
-    aaveGraphQuery()
-}
-AaveScript()
 
+        writeAdata();
+        writeAdataLeft();
+    }
+    aaveGraphQuery();
+    PostProcess()
+
+    // child_process.spawn('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/textToSpeech.sh', [], { shell: process.platform == 'win32' })
+
+}
+// AaveScript()

@@ -29,7 +29,7 @@ const Collection = ({ coinDataMax, coinData30, coinData1, coinDat }) => {
                     <Graph
                         coinDat={dataParse1}
                         color={'green'}
-                        height={400}
+                        height={1000}
                         top={0}
                         bottom={10}
                     />
@@ -42,27 +42,27 @@ const Collection = ({ coinDataMax, coinData30, coinData1, coinDat }) => {
                 </div>
 
                 <div className="collection--container">
-                    <Graph
-                        coinDat={dataParse30}
-                        color={'red'}
-                        height={150}
-                        top={0}
-                        bottom={0}
-                    />
-                    <h3 className="collection--text">30 Days</h3>
+                    <div className="collection--container-half">
+                        <Graph
+                            coinDat={dataParse30}
+                            color={'red'}
+                            height={250}
+                            top={0}
+                            bottom={0}
+                        />
+                        <h3 className="collection--text">30 Days</h3>
+                    </div>
+                    <div className="collection--container-half">
+                        <Graph
+                            coinDat={dataParseMax}
+                            color={'red'}
+                            height={150}
+                            top={0}
+                            bottom={0}
+                        />
+                        <h3 className="collection--text">Max</h3>
+                    </div>
                 </div>
-
-                <div className="collection--container">
-                    <Graph
-                        coinDat={dataParseMax}
-                        color={'red'}
-                        height={100}
-                        top={0}
-                        bottom={0}
-                    />
-                    <h3 className="collection--text">Max</h3>
-                </div>
-
             </div>
         )
     }

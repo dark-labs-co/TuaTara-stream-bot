@@ -9,10 +9,10 @@ export default function MainArea() {
     return (
         <div className="display--wrapper">
             <div className="display--container">
-                <h2 className="display--hero-title">Market Watch</h2>
-                <div className="display--subHero-container">
+                {/* <h2 className="display--hero-title">Market Watch</h2> */}
+                {/* <div className="display--subHero-container">
                     <strong>{DataLink.market_data.current_price.usd}</strong>$
-                </div>
+                </div> */}
                 <MarketCell
                     title='1 Hour'
                     dat={DataLink.market_data.price_change_percentage_1h_in_currency.usd}

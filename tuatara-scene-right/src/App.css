@@ -8,7 +8,7 @@
 }
 
 #root {
-  background: #000000bd;
+  background: #0000;
   color: #e6e6e6e3;
   width: 50vw;
   height: 1000px;
@@ -134,7 +134,7 @@ h4{
   margin-top: 0;
   font-size: 30px;
   letter-spacing: 10px;
-  width: 50%;
+  width: 100%;
   height: auto;
   right: 0;
   position: relative;
@@ -142,6 +142,12 @@ h4{
   /* background: rgba(0, 0, 0, 0.5);   */
   margin: 0;
   text-align: center;
+}
+.coinPrice--prices--container{
+  display: flex;
+  justify-content:space-around;
+  background: linear-gradient(90deg, #fff 0%, #fff 100%); 
+  color: #000;
 }
 
 .coinPrice--title-text {
@@ -210,40 +216,23 @@ h4{
   margin-top: 0;
   padding: 10px;
   color: #242424e3;
-  color: #e6e6e6e3;
+  color: #626890;
   text-align:center;
   position: relative;
   z-index: 100;
+  font-size:3rem;
+  display: flex;
 }
 
-.coinPrice--subCur--text{
-  margin: 0;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-bottom: 0;
-  padding: 1rem;
-  font-size: 30px;
-  /* background-image: linear-gradient( #45f5e8, #d2ea32); */
-  text-transform: uppercase;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-align:left;
-  z-index: 100;
-  position: relative;
-  color: #343636;
-  color: #e6e6e6e3;
-  font-size: 1.5rem;
+.coinPrice--price-label {
+  font-size:2rem;
 }
 
-.collection--graph--title{
-  margin-bottom: 0;
-  padding: 0;
-  font-size: 2rem;
-  color: #e6e6e6e3;
-  text-align: center;
-  width: 50%;
+.coinPrice--price-text:nth-of-type(2){
+  color: #f79413;
 }
+
+.coinPrice--price-text:nth-of-type(3){
+  color: #40b047;
+}
+

@@ -7,10 +7,12 @@ import SuperRare from "./components/superRare/superRare";
 import Uniswap from "./components/uniswap/uniswap";
 import Segment1 from "./segment1.json"
 import CountdownAnimation from "./components/countdownAnimation";
+import MarketLogo from "./components/graph/marketLogo";
 
 const Icon = ({ name }) => {
     const ImportedIconRef = useRef(null);
     const [loading, setLoading] = useState(false);
+
 
     useEffect(() => {
         setLoading(true);
@@ -53,7 +55,6 @@ function MarketGraph() {
 
         const CoinGeckoClient = new CoinGecko();
         let PriceLogger = async () => {
-            // let data = await CoinGeckoClient.coins.fetch('loopring', {})
             try {
                 let dataCoin0 = await CoinGeckoClient.coins.fetch(cur, {})
                 let dataMax = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: 'max' })
@@ -74,23 +75,22 @@ function MarketGraph() {
 
 
     const delay = ms => new Promise(res => setTimeout(res, ms));
-    const yourFunction = async () => {
-        await delay(10000);
-        console.log("Waited 5s");
-        setSubCur({ "symbol": "eth", "currency": "Ethereum" })
-        await delay(10000);
-        console.log("Waited 5s");
-        setSubCur({ "symbol": "btc", "currency": "Bitcoin" })
-
-        await delay(10000);
-        setSubCur({ "symbol": "usd", "currency": "USD" })
-    };
+    // const subCurCycle = async () => {
+    //     await delay(10000);
+    //     setSubCur({ "symbol": "eth", "currency": "Ethereum" })
+    //     await delay(10000);
+    //     setSubCur({ "symbol": "eth", "currency": "Ethereum" })
+    //     await delay(10000);
+    //     setSubCur({ "symbol": "btc", "currency": "Bitcoin" })
+    //     await delay(10000);
+    //     setSubCur({ "symbol": "usd", "currency": "USD" })
+    // };
 
     useEffect(() => {
         fetchMetrics(Segment1.currency)
-        yourFunction()
+        // subCurCycle()
     }, []);
-    console.log(subCur)
+
     return (
         <div className="App">
             {CoinDat.code === 200 &&
@@ -100,7 +100,11 @@ function MarketGraph() {
                         <h1 className={`coinPrice--title-text ${Segment1.currency}`}>{Segment1.currency} | {Segment1.symbol}</h1>
                         {/* <h2 className="coinPrice--layer--0">{CoinDat.data.market_data.current_price.usd}</h2> */}
                         {/* <h3 className="coinPrice--subCur--text">{subCur.symbol.toUpperCase()}</h3> */}
-                        <h2 className="coinPrice--price-text">{CoinDat.data.market_data.current_price[subCur.symbol]}{subCur.symbol.toUpperCase()}</h2>
+                        <div className={`coinPrice--prices--container`}>
+                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['eth'].toFixed(4)}<div className="coinPrice--price-label">ETH</div></div>
+                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['btc'].toFixed(5)}<div className="coinPrice--price-label">BTC</div></div>
+                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['usd'].toFixed(2)}<div className="coinPrice--price-label">USD</div></div>
+                        </div>
                         {/* <div className="collection--text--wrapper">
                             <div className="collection--text--container">
                                 <div className="collection--text--item">
@@ -123,17 +127,14 @@ function MarketGraph() {
                     {/* <p>Thumbs down {CoinDat.data.sentiment_votes_down_percentage}</p> */}
                 </>
             }
-            <h3 className="collection--graph--title">Market Data</h3>
+
+            <div className="collection--graph--title"><MarketLogo /></div>
             <Collection
                 coinDat={CoinDat}
                 coinDataMax={CoinDatMax}
                 coinData30={CoinDat30}
                 coinData1={CoinDat1}
             />
-            {/* <h2>SuperRare</h2>
-      <SuperRare />
-      <Uniswap /> */}
-            {/* Live: {CoinDat.data.last_updated} */}
         </div >
     );
 }
