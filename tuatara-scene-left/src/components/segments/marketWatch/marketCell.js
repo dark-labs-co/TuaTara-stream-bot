@@ -10,7 +10,7 @@ export default function MarketCell({ title, dat }) {
 
     return (
         <div className={`display--hero-item ${market}`}>
-            <h2 className="display-title">{title}</h2><h2 className="display-percent">{dat.toFixed(2)}%</h2><MarketWatchPlainArrow className="display-arrow" fills={market === 'up' ? '#45f55d' : '#d245f5'} rotation={market === 'up' ? 270 : 90} />
+            <h2 className="display-title">{title}</h2><h2 className="display-percent">{dat.toFixed(2)}%</h2><MarketWatchPlainArrow className="display-arrow" fills={market === 'up' ? '#1daf30' : '#d245f5'} rotation={market === 'up' ? 270 : 90} />
         </div>
     )
 }

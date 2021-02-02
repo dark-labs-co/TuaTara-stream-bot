@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import logo from './logo.svg';
 import './App.css';
 import Collection from './components/graph/collection';
 import CoinGecko from 'coingecko-api';
@@ -34,7 +33,7 @@ const Icon = ({ name }) => {
     if (!loading && ImportedIconRef.current) {
         const { current: ImportedIcon } = ImportedIconRef;
         console.log(ImportedIconRef)
-        return <img src={ImportedIcon.default} className="coinPrice--icon-img" />
+        return <><img src={ImportedIcon.default} className="coinPrice--icon-img0" /><img src={ImportedIcon.default} className="coinPrice--icon-img1" /></>
     }
 
     return null;
@@ -60,8 +59,7 @@ function MarketGraph() {
                 let dataMax = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: 'max' })
                 let data30 = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: '30' })
                 let data1 = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: '1' })
-                console.log('data1')
-                console.log(data1)
+
                 { dataCoin0.code === 200 && setCoinDat(dataCoin0) }
                 { dataMax.code === 200 && setCoinDatMax(dataMax) }
                 { data30.code === 200 && setCoinDat30(data30) }
@@ -102,8 +100,8 @@ function MarketGraph() {
                         {/* <h3 className="coinPrice--subCur--text">{subCur.symbol.toUpperCase()}</h3> */}
                         <div className={`coinPrice--prices--container`}>
                             <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['eth'].toFixed(4)}<div className="coinPrice--price-label">ETH</div></div>
-                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['btc'].toFixed(5)}<div className="coinPrice--price-label">BTC</div></div>
                             <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['usd'].toFixed(2)}<div className="coinPrice--price-label">USD</div></div>
+                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['btc'].toFixed(5)}<div className="coinPrice--price-label">BTC</div></div>
                         </div>
                         {/* <div className="collection--text--wrapper">
                             <div className="collection--text--container">
@@ -128,7 +126,9 @@ function MarketGraph() {
                 </>
             }
 
-            <div className="collection--graph--title"><MarketLogo /></div>
+            <div className="collection--graph--title">
+                <MarketLogo />
+            </div>
             <Collection
                 coinDat={CoinDat}
                 coinDataMax={CoinDatMax}

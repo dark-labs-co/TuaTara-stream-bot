@@ -33,6 +33,11 @@ module.exports = function Run() {
         console.log('Paused TuaTara Left');
     });
 
+    fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scroll/src/segment0.json', '{ "segment": "pause" }', function (err) {
+        if (err) throw err;
+        console.log('Paused TuaTara Scroll');
+    });
+
     if (segment === 'marketWatch') {
         // MarketWatch()
         PostProcess()

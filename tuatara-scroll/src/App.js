@@ -4,13 +4,12 @@ import CoinGecko from 'coingecko-api';
 import HeaderScroll from './components/headerScroll/headerScroll'
 import SegmentData from "./segment2.json"
 import GasStation from "./components/gasStation/gasStation";
-
+import MarketWatchTransition from "./components/transitions/marketWatchTransition";
 export default function App() {
   const [CoinDat, setCoinDat] = useState([])
   const [gasDatSlow, setGasDatSlow] = useState({})
   const [gasDatMed, setGasDatMed] = useState({})
   const [gasDatFast, setGasDatFast] = useState({})
-
 
   const fetchMetrics = () => {
     //? Initiate the CoinGecko API Client
@@ -59,16 +58,18 @@ export default function App() {
         <HeaderScroll
           text={CoinDat.data.market_data}
         />
+        <MarketWatchTransition />
       </>
       }
-      {gasDatFast.gas >= 10 && <>
-
-        <GasStation
-          slow={gasDatSlow}
-          medium={gasDatMed}
-          fast={gasDatFast}
-        />
-      </>}
+      {
+        gasDatFast.gas >= 10 && <>
+          <GasStation
+            slow={gasDatSlow}
+            medium={gasDatMed}
+            fast={gasDatFast}
+          />
+        </>
+      }
     </>
   )
 }

@@ -29,7 +29,7 @@ const Collection = ({ coinDataMax, coinData30, coinData1, coinDat }) => {
                     <Graph
                         coinDat={dataParse1}
                         color={'green'}
-                        height={1000}
+                        height={500}
                         top={0}
                         bottom={10}
                     />

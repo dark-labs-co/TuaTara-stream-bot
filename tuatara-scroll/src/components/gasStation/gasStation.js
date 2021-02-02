@@ -7,13 +7,13 @@ export default function GasStation({ slow, medium, fast }) {
         <div className="gasStation--wrapper">
             <div className="gasStation--item-container"><GasLogo /></div>
             <div className="gasStation--item-container"><div className="gasStation--item-label">
-                S</div>{slow.gas}
+                Slow</div>{slow.gas}
                 <div className="gasStation--item-time"> {medium.time}</div></div>
             <div className="gasStation--item-container"><div className="gasStation--item-label">
-                M</div>{medium.gas}
+                Ave</div>{medium.gas}
                 <div className="gasStation--item-time"> {medium.time}</div></div>
             <div className="gasStation--item-container"><div className="gasStation--item-label">
-                F</div>{fast.gas}
+                Fast</div>{fast.gas}
                 <div className="gasStation--item-time"> {medium.time}</div></div>
         </div>
     )

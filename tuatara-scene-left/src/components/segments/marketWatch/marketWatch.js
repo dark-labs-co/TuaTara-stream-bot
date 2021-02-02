@@ -7,7 +7,6 @@ import DataLink from '../../../segment0.json'
 import MainArea from "./mainArea"
 import RhinoAnalyzer from '../models/rhinoAnalyzer';
 import GhostAnalyzer from '../models/ghostAnalyzer';
-console.log(DataLink.segment)
 
 export default function MarketWatch() {
     const [time, setTime] = ('')

@@ -34,14 +34,23 @@ module.exports = function PostProcess() {
                     console.log('Saved - R', fIndex);
                 });
         }
+
         function write2(fIndex) {
+            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scroll/src/segment0.json',
+                JSON.stringify({ "segment": feedSegs[fIndex] }), function (err) {
+                    if (err) throw err;
+                    console.log('Saved - Scroll', fIndex);
+                });
+        }
+
+        function write3(fIndex) {
             fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/feedSegment.json',
                 JSON.stringify({ "segI": (fIndex), "segment": feedSegs }), function (err) {
                     if (err) throw err;
                     console.log('Saved!');
                 })
         }
-        function write3(fIndex) {
+        function write4(fIndex) {
             fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/feedSegmentIndex.json',
                 JSON.stringify({ "segI": (fIndex) }), function (err) {
                     if (err) throw err;
@@ -70,10 +79,16 @@ module.exports = function PostProcess() {
                 write3(feedN)
             }, 3000);
         }
+        function w4() {
+            setTimeout(function () {
+                write4(feedN)
+            }, 3000);
+        }
         w0()
         w1()
         w2()
         w3()
+        w4()
     }
     process()
 }

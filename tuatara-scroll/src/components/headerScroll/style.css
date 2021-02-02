@@ -11,7 +11,7 @@
 }
 
 .down{
-    color:#45f55d;
+    color:#1daf30;
     /* background-image: linear-gradient(to left, #d245f5, #3254ea); */
 }
 
@@ -21,7 +21,7 @@
     top:0;
     width: 50px;
     margin:0;
-    background:#45f55d;
+    background:#1daf30;
     padding: .25rem 1rem;
     z-index: 100;
     color: rgb(31, 31, 31);

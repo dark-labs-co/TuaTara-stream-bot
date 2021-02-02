@@ -66,11 +66,11 @@ const Graph = ({ coinDat, color, height, top, bottom }) => {
 
                 defs={[
                     linearGradientDef('red', [
-                        { offset: 0, color: '#45f55d' },
+                        { offset: 0, color: '#1daf30' },
                         { offset: 100, color: '#d5f545', opacity: .95 },
                     ]),
                     linearGradientDef('green', [
-                        { offset: 0, color: '#45f55d' },
+                        { offset: 0, color: '#1daf30' },
                         { offset: 100, color: '#d5f545', opacity: .95 },
                     ])
                 ]}
