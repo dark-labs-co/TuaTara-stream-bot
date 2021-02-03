@@ -9,9 +9,9 @@ const CoinList = require('./coinList.json')
 var async = require("async");
 const child_process = require("child_process")
 const PostProcess = require('../postProcess')
-// function AaveScript() {
 
 
+//function AaveScript() {
 module.exports = function AaveScript() {
 
     let flashLoanDat = {}
@@ -242,11 +242,10 @@ module.exports = function AaveScript() {
             });
         }
 
-        writeAdata();
-        writeAdataLeft();
+        // writeAdata();
+        // writeAdataLeft();
     }
     aaveGraphQuery();
-    PostProcess()
 
     // child_process.spawn('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/textToSpeech.sh', [], { shell: process.platform == 'win32' })
 

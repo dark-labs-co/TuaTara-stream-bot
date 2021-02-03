@@ -10,11 +10,11 @@ export default function MarketWatchTransition() {
     const [vidPlay, setVidPlay] = useState(false)
     useEffect(() => {
         const player = videojs(videoRef.current, { play: vidPlay, muted: true, play: true }, () => {
-            if (segment0.segment === 'pause') {
+            if (segment0.segment === 'marketWatchPause') {
                 player.src(MWVideoTransition);
                 player.play();
             }
-            if (segment0.segment === 'pauseAave') {
+            if (segment0.segment === 'aavePause') {
                 player.src(AaveVideoTransition);
                 player.play();
             }
@@ -22,7 +22,7 @@ export default function MarketWatchTransition() {
         });
 
 
-    }, [segment0]);
+    }, [segment0, videoRef, vidPlay]);
     return (
         <video ref={videoRef} height="1500px" width="1500" className="video--item" />
     )

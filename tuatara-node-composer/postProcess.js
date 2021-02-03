@@ -1,95 +1,55 @@
 var fs = require('fs');
-let feedSegment = require('./feedSegment.json');
-let feedSegmentIndex = require('./feedSegmentIndex.json');
 
 module.exports = function PostProcess() {
-    // function PostProcess() {
-    function process() {
-
-        let feedL = feedSegment.segment.length
-        let feedSegs = feedSegment.segment
-
-        let feedI = feedSegmentIndex.segI
-        let feedN = 0
-
-        if (feedI <= (feedL - 2)) {
-            feedN = feedI + 1
+    //function PostProcess(fSeg) {
+    fs.readFile('./feedSegment.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err)
+            return
         }
-        else {
-            feedN = 0
-        }
+        parseFeedSegment(JSON.parse(data))
+    })
 
-        function write0(fIndex) {
-            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/segment0.json',
-                JSON.stringify({ "segment": feedSegs[fIndex] }), function (err) {
-                    if (err) throw err;
-                    console.log('Saved - L', fIndex);
-                });
-        }
+    function parseFeedSegment(dat) {
+        let segI = dat.segI
+        let segments = dat.segments
+        let currentSegment = dat.curSegment
 
-        function write1(fIndex) {
-            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/segment0.json',
-                JSON.stringify({ "segment": feedSegs[fIndex] }), function (err) {
-                    if (err) throw err;
-                    console.log('Saved - R', fIndex);
-                });
-        }
-
-        function write2(fIndex) {
-            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scroll/src/segment0.json',
-                JSON.stringify({ "segment": feedSegs[fIndex] }), function (err) {
-                    if (err) throw err;
-                    console.log('Saved - Scroll', fIndex);
-                });
-        }
-
-        function write3(fIndex) {
-            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/feedSegment.json',
-                JSON.stringify({ "segI": (fIndex), "segment": feedSegs }), function (err) {
-                    if (err) throw err;
-                    console.log('Saved!');
-                })
-        }
-        function write4(fIndex) {
-            fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/feedSegmentIndex.json',
-                JSON.stringify({ "segI": (fIndex) }), function (err) {
-                    if (err) throw err;
-                    console.log('Saved!');
-                })
-        }
-
-
-        function w0() {
+        function w1(fIndex) {
             setTimeout(function () {
-                write0(feedN)
-            }, 3000);
+                var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/segment0.json");
+                stream.on('error', console.error);
+                stream.write(JSON.stringify({ "segment": currentSegment }));
+                stream.end();
+                console.log(4)
+
+            }, 7000);
         }
-        function w1() {
+        function w2(fIndex) {
             setTimeout(function () {
-                write1(feedN)
-            }, 3000);
+                var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scroll/src/segment0.json");
+                stream.on('error', console.error);
+                stream.write(JSON.stringify({ "segment": currentSegment }));
+                stream.end();
+                console.log(5)
+
+            }, 8000);
         }
-        function w2() {
+        function w3(fIndex) {
             setTimeout(function () {
-                write2(feedN)
-            }, 3000);
+                var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/segment0.json");
+                stream.on('error', console.error);
+                stream.write(JSON.stringify({ "segment": currentSegment }));
+                stream.end();
+                console.log(6)
+
+            }, 9000);
         }
-        function w3() {
-            setTimeout(function () {
-                write3(feedN)
-            }, 3000);
-        }
-        function w4() {
-            setTimeout(function () {
-                write4(feedN)
-            }, 3000);
-        }
-        w0()
-        w1()
-        w2()
-        w3()
-        w4()
+
+        w1(segI)
+        w2(segI)
+        w3(segI)
+
     }
-    process()
 }
 // PostProcess()

@@ -1,0 +1,24 @@
+.rateData--cell-wrapper{
+    color: #000;
+    width: 100%;
+    display: flex;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.rateData--cell-container{
+    display: flex;
+    width: 100%;
+    font-size: 1.75rem;
+}
+
+.rate--symbol-text{
+    color: #000;
+}
+
+.rateData--lending-title{
+    font-size:5rem;
+    color:#b6509e;
+    padding:0;
+    margin:0 20px;
+}

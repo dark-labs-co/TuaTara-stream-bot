@@ -7,7 +7,6 @@ export default function MainArea() {
     const [coinIndex1, setCoinIndex1] = useState(1)
     const [coinIndex2, setCoinIndex2] = useState(2)
     const [coinIndex3, setCoinIndex3] = useState(3)
-    // // console.log(DataLinkAave.borrowDat.total_amount_borrowed_100samp_DAI)
 
     const delay = ms => new Promise(res => setTimeout(res, ms));
     const coinIndexCycle = async () => {
@@ -49,19 +48,12 @@ export default function MainArea() {
     return (
         <div className="display--wrapper">
             <div className="display--container">
-                <div className="display--hero-container">
-                    <h2 className="display--hero-left">Lending</h2>
-                    <h2 className="display--hero-right">AAVE</h2>
-                </div>
                 <AaveBar
                     coinIndex0={coinIndex0}
                     coinIndex1={coinIndex1}
                     coinIndex2={coinIndex2}
                     coinIndex3={coinIndex3}
                 />
-                <div className="display--subHero-container">
-                    {/* <strong>{DataLink.borrowDat.total_amount_borrowed_100samp_ETH}</strong> */}
-                </div>
             </div >
         </div >
     )

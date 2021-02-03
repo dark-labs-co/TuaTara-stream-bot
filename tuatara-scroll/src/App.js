@@ -5,6 +5,8 @@ import HeaderScroll from './components/headerScroll/headerScroll'
 import SegmentData from "./segment2.json"
 import GasStation from "./components/gasStation/gasStation";
 import MarketWatchTransition from "./components/transitions/marketWatchTransition";
+import TuaTaraLogo from "./components/logo/tuaTaraLogo";
+
 export default function App() {
   const [CoinDat, setCoinDat] = useState([])
   const [gasDatSlow, setGasDatSlow] = useState({})
@@ -58,9 +60,11 @@ export default function App() {
         <HeaderScroll
           text={CoinDat.data.market_data}
         />
+        <TuaTaraLogo />
         <MarketWatchTransition />
       </>
       }
+
       {
         gasDatFast.gas >= 10 && <>
           <GasStation
