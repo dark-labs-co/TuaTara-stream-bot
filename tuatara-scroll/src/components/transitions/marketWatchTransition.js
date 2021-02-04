@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import videojs from 'video.js';
-import AaveVideoTransition from "../../assets/aaveTransition.webm";
+import AaveVideoTransition from "../../assets/aaveTransition0.webm";
 import MWVideoTransition from "../../assets/marketWatchTransition.webm";
 import './transitions.css'
 import segment0 from "../../segment0.json"

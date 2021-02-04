@@ -14,6 +14,7 @@ module.exports = function PostProcess() {
         let segI = dat.segI
         let segments = dat.segments
         let currentSegment = dat.curSegment
+        let nextSegment = dat.nextSegment
 
         function w1(fIndex) {
             setTimeout(function () {
@@ -23,7 +24,7 @@ module.exports = function PostProcess() {
                 stream.end();
                 console.log(4)
 
-            }, 7000);
+            }, 10000);
         }
         function w2(fIndex) {
             setTimeout(function () {
@@ -33,7 +34,7 @@ module.exports = function PostProcess() {
                 stream.end();
                 console.log(5)
 
-            }, 8000);
+            }, 10000);
         }
         function w3(fIndex) {
             setTimeout(function () {

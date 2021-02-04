@@ -19,24 +19,30 @@ module.exports = function Run() {
         parseFeedSegment(JSON.parse(data))
     })
 
+    let segIndex = 0
+
     function parseFeedSegment(dat) {
         let segI = dat.segI
         let segments = dat.segments
 
-        let segIndex = segI + 1
+        let curSegment = dat.nextSegment
+
+
 
         //? Reset Segment Index
-        if (segI >= (segments.length - 2)) {
+        if (segI <= (segments.length - 1)) {
+            segIndex = segI
+        }
+        else {
             segIndex = 0
         }
+        let nextSegment = dat.segments[segIndex]
 
 
-        let curSegment = segments[segIndex]
-        let nextSegment = segments[(segIndex + 1)]
 
         //? Write to tuatara-right
         //? Pause Audio
-        function writePause(nextSeg, segI, segments) {
+        function writePause(curSeg, nextSeg, indexSeg, segments) {
             setTimeout(function () {
                 var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scroll/src/segment0.json");
                 stream.on('error', console.error);
@@ -44,37 +50,37 @@ module.exports = function Run() {
                 stream.end();
                 console.log(0)
 
-            }, 5000);
+            }, 8000);
 
-            setTimeout(function () {
-                var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/segment0.json");
-                stream.on('error', console.error);
-                stream.write(`{ "segment": "${nextSeg}Pause" }`);
-                stream.end();
-                console.log(1)
-            }, 1000);
+            // setTimeout(function () {
+            //     var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/segment0.json");
+            //     stream.on('error', console.error);
+            //     stream.write(`{ "segment": "${nextSeg}Pause" }`);
+            //     stream.end();
+            //     console.log(1)
+            // }, 7000);
 
-            setTimeout(function () {
-                var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/segment0.json");
-                stream.on('error', console.error);
-                stream.write(`{ "segment": "${nextSeg}Pause" }`);
-                stream.end();
-                console.log(2)
+            // setTimeout(function () {
+            //     var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/segment0.json");
+            //     stream.on('error', console.error);
+            //     stream.write(`{ "segment": "${nextSeg}Pause" }`);
+            //     stream.end();
+            //     console.log(2)
 
-            }, 3000);
+            // }, 7000);
 
 
             setTimeout(function () {
                 var stream = fs.createWriteStream("D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/feedSegment.json");
                 stream.on('error', console.error);
-                stream.write(JSON.stringify({ "segI": segI, "curSegment": nextSeg, "segments": segments }));
+                stream.write(JSON.stringify({ "segI": (indexSeg + 1), "curSegment": curSeg, "nextSegment": nextSeg, "segments": segments }));
                 stream.end();
                 console.log(3)
 
-            }, 4000);
+            }, 7000);
         }
 
-        writePause(nextSegment, segIndex, segments)
+        writePause(curSegment, nextSegment, segIndex, segments)
 
 
         if (curSegment === 'aave') {

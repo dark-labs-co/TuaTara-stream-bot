@@ -1,24 +1,81 @@
 .rateData--cell-wrapper{
-    color: #000;
+    color: #383d51;
+    color:rgba(255, 255, 255, 0.801);
+    background: #f5f5f565;
+    background: #383d51cc;
     width: 100%;
     display: flex;
+    flex-direction : column;
     font-weight: bold;
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
-.rateData--cell-container{
+.rateData--cell-container {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+.rateData--title-container{
+    display: flex;
+    flex-direction: row;
+    background:rgba(255, 255, 255, 0.801);
+    color: #383d51;
+    z-index: 1;
+    font-size: 1.3rem;
+}
+
+.rate--symbol-title-text{
+    color: #383d51;
+}
+
+.rateData--cell-item{
     display: flex;
     width: 100%;
     font-size: 1.75rem;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+}
+
+.rateData--cell-item:nth-of-type(2){
+    border-right: solid 4px #b6509e;
+    border-color: linear-gradient(#b6509e, #9198e5);
+}
+
+.rateData--cell-item:nth-of-type(3){
+    border-right: solid 4px #2cb8c3;
+}
+
+.rateData--cell-item:nth-of-type(4){
+    border-right: solid 4px #2cb8c3;
 }
 
 .rate--symbol-text{
-    color: #000;
+    color: #ececec;
 }
 
-.rateData--lending-title{
-    font-size:5rem;
-    color:#b6509e;
-    padding:0;
-    margin:0 20px;
+.rateData--lending-title {
+    font-size: 5rem;
+    background: #383d51;    
+    padding: 20px 20px;
+    margin: 0 0px;
+    /* text-align: center; */
+    /* margin: auto; */
+    /* width: 100%; */
+    z-index: 1;
+}
+
+.aave--token-icon{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    padding: auto;
+}
+
+.coinPrice--icon-img1 {
 }

@@ -11,10 +11,10 @@ const child_process = require("child_process")
 const PostProcess = require('../postProcess')
 
 
-//function AaveScript() {
-module.exports = function AaveScript() {
+function AaveScript() {
+    //module.exports = function AaveScript() {
+    let flashLoanDat = []
 
-    let flashLoanDat = {}
     let rateDat = {
         script: '',
         scriptDat: [],
@@ -144,10 +144,16 @@ module.exports = function AaveScript() {
         for (let i = 0; i < flash.length; i++) {
             let t = flash[i].timestamp
             let dayString = moment.unix(t).format("DD");
-            let amount = parseInt(flash[i].amount)
 
-            if (d == dayString) {
+            //? get posts from today
+            if (reserve[i] && reserve[i].symbol) {
+                let symbol = reserve[i].symbol
+                let amount = parseInt(flash[i].amount)
+                let priceInEth = reserve[i].price
+
+                flashLoanDat.push({ symbol: symbol, amount: amount, priceInEth: priceInEth.priceInEth })
                 // console.log(`Flash: ${amount.toFixed()} ${flash[i].reserve.symbol}`)
+                // }
             }
         }
 
@@ -242,12 +248,9 @@ module.exports = function AaveScript() {
             });
         }
 
-        // writeAdata();
-        // writeAdataLeft();
+        writeAdata();
+        writeAdataLeft();
     }
     aaveGraphQuery();
-
-    // child_process.spawn('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-node-composer/textToSpeech.sh', [], { shell: process.platform == 'win32' })
-
 }
-// AaveScript()
+AaveScript()
