@@ -155,6 +155,7 @@ h4{
   display: flex;
   justify-content:space-around;
   background: linear-gradient(90deg, #fff 0%, #fff 100%); 
+  background: rgba(0, 0, 0, 0.733);
   color: #000;
 }
 

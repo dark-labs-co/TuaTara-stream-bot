@@ -41,7 +41,7 @@ h1 {
 
 .display--wrapper{
   position: absolute;
-  top: 145px;
+  top: 100px;
   width: 100%;
   height: calc(100% - 145px);
   display: grid;
@@ -63,6 +63,24 @@ h1 {
   background: rgba(0, 0, 0, 0.8); 
   color: #fff;
   margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align:left;
+  justify-content:end;
+}
+
+.display--title-container{
+  color: #383d51cc;
+}
+.display--title-text{
+  position: relative;
+  left:15px;
+  top:-10px;
+  margin: 1vh 0;
+  padding:0vh 0;
+  color: #383d51cc;
+  font-size: 4.5rem;
+  font-style: italic;
 }
 
 .display--hero-item {
@@ -71,7 +89,7 @@ h1 {
   justify-content: space-between;
   height: min-content;
   padding: .0rem 2rem;
-  margin: .5rem 1rem;
+  margin: .2rem 1rem;
   background: rgba(255, 255, 255, 0.7); 
   /* border: solid 1px #dfdfdf; */
   color: #dfdfdf;

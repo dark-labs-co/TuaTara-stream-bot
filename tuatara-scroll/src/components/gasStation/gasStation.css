@@ -1,81 +1,112 @@
 .gasStation--wrapper{
     position: absolute;
-    bottom:0;
+    bottom:-18px;
     right:0;
-    width: 60%;
+    width: 70%;
     display: flex;
-    background: rgba(46, 119, 216, 0.637);
-    background:hsla(46, 62%, 96%, 0.9);
-    border-top: solid 8px hsla(46, 75%, 54%, 0.9);
-    border-left: solid 8px hsla(46, 75%, 54%, 0.9);
-    border-left: solid 8px hsla(46, 75%, 54%, 0.9);
-    height: 85px;
-    outline: 5px solid rgba(46, 119, 216, 0.637);
+    background:hsla(0, 0%, 0%, 0.424);
+    border-top: solid 4px #d245f5;
+    border-left: solid 4px #d245f5;
+    border-left: solid 4px #d245f5;
+    outline: 5px solid  #d245f5;
     outline-offset: 7px; /* box-shadow: 200px 80px 50px 0px rgba(46, 119, 216, 0.637); */
+    opacity: .8;
 }
 
 .gasStation--logo-container{
-    width: 100%;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    margin: 0;
+    margin-top: -17px;
+    padding: 0;
 }
 
 .gasStation--item-label{
     /* border-right: solid 5px rgba(255, 255, 255, 0.924); */
-    width: 10%;
-    padding: 0 1rem;
+    padding: 0 0rem;
+    padding-right: 1.5rem;
     color:rgba(243, 108, 18, 0.897);
+    color:#d245f5;
     font-size:2rem;
     margin: auto;
     margin-left: 0px;
 }
 
 .gasStation--item-container{
-    padding: 1rem 2rem;
-    width: 70%;
+    width: 100%;
     text-align:center;
     display: flex;
-    justify-content:left;
-    font-size: 3rem;
-    border-right: solid 4px rgba(46, 119, 216, 0.637);
+    justify-content:space-between;
+    font-size: 4rem;
+    border-right: solid 4px #d245f5;
     /* box-shadow: 200px 80px 30px 0px #0ff; */
-    box-shadow: 320px 85px 60px 0px rgba(46, 119, 216, 0.637);
+    box-shadow: 320px 85px 60px 0px #d245f5;
     position: relative;
     margin: auto;
     color: #4d4d4d;
+    color: #e0e0e0;
+    padding:1rem auto;
+    font-style: italic;
+    font-weight: 700;
 }
 
 .gasStation--item-container:nth-of-type(1){
     box-shadow: 320px 85px 60px 0px rgb(255, 100, 0);
-    background:rgba(233, 233, 233, 0.9);
-    width: 350px;
+    background:rgba(255, 255, 255, 0.6);
+    padding:1rem;
+    margin:0;
+    width: 100px;
 }
 
 .gasStation--item-container:nth-of-type(2){
     box-shadow: 320px 85px 60px 0px rgb(255, 102, 0);
-    font-weight: 900;
-    background:rgba(233, 233, 233, 0.9);
-    margin:auto;
-    padding: 0 1rem;
+    background:rgba(0,0,0,0.6);
+    margin:0;
+    padding:1rem;
 }
 
 .gasStation--item-container:nth-of-type(3){
     box-shadow: 320px 85px 60px 0px red;
-    font-weight: 700;
-    background:rgba(233, 233, 233, 0.9);
-    margin:auto;
-    padding: 0 1rem;
+    background:rgba(0,0,0,0.6);
+    margin:0;
+    padding:1rem;
 }
 
 .gasStation--item-container:nth-of-type(4){
     box-shadow: 320px 85px 60px 0px red;
-    font-weight: 700;
-    font-style: italic;
-    background:rgba(233, 233, 233, 0.9);
-    margin:auto;
-    padding: 0 1rem;
+    background:rgba(0,0,0,0.6);
+    margin:0;
+    padding:1rem;
 }
 
-.gasStation--item-time{
-    font-size: 2.5rem;
-    color: grey;
-    padding: 0 1rem ;
+.gasStation--gwei-text{
+    margin: auto;
 }
+
+.gasStation--gwei-time{
+    font-size: 3rem;
+    padding: 0 0rem ;
+    display: flex;
+    margin: auto;
+    padding: 0 .5rem;
+    font-style: normal;
+}
+
+.gasStation--gwei-label{
+    font-size:1.5rem;
+    color: #eee;
+    /* padding: 0 1rem ;0 */
+    /* padding-right: 1rem ; */
+    font-style: normal;
+    padding: 0 .1rem ;
+}
+
+.gasStation--time-label{
+    font-size:1.5rem;
+    color: #eee;
+    padding: 0 .1rem ;
+    /* padding-right: 1rem ; */
+    font-style: normal;
+}
+

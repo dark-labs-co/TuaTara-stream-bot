@@ -2,7 +2,7 @@
     color: #383d51;
     color:rgba(255, 255, 255, 0.801);
     background: #f5f5f565;
-    background: #383d51cc;
+    background: #383d5150;
     width: 100%;
     display: flex;
     flex-direction : column;
@@ -25,7 +25,10 @@
     background:rgba(255, 255, 255, 0.801);
     color: #383d51;
     z-index: 1;
+    margin-top: 150px;
     font-size: 1.3rem;
+    border-top: solid 4px #2cb8c3;
+    border-bottom: solid 4px #b6509e;
 }
 
 .rate--symbol-title-text{
@@ -60,14 +63,14 @@
 }
 
 .rateData--lending-title {
-    font-size: 5rem;
-    background: #383d51;    
+    font-size: 2.5rem;
     padding: 20px 20px;
     margin: 0 0px;
-    /* text-align: center; */
-    /* margin: auto; */
-    /* width: 100%; */
-    z-index: 1;
+    z-index: 2;
+    height: 0px;
+    color: rgba(245, 245, 245, 0.795);
+    position: relative;
+    top: 100px;
 }
 
 .aave--token-icon{
@@ -77,5 +80,20 @@
     padding: auto;
 }
 
-.coinPrice--icon-img1 {
+.aave-logo--wrapper{
+    position: absolute;
+    top: 0px;
+    height: 8.99vh;
+    padding:2vh 0;
+    padding-bottom:4vh;
+    width: 50%;
+    background: #383d51d0;
+    text-align: center;
+    z-index: 2;
 }
+
+.aave-logo--item {
+    height: 100%;
+    margin: auto;
+}
+

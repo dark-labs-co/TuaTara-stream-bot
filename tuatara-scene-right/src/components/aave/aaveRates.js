@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import DataLink from '../../dataLinkAaveRaw.json'
 import "./aave.css"
 import { useSpring, animated } from "react-spring";
+import AaveLogoImg from "../../assets/aaveLogos/Aave Logo.svg"
 
 function AaveRateCell({ dataLink }) {
 
@@ -87,6 +88,9 @@ export default function AaveRates() {
 
     return (
         <>
+            <div className={'aave-logo--wrapper'}>
+                <img className={'aave-logo--item'} src={AaveLogoImg} />
+            </div>
             <div className="rateData--cell-wrapper">
                 <h1 className="rateData--lending-title">Liquidity Rates</h1>
                 <div className="rateData--title-container">

@@ -1,6 +1,5 @@
 import React from 'react'
 import DataLink from '../../../dataLinkRaw.json'
-import MarketWatchIcon from '../icon'
 import MarketCell from './marketCell'
 
 
@@ -9,10 +8,9 @@ export default function MainArea() {
     return (
         <div className="display--wrapper">
             <div className="display--container">
-                {/* <h2 className="display--hero-title">Market Watch</h2> */}
-                {/* <div className="display--subHero-container">
-                    <strong>{DataLink.market_data.current_price.usd}</strong>$
-                </div> */}
+                <div className="display--title-container">
+                    <h1 className="display--title-text">Price Movement</h1>
+                </div>
                 <MarketCell
                     title='1 Hour'
                     dat={DataLink.market_data.price_change_percentage_1h_in_currency.usd}
@@ -46,37 +44,6 @@ export default function MainArea() {
                     dat={DataLink.market_data.price_change_percentage_1y}
                 />
             </div>
-
-
-            {/* <div className="display-sample--container">
-                <div className="display-item">
-                    <MarketWatchIcon
-                        stroke="#EBEBEB" />
-                </div>
-                <div className="display-item">
-                    <MarketWatchIcon
-                        stroke="#000" />
-                </div>
-                <div className="display-item">
-                    <MarketWatchIcon
-                        stroke="#000" />
-                </div>
-
-                <div className="display-item">
-                    <MarketWatchIcon
-                        stroke="#000" />
-                </div>
-
-                <div className="display-item">
-                    <MarketWatchIcon
-                        stroke="#000" />
-                </div>
-                <div className="display-item">
-                    <MarketWatchIcon
-                        stroke="#000" />
-                </div>
-            </div> */}
-
         </div >
     )
 }

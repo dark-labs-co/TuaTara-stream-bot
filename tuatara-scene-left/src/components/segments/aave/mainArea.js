@@ -49,6 +49,8 @@ export default function MainArea() {
         <div className="display--wrapper">
             <div className="display--container">
                 <AaveBar
+                    serviceName={'Lending'}
+                    serviceType={'lendingData'}
                     coinIndex0={coinIndex0}
                     coinIndex1={coinIndex1}
                     coinIndex2={coinIndex2}

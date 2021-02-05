@@ -14,9 +14,11 @@ const theme = {
         }
     }
 }
-export const AaveBar = ({ coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
+export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
     <>
-        <div className={'aave-bar--wrapper'}>
+        <h1 className='aave-section--title'>{serviceName}</h1>
+        <h1 className='aave-section--subTitle'>last 10,000 txs</h1>
+        <div className='aave-bar--wrapper'>
             <ResponsiveBar
                 data={[
                     {
@@ -53,7 +55,7 @@ export const AaveBar = ({ coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
                 keys={['coin0_deposit', 'coin0_borrow', 'coin1_deposit', 'coin1_borrow', 'coin2_deposit', 'coin2_borrow', 'coin3_deposit', 'coin3_borrow']}
                 indexBy="symbol"
                 margin={{ top: 10, right: 0, bottom: 20, left: 0 }}
-                padding={0.3}
+                padding={.1}
                 valueScale={{ type: 'linear' }}
                 indexScale={{ type: 'band', round: true }}
                 theme={theme}
@@ -63,20 +65,21 @@ export const AaveBar = ({ coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
                     {
                         id: 'borrow',
                         type: 'patternLines',
-                        background: '#b6509e',
-                        color: '#b6509e',
+                        background: '#b6509e70',
+                        color: '#b6509e70',
                         size: 4,
-                        padding: 1,
-                        stagger: true
+                        padding: 0,
+                        stagger: false
                     },
                     {
                         id: 'deposit',
                         type: 'patternLines',
-                        background: '#2cb8c3',
-                        color: '#2cb8c3',
+                        background: '#2cb8c370',
+                        color: '#2cb8c370',
                         size: 4,
-                        padding: 1,
-                        stagger: true
+                        padding: 0,
+                        stagger: false,
+                        opacity: 0.1
                     }
 
                 ]}
@@ -186,19 +189,61 @@ export const AaveBar = ({ coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
         </div>
         <div className="aave--coinName-wrapper">
             <div className="aave--coinName-text">
-                {AaveDataLink.lendingData[coinIndex0].symbol}
-            </div>
-            <div className="aave--coinName-text">
-                {AaveDataLink.lendingData[coinIndex1].symbol}
+                <div className="aave--coinName-title">
+                    {AaveDataLink.lendingData[coinIndex0].symbol}
+                </div>
+                <div className="aave--coinName-data0">
+                    {AaveDataLink.lendingData[coinIndex0].deposit}
+                    <br />
 
+                    <div className="aave--coinName-data1">
+                        {AaveDataLink.lendingData[coinIndex0].borrow}
+                    </div>
+                </div>
+            </div>
+
+            <div className="aave--coinName-text">
+                <div className="aave--coinName-title">
+                    {AaveDataLink.lendingData[coinIndex1].symbol}
+                </div>
+                <div className="aave--coinName-data0">
+                    {AaveDataLink.lendingData[coinIndex1].deposit}
+                    <br />
+
+                    <div className="aave--coinName-data1">
+                        {AaveDataLink.lendingData[coinIndex1].borrow}
+                    </div>
+                </div>
+            </div>
+
+            <div className="aave--coinName-text">
+                <div className="aave--coinName-title">
+                    {AaveDataLink.lendingData[coinIndex2].symbol}
+                </div>
+                <div className="aave--coinName-data0">
+                    {AaveDataLink.lendingData[coinIndex2].deposit}
+                    <br />
+
+                    <div className="aave--coinName-data1">
+                        {AaveDataLink.lendingData[coinIndex2].borrow}
+                    </div>
+                </div>
             </div>
             <div className="aave--coinName-text">
-                {AaveDataLink.lendingData[coinIndex2].symbol}
-            </div>
-            <div className="aave--coinName-text">
-                {AaveDataLink.lendingData[coinIndex3].symbol}
+                <div className="aave--coinName-title">
+                    {AaveDataLink.lendingData[coinIndex3].symbol}
+                </div>
+                <div className="aave--coinName-data0">
+                    {AaveDataLink.lendingData[coinIndex3].deposit}
+                    <br />
+
+                    <div className="aave--coinName-data1">
+                        {AaveDataLink.lendingData[coinIndex3].borrow}
+                    </div>
+                </div>
             </div>
         </div>
+
         <svg className="aave--graphOverlay-l0" viewBox="0 -50 2000 2000">
             <defs>
                 <linearGradient id="grad0" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -239,39 +284,9 @@ export const AaveBar = ({ coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
                 d="M 543.57795,786.43914 H 1432.6474"
                 id="path945-9"
 
-                fill="rgba(255, 255, 255, 0.)" />
-            <g
-                id="g1039"
-                transform="matrix(2.1945262,0,0,2.1945262,519.17703,255.35523)">
-                <circle
-                    id="path988-5-6"
-                    cx="213.4561"
-                    cy="-70.659256"
-                    r="39.970787"
-                    fill="url(#grad0)"
-                />
-                <circle
-                    id="path988"
-                    cx="213.4561"
-                    cy="-70.659256"
-                    r="36.79253"
+                fill="rgba(255, 255, 255, 0)"
+            />
 
-                    fill="url(#grad1)"
-                />
-                <circle
-                    id="path988-2"
-                    cx="213.4561"
-                    cy="-70.659256"
-                    r="31.577211"
-
-                    fill="url(#grad2)"
-                />
-                <path
-                    d="m 217.91315,-87.255856 -17.50856,19.749139 h 11.77171 l -3.82148,13.44406 18.1528,-20.468299 h -11.5084 z"
-                    id="path986"
-
-                    fill="#fff" />
-            </g>
             <g
                 stroke="#fff"
             >
@@ -345,6 +360,7 @@ export const AaveBar = ({ coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
                     id="path1045-9-2-2-2"
                     stroke="#2cb8c3"
                     strokeWidth="5"
+                    stroke
                 />
                 <path
                     d="m 1432.6474,786.43914 442.2213,543.56936"

@@ -20,10 +20,9 @@ export default function MarketWatchTransition() {
             }
             setVidPlay(true);
         });
-
-
     }, [segment0, videoRef, vidPlay]);
+
     return (
-        <video ref={videoRef} height="1500px" width="1500" className="video--item" />
+        <video ref={videoRef} width="2200" className="video--item" />
     )
 }

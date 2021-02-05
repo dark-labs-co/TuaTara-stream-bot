@@ -11,7 +11,10 @@
 
 .aave--graphOverlay-l0{
     position: absolute;
-
+    margin-top: -680px;
+    opacity: 0.3;
+    margin-left: 350px;
+    z-index: -3;
 }
 
 .display--hero-container{
@@ -60,12 +63,29 @@ text{
     text-align: center;
     font-size:3rem;
     font-weight:bold;
+    border-top: solid 4px #2cb8c3;
     color: #2cb8c3;
+    background: rgba(255, 255, 255, 0.596);
+    color: rgba(0, 0, 0, 0.596);
+    margin:0 .2rem;
 }
 
-.aave--coinName-text:nth-of-type(3),
-.aave--coinName-text:nth-of-type(4) {
+.aave--coinName-title{
+    background: rgba(0, 0, 0, 0.596);
+    color: rgba(255, 255, 255, 0.801);
+    font-weight:900;
+}
+
+.aave--coinName-data0{
+    color: rgba(255, 255, 255, 0.596);
     color: #b6509e;
+    border-top: solid 4px #b6509e;
+    font-size: 2.99rem;
+}
+
+.aave--coinName-data1{
+    color: #2cb8c3;
+    border-top: solid 4px #2cb8c3;
 }
 
 .footer--wrapper{
@@ -76,4 +96,21 @@ text{
     font-weight:bold;
     color: #b6509e;
     margin-top:110px ;
+}
+
+.aave-section--title{
+    position: absolute;
+    left: 50vw;
+    top: 3vh;
+    font-size: 10rem;
+    z-index: -1;
+    color:rgba(255, 255, 255, 0.733);
+}
+.aave-section--subTitle{
+    position: absolute;
+    left: 50vw;
+    top: 20vh;
+    font-size: 7rem;
+    z-index: -1;
+    color:rgba(255, 255, 255, .4);
 }

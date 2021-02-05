@@ -11,8 +11,8 @@ const child_process = require("child_process")
 const PostProcess = require('../postProcess')
 
 
-function AaveScript() {
-    //module.exports = function AaveScript() {
+//function AaveScript() {
+module.exports = function AaveScript() {
     let flashLoanDat = []
 
     let rateDat = {
@@ -139,6 +139,7 @@ function AaveScript() {
         let borrow = r.data.borrows
         let deposit = r.data.deposits
         let reserve = r.data.reserves
+        let flashLoanList = []
 
         //? parse FlashLoans
         for (let i = 0; i < flash.length; i++) {
@@ -151,11 +152,27 @@ function AaveScript() {
                 let amount = parseInt(flash[i].amount)
                 let priceInEth = reserve[i].price
 
-                flashLoanDat.push({ symbol: symbol, amount: amount, priceInEth: priceInEth.priceInEth })
+                flashLoanList.push({ symbol: symbol, amount: amount, priceInEth: priceInEth.priceInEth })
                 // console.log(`Flash: ${amount.toFixed()} ${flash[i].reserve.symbol}`)
                 // }
             }
         }
+
+        //? Compile to totals, convert to eth, push to flashLoanDat  
+        //? cycle through coin symbol list and concatinate to lists in order to add totals
+
+        // for (let i = 0; i < CoinList.length; i++) {
+        //     //? check if symbol in list matches the returned element and push it to borrow array 
+        //     if (flashLoanList[i].symbol && (flashLoanList[i] === CoinList[i].symbol)) {
+        //         const element = flashLoanList[i];
+        //         console.log(element.symbol)
+        //         element.borrow.push(bAmount)
+        //         // element.vsEth = priceInEth.priceInEth
+        //     }
+        //     // console.log(coinData)
+        // }
+
+
 
         // ? parse Rates
         for (let i = 0; i < reserve.length; i++) {
@@ -182,6 +199,7 @@ function AaveScript() {
             let symbol = borrow[i].reserve.symbol
             let priceInEth = borrow[i].reserve.price
             // coinData.borrow.push(bAmount)
+            //? cycle through coin symbol list and concatinate to lists in order to add totals
             for (let i = 0; i < CoinList.length; i++) {
                 //? check if symbol in list matches the returned element and push it to borrow array 
                 if (symbol === CoinList[i].symbol) {
@@ -253,4 +271,4 @@ function AaveScript() {
     }
     aaveGraphQuery();
 }
-AaveScript()
+// AaveScript()
