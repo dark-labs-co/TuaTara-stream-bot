@@ -146,7 +146,7 @@ h4{
   height: auto;
   right: 0;
   position: relative;
-  /* background: linear-gradient(-90deg, #1daf30 0%, #d5f545 100%);  */
+  /* background: linear-gradient(-0, #1daf30 90deg,%, #d5f545 0%);  */
   /* background: rgba(0, 0, 0, 0.5);   */
   margin: 0;
   text-align: center;
@@ -154,7 +154,7 @@ h4{
 .coinPrice--prices--container{
   display: flex;
   justify-content:space-around;
-  background: linear-gradient(90deg, #fff 0%, #fff 100%); 
+  background: linear-gradient(90deg, #fff 0%, #fff 50%, #fff 100%); 
   background: rgba(0, 0, 0, 0.733);
   color: #000;
 }
@@ -164,50 +164,101 @@ h4{
   padding: 1rem;
   padding-left: 20px;
   margin: 0;
-  background: linear-gradient(90deg, #1daf30 0%, #d5f545 100%); 
+  background: linear-gradient(90deg, #d5f545 0%, #1daf30 50%, #d5f545 100%); 
   color: #000;
   text-transform:capitalize;
   height: 70px;
 }
 
 .coinPrice--title-text.ethereum{
-  background: linear-gradient(90deg, #434976 0%, #fff 100%);
+  background: linear-gradient(90deg, #fff 0%, #434976 50%, #fff 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.bitcoin{
-  background: linear-gradient(90deg, #f79413 0%, #fff 100%);
+  background: linear-gradient(90deg, #fff 0%, #f79413 50%, #fff 100%);
   color: #fff;
 }
 
+.coinPrice--title-text.bitcoin-cash{
+  background: linear-gradient(90deg, #fff 0%, #02c28f 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.binance-usd, .coinPrice--title-text.binance-cash, .coinPrice--title-text.binance-coin{
+  background: linear-gradient(90deg, #fff 0%, #f0ba03 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.ripple{
+  background: linear-gradient(90deg, #fff 0%, #000 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.okb{
+  background: linear-gradient(90deg, #fff 0%, #1a5fed 50%, #fff 100%);
+  color: #fff; 
+} 
+.coinPrice--title-text.dogecoin {
+  background: linear-gradient(90deg, #fff 0%, #e1cf8a 50%, #fff 100%);
+  color: #fff; 
+}
 .coinPrice--title-text.eos{
-  background: linear-gradient(90deg, rgb(78, 78, 78) 0%, #fff 100%);
+  background: linear-gradient(90deg, #fff 0%, #4e4e4e 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.the-graph{
+  background: linear-gradient(90deg, #4782e4 0%,#5f37cd 50%, #4782e4 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.tron{
+  background: linear-gradient(90deg, #fff 0%, #c53027 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.stellar{
+  background: linear-gradient(90deg, #fff 0%, #000000 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.chainlink{
+  background: linear-gradient(90deg, #fff 0%, #2a5ada 50%, #fff 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.polkadot{
-  background: linear-gradient(90deg, #e6007a 0%, #fff 100%);
+  background: linear-gradient(90deg, #fff 0%, #e6007a 50%, #fff 100%);
   color: #fff;
 }
 
-
+.coinPrice--title-text.dash{
+  background: linear-gradient(90deg, #fff 0%, #008ee5 50%, #fff 100%);
+  color: #fff;
+}
 .coinPrice--title-text.aave{
-  background: linear-gradient(90deg, #ae56a1 0%, #39b0c2 100%);
+  background: linear-gradient(90deg, #39b0c2 0%, #ae56a1 50%, #39b0c2 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.uniswap{
+  background: linear-gradient(90deg, #fdf2f7 0%, #fe007b 50%, #fdf2f7 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.cardano{
-  background: linear-gradient(90deg, #236dd3 0%, #fff 100%);
+  background: linear-gradient(90deg, #fff 0%, #236dd3 50%, #fff 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.litecoin{
-  background: linear-gradient(90deg, #848484 0%, #fff 100%);
+  background: linear-gradient(90deg, #fff 0%, #848484 50%, #fff 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.monero{
-  background: linear-gradient(90deg,#f2681c 0%, #4c4c4c 100%);
+  background: linear-gradient(90deg,#4c4c4c 0%, #f2681c 50%, #4c4c4c 100%);
   color: #fff;
 }
 
@@ -225,7 +276,7 @@ h4{
   margin-top: 0;
   padding: 10px;
   color: #242424e3;
-  color: #626890;
+  color:#fff;
   text-align:center;
   position: relative;
   z-index: 100;
@@ -233,15 +284,23 @@ h4{
   display: flex;
 }
 
+.coinPrice--price-text:nth-of-type(2) {
+  font-size:3.5rem;
+}
+
 .coinPrice--price-label {
   font-size:2rem;
 }
 
-.coinPrice--price-text:nth-of-type(2){
+.coinPrice--price-label.eth{
+  color: #406bb0;
+}
+
+.coinPrice--price-label.usd{
   color: #40b047;
 }
 
-.coinPrice--price-text:nth-of-type(3){
+.coinPrice--price-label.btc{
   color: #f79413;
 }
 

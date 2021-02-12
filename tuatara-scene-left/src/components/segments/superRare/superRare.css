@@ -1,0 +1,23 @@
+.art--cell-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.art--cell-container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.art--cell-title{
+
+}
+
+.art--cell-image{
+    height: 200px;
+    width: 200px;
+}

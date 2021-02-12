@@ -25,45 +25,40 @@ const Collection = ({ coinDataMax, coinData30, coinData1, coinDat }) => {
 
         return (
             <div className="collection--wrapper">
+                <h1>Prices</h1>
                 <div className="collection--container">
+                    <h3 className="collection--text">Today</h3>
                     <Graph
                         coinDat={dataParse1}
                         color={'green'}
-                        height={500}
+                        height={575}
                         top={0}
                         bottom={10}
                     />
-                    <h3 className="collection--text">Today</h3>
-
-                    {/* <div className="collection--text--container">
-                            <p className="collection--change">Price Change:</p>
-                            <h4> {coinDat.data.market_data.price_change_24h.toFixed(2)}</h4>
-                        </div> */}
                 </div>
 
                 <div className="collection--container">
-                    <div className="collection--container-half">
-                        <Graph
-                            coinDat={dataParse30}
-                            color={'red'}
-                            height={250}
-                            top={0}
-                            bottom={0}
-                        />
-                        <h3 className="collection--text">30 Days</h3>
-                    </div>
-                    <div className="collection--container-half">
-                        <Graph
-                            coinDat={dataParseMax}
-                            color={'red'}
-                            height={150}
-                            top={0}
-                            bottom={0}
-                        />
-                        <h3 className="collection--text">Max</h3>
-                    </div>
+                    <h3 className="collection--text">30 Days</h3>
+                    <Graph
+                        coinDat={dataParse30}
+                        color={'red'}
+                        height={150}
+                        top={0}
+                        bottom={0}
+                    />
                 </div>
-            </div>
+
+                <div className="collection--container">
+                    <h3 className="collection--text">Max</h3>
+                    <Graph
+                        coinDat={dataParseMax}
+                        color={'red'}
+                        height={150}
+                        top={0}
+                        bottom={0}
+                    />
+                </div>
+            </div >
         )
     }
     return (

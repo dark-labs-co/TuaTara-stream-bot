@@ -22,32 +22,39 @@ export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinI
             <ResponsiveBar
                 data={[
                     {
-                        "symbol": "coin0",
-                        "coin0_borrow": (AaveDataLink.lendingData[coinIndex0].borrow * AaveDataLink.lendingData[coinIndex0].vsEth).toFixed(),
+                        "symbol": "coin",
+                        "coin0_borrow": 0,
                         "coin0_borrowColor": "hsl(38, 70%, 50%)",
-                        "coin0_deposit": (AaveDataLink.lendingData[coinIndex0].deposit * AaveDataLink.lendingData[coinIndex0].vsEth).toFixed(),
+                        "coin0_deposit": 0,
+                        "coin0_depositColor": "#2cb8c3",
+                    },
+                    {
+                        "symbol": "coin0",
+                        "coin0_borrow": (AaveDataLink.lendingData[coinIndex0].deposit * AaveDataLink.lendingData[coinIndex0].vsEth).toFixed(),
+                        "coin0_borrowColor": "hsl(38, 70%, 50%)",
+                        "coin0_deposit": (AaveDataLink.lendingData[coinIndex0].borrow * AaveDataLink.lendingData[coinIndex0].vsEth).toFixed(),
                         "coin0_depositColor": "#2cb8c3",
                     },
                     {
                         "symbol": "coin1",
-                        "coin1_borrow": (AaveDataLink.lendingData[coinIndex1].borrow * AaveDataLink.lendingData[coinIndex1].vsEth).toFixed(),
+                        "coin1_borrow": (AaveDataLink.lendingData[coinIndex1].deposit * AaveDataLink.lendingData[coinIndex1].vsEth).toFixed(),
                         "coin1_borrowColor": "hsl(38, 70%, 50%)",
-                        "coin1_deposit": (AaveDataLink.lendingData[coinIndex1].deposit * AaveDataLink.lendingData[coinIndex1].vsEth).toFixed(),
+                        "coin1_deposit": (AaveDataLink.lendingData[coinIndex1].borrow * AaveDataLink.lendingData[coinIndex1].vsEth).toFixed(),
                         "coin1_depositColor": "hsl(38, 70%, 50%)",
                     },
                     {
                         "symbol": "coin2",
-                        "coin2_borrow": (AaveDataLink.lendingData[coinIndex2].borrow * AaveDataLink.lendingData[coinIndex2].vsEth).toFixed(),
+                        "coin2_borrow": (AaveDataLink.lendingData[coinIndex2].deposit * AaveDataLink.lendingData[coinIndex2].vsEth).toFixed(),
                         "coin2_borrowColor": "hsl(38, 70%, 50%)",
-                        "coin2_deposit": (AaveDataLink.lendingData[coinIndex2].deposit * AaveDataLink.lendingData[coinIndex2].vsEth).toFixed(),
+                        "coin2_deposit": (AaveDataLink.lendingData[coinIndex2].borrow * AaveDataLink.lendingData[coinIndex2].vsEth).toFixed(),
                         "coin2_depositColor": "hsl(38, 70%, 50%)",
                     },
 
                     {
                         "symbol": "coin3",
-                        "coin3_borrow": (AaveDataLink.lendingData[coinIndex3].borrow * AaveDataLink.lendingData[coinIndex3].vsEth).toFixed(),
+                        "coin3_borrow": (AaveDataLink.lendingData[coinIndex3].deposit * AaveDataLink.lendingData[coinIndex3].vsEth).toFixed(),
                         "coin3_borrowColor": "hsl(38, 70%, 50%)",
-                        "coin3_deposit": (AaveDataLink.lendingData[coinIndex3].deposit * AaveDataLink.lendingData[coinIndex3].vsEth).toFixed(),
+                        "coin3_deposit": (AaveDataLink.lendingData[coinIndex3].borrow * AaveDataLink.lendingData[coinIndex3].vsEth).toFixed(),
                         "coin3_depositColor": "hsl(38, 70%, 50%)",
                     },
 
@@ -190,6 +197,20 @@ export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinI
         <div className="aave--coinName-wrapper">
             <div className="aave--coinName-text">
                 <div className="aave--coinName-title">
+                    Type
+                </div>
+                <div className="aave--coinName-data0">
+                    Borrow
+                    <br />
+
+                    <div className="aave--coinName-data1">
+                        Deposit
+                    </div>
+                </div>
+            </div>
+
+            <div className="aave--coinName-text">
+                <div className="aave--coinName-title">
                     {AaveDataLink.lendingData[coinIndex0].symbol}
                 </div>
                 <div className="aave--coinName-data0">
@@ -223,7 +244,6 @@ export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinI
                 <div className="aave--coinName-data0">
                     {AaveDataLink.lendingData[coinIndex2].deposit}
                     <br />
-
                     <div className="aave--coinName-data1">
                         {AaveDataLink.lendingData[coinIndex2].borrow}
                     </div>

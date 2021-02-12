@@ -33,9 +33,13 @@ function SuperRare() {
 
         let graphql = JSON.stringify({
             query: `{
-                artworks(first: 100 orderBy:tokenId orderDirection:desc) {
+                artworks(first: 100 orderBy:created orderDirection:desc) {
                   descriptorUri
                   tokenId
+                  salePrice
+                  currentBid{
+                      amount
+                  }
                   creator {
                     id
                   }
@@ -74,7 +78,7 @@ function SuperRare() {
         function parseSuperRareUri(r) {
             artworksDat.recent.push(r);
             console.log(artworksDat.recent.length);
-            if (artworksDat.recent.length >= 15) {
+            if (artworksDat.recent.length >= 100) {
                 writeF(artworksDat)
             }
         }
@@ -82,7 +86,12 @@ function SuperRare() {
 
     //? Save Local Data
     function writeF(artworksDat) {
-        fs.writeFile('./rareData.json', JSON.stringify({ artworksDat }), function (err) {
+        // fs.writeFile('./rareData.json', JSON.stringify({ artworksDat }), function (err) {
+        //     if (err) throw err;
+        //     console.log('rareDatLocal');
+        // });
+
+        fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-left/src/rareData.json', JSON.stringify({ artworksDat }), function (err) {
             if (err) throw err;
             console.log('Saved!');
         });

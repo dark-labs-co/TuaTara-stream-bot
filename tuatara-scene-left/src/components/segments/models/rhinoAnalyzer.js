@@ -35,9 +35,9 @@ export default function RhinoAnalyzer({ sound }) {
                 mesh0.current.material.color.setRGB(10, 0, 200)
                 mesh1.current.material.color.setRGB(100, 10, 0)
                 mesh2.current.material.color.setRGB(100, 10, 0)
-                meshGroup.current.position.y = -4.25
-                meshGroup.current.position.x = -5.5
-                meshHead.current.rotation.y = (1 + Math.sin(2)) / 20
+                meshGroup.current.position.y = -4.5
+                meshGroup.current.position.x = -5.25
+                // meshHead.current.rotation.y = (1 + Math.sin(2)) / 20
                 // meshGroup.current.position.z = 100
             }
 
@@ -47,7 +47,7 @@ export default function RhinoAnalyzer({ sound }) {
                 mesh1.current.material.color.setRGB(0, data / 10, 0)
                 mesh0.current.material.color.setRGB(data / 100, 0, data / 200)
                 mesh1.current.material.color.setRGB(0, data / 10, 0);
-                meshHead.current.rotation.y = (1 + Math.sin(t / data)) / 20
+                meshHead.current.rotation.y = (0)
             }
         }
         else {

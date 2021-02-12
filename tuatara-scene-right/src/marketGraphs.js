@@ -2,8 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import './App.css';
 import Collection from './components/graph/collection';
 import CoinGecko from 'coingecko-api';
-import SuperRare from "./components/superRare/superRare";
-import Uniswap from "./components/uniswap/uniswap";
 import Segment1 from "./segment1.json"
 import CountdownAnimation from "./components/countdownAnimation";
 import MarketLogo from "./components/graph/marketLogo";
@@ -95,13 +93,13 @@ function MarketGraph() {
                 <>
                     <div className={`coinPrice--layer--container ${Segment1.currency}`}>
                         <Icon name="bitcoin" fill="red" />
-                        <h1 className={`coinPrice--title-text ${Segment1.currency}`}>{Segment1.currency} | {Segment1.symbol}</h1>
+                        <h1 className={`coinPrice--title-text ${Segment1.currency}`}>{Segment1.currency} ({Segment1.symbol})</h1>
                         {/* <h2 className="coinPrice--layer--0">{CoinDat.data.market_data.current_price.usd}</h2> */}
                         {/* <h3 className="coinPrice--subCur--text">{subCur.symbol.toUpperCase()}</h3> */}
                         <div className={`coinPrice--prices--container`}>
-                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['eth'].toFixed(4)}<div className="coinPrice--price-label">ETH</div></div>
-                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['usd'].toFixed(2)}<div className="coinPrice--price-label">USD</div></div>
-                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['btc'].toFixed(5)}<div className="coinPrice--price-label">BTC</div></div>
+                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['eth'].toFixed(4)}<div className="coinPrice--price-label eth">ETH</div></div>
+                            <div className="coinPrice--price-text usd">{CoinDat.data.market_data.current_price['usd'].toFixed(2)}<div className="coinPrice--price-label usd">USD</div></div>
+                            <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['btc'].toFixed(5)}<div className="coinPrice--price-label btc">BTC</div></div>
                         </div>
                         {/* <div className="collection--text--wrapper">
                             <div className="collection--text--container">

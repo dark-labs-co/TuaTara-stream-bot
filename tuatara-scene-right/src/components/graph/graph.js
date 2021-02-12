@@ -3,7 +3,10 @@ import { ResponsiveStream } from "@nivo/stream";
 import { linearGradientDef } from '@nivo/core'
 import './styles.css'
 
-const Graph = ({ coinDat, color, height, top, bottom }) => {
+const Graph = ({ coinDat, color, height, tickVals }) => {
+    const [highestValArr, setHighestValArr] = useState([])
+    const [highestVal, setHighestVal] = useState(0)
+
     const theme = {
         // background: "#222222",
         axis: {
@@ -14,24 +17,27 @@ const Graph = ({ coinDat, color, height, top, bottom }) => {
                     stroke: "none"
                 },
                 text: {
-                    fill: "#252727"
+                    fill: "white",
+                    fontSize: "16px",
+
                 }
             },
             legend: {
                 text: {
-                    fill: "none"
+                    fill: "white"
                 }
             }
         },
         grid: {
             line: {
-                stroke: "none"
+                stroke: "white"
             }
         }
     };
 
     {/*
 */}
+
 
     return (
         <div className="grid--container">
@@ -40,14 +46,14 @@ const Graph = ({ coinDat, color, height, top, bottom }) => {
                 keys={["ETH"]}
                 height={height}
                 order='ascending'
-                margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
+                margin={{ top: 10, right: 60, bottom: 10, left: 10 }}
                 axisTop={null}
                 axisBottom={null}
                 axisRight={{
                     enable: true,
-                    tickRotation: 0
+                    tickRotation: 0,
+                    tickValues: { tickVals }
                 }}
-                axisRight={null}
                 offsetType="none"
                 colors="none"
                 fillOpacity={0.85}

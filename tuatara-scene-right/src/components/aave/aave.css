@@ -17,7 +17,19 @@
     text-align: center;
     margin: auto;
     justify-content: center;
+    /* line-height: 1rem; */
 }
+
+.rateData--cellTitle-container {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    line-height: 2rem;
+}
+
 
 .rateData--title-container{
     display: flex;
@@ -27,8 +39,8 @@
     z-index: 1;
     margin-top: 150px;
     font-size: 1.3rem;
-    border-top: solid 4px #2cb8c3;
-    border-bottom: solid 4px #b6509e;
+    border-top: solid 6px #2cb8c3;
+    border-bottom: solid 6px #b6509e;
 }
 
 .rate--symbol-title-text{

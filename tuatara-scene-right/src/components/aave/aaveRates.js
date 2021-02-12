@@ -94,18 +94,18 @@ export default function AaveRates() {
             <div className="rateData--cell-wrapper">
                 <h1 className="rateData--lending-title">Liquidity Rates</h1>
                 <div className="rateData--title-container">
-                    <div className="rateData--cell-container">
+                    <div className="rateData--cellTitle-container">
                     </div>
-                    <div className="rateData--cell-container">
+                    <div className="rateData--cellTitle-container">
                         <h1 className="rate--symbol-title-text">Token</h1>
                     </div>
-                    <div className="rateData--cell-container">
+                    <div className="rateData--cellTitle-container">
                         <h2 className="rate--dactaItem-text vbr">VBR</h2>
                     </div>
-                    <div className="rateData--cell-container">
+                    <div className="rateData--cellTitle-container">
                         <h2 className="rate--dataItem-text vbr">Liquidity Rate</h2>
                     </div>
-                    <div className="rateData--cell-container">
+                    <div className="rateData--cellTitle-container">
                         <h2 className="rate--dataItem-text vbr">Price in ETH</h2>
                     </div>
                 </div>

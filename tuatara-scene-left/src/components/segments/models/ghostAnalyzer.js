@@ -36,8 +36,8 @@ export default function RhinoAnalyzer({ sound }) {
             if (data <= 10) {
                 // mesh1.current.material.color.setRGB(100, 10, 0)
                 // mesh0.current.material.color.setRGB(0, 0, 7)
-                meshGroup.current.position.y = (1 + Math.sin(t / 1.5)) / 10
-                meshGroup.current.position.x = (1 + Math.sin(t / 2)) / 10
+                meshGroup.current.position.y = (1 + Math.sin(t / 1.5)) / 3
+                meshGroup.current.position.x = (1 + Math.sin(t / 2)) / 7
 
                 // meshGroup.current.position.y = 10
                 // meshGroup.current.position.x = 10
@@ -53,14 +53,14 @@ export default function RhinoAnalyzer({ sound }) {
     const height = useLoader(THREE.TextureLoader, img);
     height.repeat.set(1, 1);
 
-    let pos = [-9, -3, -3]
+    let pos = [-12, -6, -3]
     let rot = [0, Math.PI / .7, 0]
     return (
         <group
             rotation-x={Math.PI / .1}
             ref={meshGroup}
             dispose={null}
-            scale={[1, 1, 1]}
+            scale={[.65, .65, .65]}
         >
             <mesh
                 geometry={nodes.ghost3.geometry}
@@ -75,7 +75,7 @@ export default function RhinoAnalyzer({ sound }) {
                     attach="material"
                     // color="#9BC6D2"
                     metalness={0.1}
-                    opacity={0.9}
+                    opacity={0.8}
                 />
             </mesh>
 
