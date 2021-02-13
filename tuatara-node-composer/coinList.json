@@ -152,28 +152,8 @@
         "symbol": "ENJ"
     },
     {
-        "currency": "x",
-        "symbol": "ZRX"
-    },
-    {
-        "currency": "elrond",
-        "symbol": "EGLD"
-    },
-    {
-        "currency": "bittorrent",
-        "symbol": "BTT"
-    },
-    {
         "currency": "zilliqa",
         "symbol": "ZIL"
-    },
-    {
-        "currency": "inch",
-        "symbol": "INCH"
-    },
-    {
-        "currency": "synthetix-network-token",
-        "symbol": "SNX"
     },
     {
         "currency": "terra",
@@ -196,16 +176,8 @@
         "symbol": "CRV"
     },
     {
-        "currency": "iost",
-        "symbol": "IOST"
-    },
-    {
         "currency": "wrapped-bitcoin",
         "symbol": "WBTC"
-    },
-    {
-        "currency": "polygon",
-        "symbol": "MATIC"
     },
     {
         "currency": "reserve-rights-token",

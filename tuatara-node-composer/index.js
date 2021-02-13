@@ -12,23 +12,22 @@ function Index() {
 
     const graphs = async () => {
         for (let i = 0; i < CoinList.length; i++) {
-            await delay(4000)
+            await delay(14000)
             console.log(CoinList[i].currency)
             GraphCollection(CoinList[i].currency, CoinList[i].symbol)
             marketGraphSync(CoinList[i].currency, CoinList[i].symbol)
         }
     }
-    //TODO Working on the graphs
+
+    cron.schedule('* * * * *', () => {
+        Run()
+        HeaderScroll()
+    })
+
     graphs()
-
-    // cron.schedule('* * * * *', () => {
-    //     Run()
-    //     HeaderScroll()
-    // })
-
-    // cron.schedule('*/3 * * * *', () => {
-    //     graphs()
-    // })
+    cron.schedule('*/3 * * * *', () => {
+        graphs()
+    })
 }
 
 Index()

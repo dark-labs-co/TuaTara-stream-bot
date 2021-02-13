@@ -175,6 +175,11 @@ h4{
   color: #fff;
 }
 
+.coinPrice--title-text.ethereum-classic{
+  background: linear-gradient(90deg, #e3e3e3 0%, #0c8412 50%, #e3e3e3 100%);
+  color: #fff;
+}
+
 .coinPrice--title-text.bitcoin{
   background: linear-gradient(90deg, #fff 0%, #f79413 50%, #fff 100%);
   color: #fff;
@@ -182,6 +187,46 @@ h4{
 
 .coinPrice--title-text.bitcoin-cash{
   background: linear-gradient(90deg, #fff 0%, #02c28f 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.wrapped-bitcoin{
+  background: linear-gradient(90deg, #fff 0%, #f09340 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.zcash{
+  background: linear-gradient(90deg, #fff 0%, #d89633 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.zilliqa{
+  background: linear-gradient(90deg, #fff 0%, #49c1bf 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.filecoin{
+  background: linear-gradient(90deg, #fff 0%, #0091ff 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.icon{
+  background: linear-gradient(90deg, #fff 0%, #0091ff 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.neo{
+  background: linear-gradient(90deg, #fff 0%, #00e69a 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.huobi-token{
+  background: linear-gradient(90deg, #e1e1e1 0%, #1fb8bd 50%, #e1e1e1 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.iota{
+  background: linear-gradient(90deg, #e1e1e1 0%, #131f37 50%, #e1e1e1 100%);
   color: #fff;
 }
 
@@ -204,7 +249,7 @@ h4{
   color: #fff; 
 }
 .coinPrice--title-text.eos{
-  background: linear-gradient(90deg, #fff 0%, #4e4e4e 50%, #fff 100%);
+  background: linear-gradient(90deg, #e0e0e0 0%, #4e4e4e 50%, #e0e0e0 100%);
   color: #fff;
 }
 
@@ -223,6 +268,21 @@ h4{
   color: #fff;
 }
 
+.coinPrice--title-text.sushi{
+  background: linear-gradient(90deg, #fff 0%, #f853a1 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.terra{
+  background: linear-gradient(90deg, #fff 0%, #001e51 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.tezos{
+  background: linear-gradient(90deg, #fff 0%, #2c7df7 50%, #fff 100%);
+  color: #fff;
+}
+
 .coinPrice--title-text.chainlink{
   background: linear-gradient(90deg, #fff 0%, #2a5ada 50%, #fff 100%);
   color: #fff;
@@ -233,12 +293,62 @@ h4{
   color: #fff;
 }
 
+.coinPrice--title-text.usd-coin{
+  background: linear-gradient(90deg, #fff 0%, #2276cb 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.vechain{
+  background: linear-gradient(90deg, #fff 0%, #21b3f9 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.cosmos{
+  background: linear-gradient(90deg, #e3e3e3 0%, #2a2d46 50%, #e3e3e3 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.algorand{
+  background: linear-gradient(90deg, #fff 0%, #000 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.enjin-coin{
+  background: linear-gradient(90deg,#e0e0e0 0%, #8959e2 50%,#e0e0e0 100%);
+  color: #fff;
+}
+
 .coinPrice--title-text.dash{
   background: linear-gradient(90deg, #fff 0%, #008ee5 50%, #fff 100%);
   color: #fff;
 }
 .coinPrice--title-text.aave{
   background: linear-gradient(90deg, #39b0c2 0%, #ae56a1 50%, #39b0c2 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.avalanche{
+  background: linear-gradient(90deg, #ffffff 0%, #e84142 50%, #ffffff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.balancer{
+  background: linear-gradient(90deg, #ffffff 0%, #000 50%, #ffffff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.basic-attention-token{
+  background: linear-gradient(90deg, #ffffff 0%, #ff4f00 50%, #ffffff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.curve-dao-token{
+  background: linear-gradient(90deg, #ffffff 0%, #a5a4ce 50%, #ffffff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.curve-dao-token{
+  background: linear-gradient(90deg, #fdf2f7 0%, #f4b82d 50%, #fdf2f7 100%);
   color: #fff;
 }
 
@@ -261,6 +371,46 @@ h4{
   background: linear-gradient(90deg,#4c4c4c 0%, #f2681c 50%, #4c4c4c 100%);
   color: #fff;
 }
+
+.coinPrice--title-text.ontology{
+  background: linear-gradient(90deg,#fff 0%, #46a5ff 50%, #fff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.qtum{
+  background: linear-gradient(90deg,#e1e1e1 0%, #2ea7de 50%, #e1e1e1 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.reserve-rights-token{
+  background: linear-gradient(90deg,#e1e1e1 0%, #000000 50%, #e1e1e1 100%);
+  color: #fff;
+}
+.coinPrice--title-text.yearn-finance{
+  background: linear-gradient(90deg,#e1e1e1 0%, #0064cc 50%, #e1e1e1 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.omg-network{
+  background: linear-gradient(90deg,#ffffff 0%, #000 50%, #ffffff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.bittorrent{
+  background: linear-gradient(90deg,#ffffff 0%, #000 50%, #ffffff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.inch{
+  background: linear-gradient(90deg,#ffffff 0%, #000 50%, #ffffff 100%);
+  color: #fff;
+}
+
+.coinPrice--title-text.synthetics{}
+.coinPrice--title-text.dai{}
+.coinPrice--title-text.curveDao{}
+.coinPrice--title-text.lost{}
+.coinPrice--title-text.polygon{}
 
 
 .coinPrice--layer--0 {
