@@ -94,33 +94,13 @@ function MarketGraph() {
                     <div className={`coinPrice--layer--container ${Segment1.currency}`}>
                         <Icon name="bitcoin" fill="red" />
                         <h1 className={`coinPrice--title-text ${Segment1.currency}`}>{Segment1.currency} ({Segment1.symbol})</h1>
-                        {/* <h2 className="coinPrice--layer--0">{CoinDat.data.market_data.current_price.usd}</h2> */}
-                        {/* <h3 className="coinPrice--subCur--text">{subCur.symbol.toUpperCase()}</h3> */}
                         <div className={`coinPrice--prices--container`}>
                             <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['eth'].toFixed(4)}<div className="coinPrice--price-label eth">ETH</div></div>
                             <div className="coinPrice--price-text usd">{CoinDat.data.market_data.current_price['usd'].toFixed(2)}<div className="coinPrice--price-label usd">USD</div></div>
                             <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['btc'].toFixed(5)}<div className="coinPrice--price-label btc">BTC</div></div>
                         </div>
-                        {/* <div className="collection--text--wrapper">
-                            <div className="collection--text--container">
-                                <div className="collection--text--item">
-                                    <p className="collection--text--text"> Low</p>
-                                    <h4 className="low">{CoinDat.data.market_data.low_24h[subCur.symbol]}</h4>
-                                </div>
-
-                                <div className="collection--text--item">
-                                    <p className="collection--text--text">High</p>
-                                    <h4 className="high">{CoinDat.data.market_data.high_24h[subCur.symbol]}</h4>
-                                </div>
-                            </div>
-                        </div> */}
                         <CountdownAnimation />
                     </div>
-                    {/* <h2 className="coinPrice">{CoinDat.data.tickers[0].target}</h2> */}
-                    {/* <h1>Ethereum </h1> */}
-                    {/*? Put this on a timer to change ticker */}
-                    {/* <p>Thumbs up {CoinDat.data.sentiment_votes_up_percentage}</p> */}
-                    {/* <p>Thumbs down {CoinDat.data.sentiment_votes_down_percentage}</p> */}
                 </>
             }
 

@@ -1,1 +1,4 @@
-{ "currency": "enjin-coin","symbol": "ENJ"}
+{
+    "currency": "eth",
+    "symbol": "ethereum"
+}

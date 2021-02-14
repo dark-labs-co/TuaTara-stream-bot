@@ -18,7 +18,7 @@ const Graph = ({ coinDat, color, height, tickVals }) => {
                 },
                 text: {
                     fill: "white",
-                    fontSize: "16px",
+                    fontSize: "26px",
 
                 }
             },
@@ -46,7 +46,7 @@ const Graph = ({ coinDat, color, height, tickVals }) => {
                 keys={["ETH"]}
                 height={height}
                 order='ascending'
-                margin={{ top: 10, right: 60, bottom: 10, left: 10 }}
+                margin={{ top: 10, right: 100, bottom: 10, left: 10 }}
                 axisTop={null}
                 axisBottom={null}
                 axisRight={{
@@ -72,11 +72,11 @@ const Graph = ({ coinDat, color, height, tickVals }) => {
 
                 defs={[
                     linearGradientDef('red', [
-                        { offset: 0, color: '#1daf30' },
+                        { offset: 0, color: '#fff' },
                         { offset: 100, color: '#d5f545', opacity: .95 },
                     ]),
                     linearGradientDef('green', [
-                        { offset: 0, color: '#1daf30' },
+                        { offset: 0, color: '#fff' },
                         { offset: 100, color: '#d5f545', opacity: .95 },
                     ])
                 ]}

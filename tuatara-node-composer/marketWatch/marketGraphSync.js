@@ -3,7 +3,6 @@ const fetch = require('node-fetch')
 global.fetch = fetch
 global.Headers = fetch.Headers
 const request = require('request')
-const child_process = require("child_process")
 var fs = require('fs')
 
 // function MarketWatch() {
