@@ -12,10 +12,25 @@ function Index() {
 
     const graphs = async () => {
         for (let i = 0; i < CoinList.length; i++) {
-            await delay(4000)
-            console.log(CoinList[i].currency)
-            GraphCollection('2', CoinList[i].currency, CoinList[i].symbol)
-            marketGraphSync(CoinList[i].currency, CoinList[i].symbol)
+            await delay(12000)
+            GraphCollection(CoinList[i].currency, CoinList[i].symbol, 1)
+            marketGraphSync(CoinList[i].currency, CoinList[i].symbol, 1)
+            await delay(12000)
+            GraphCollection(CoinList[i].currency, CoinList[i].symbol, 7)
+            marketGraphSync(CoinList[i].currency, CoinList[i].symbol, 7)
+            await delay(12000)
+            GraphCollection(CoinList[i].currency, CoinList[i].symbol, 30)
+            marketGraphSync(CoinList[i].currency, CoinList[i].symbol, 30)
+            await delay(12000)
+            GraphCollection(CoinList[i].currency, CoinList[i].symbol, 90)
+            marketGraphSync(CoinList[i].currency, CoinList[i].symbol, 90)
+            await delay(12000)
+            GraphCollection(CoinList[i].currency, CoinList[i].symbol, 365)
+            marketGraphSync(CoinList[i].currency, CoinList[i].symbol, 365)
+            await delay(12000)
+            GraphCollection(CoinList[i].currency, CoinList[i].symbol, 'max')
+            marketGraphSync(CoinList[i].currency, CoinList[i].symbol, 'max')
+
         }
     }
 
@@ -25,7 +40,7 @@ function Index() {
     // })
 
     graphs()
-    cron.schedule('*/3 * * * *', () => {
+    cron.schedule('*/15 * * * *', () => {
         graphs()
     })
 }

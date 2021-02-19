@@ -15,7 +15,7 @@ const Icon = ({ name }) => {
         setLoading(true);
         const importIcon = async () => {
             try {
-                ImportedIconRef.current = (await import(`./assets/icons/${Segment1.currency}.png`))
+                ImportedIconRef.current = (await import(`./assets/icons/${Segment1.currency.toLowerCase()}.png`))
             } catch (err) {
                 // Your own error handling logic, throwing error for the sake of
                 // simplicity
@@ -54,14 +54,8 @@ function MarketGraph() {
         let PriceLogger = async () => {
             try {
                 let dataCoin0 = await CoinGeckoClient.coins.fetch(cur, {})
-                let dataMax = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: 'max' })
-                let data30 = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: '30' })
-                let data1 = await CoinGeckoClient.coins.fetchMarketChart(cur, { days: '1' })
 
                 { dataCoin0.code === 200 && setCoinDat(dataCoin0) }
-                { dataMax.code === 200 && setCoinDatMax(dataMax) }
-                { data30.code === 200 && setCoinDat30(data30) }
-                { data1.code === 200 && setCoinDat1(data1) }
             } catch (e) {
                 console.error(e); // 30
             }
@@ -89,20 +83,20 @@ function MarketGraph() {
 
     return (
         <div className="App">
-            {CoinDat.code === 200 &&
-                <>
-                    <div className={`coinPrice--layer--container ${Segment1.currency}`}>
-                        <Icon name="bitcoin" fill="red" />
-                        <h1 className={`coinPrice--title-text ${Segment1.currency}`}>{Segment1.currency} ({Segment1.symbol})</h1>
+            <div className={`coinPrice--layer--container ${Segment1.currency}`}>
+                <Icon name="bitcoin" fill="red" />
+                <h1 className={`coinPrice--title-text ${Segment1.currency}`}>{Segment1.currency} ({Segment1.symbol})</h1>
+                {CoinDat.code === 200 &&
+                    <>
                         <div className={`coinPrice--prices--container`}>
                             <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['eth'].toFixed(4)}<div className="coinPrice--price-label eth">ETH</div></div>
                             <div className="coinPrice--price-text usd">{CoinDat.data.market_data.current_price['usd'].toFixed(2)}<div className="coinPrice--price-label usd">USD</div></div>
                             <div className="coinPrice--price-text">{CoinDat.data.market_data.current_price['btc'].toFixed(5)}<div className="coinPrice--price-label btc">BTC</div></div>
                         </div>
                         <CountdownAnimation />
-                    </div>
-                </>
-            }
+                    </>
+                }
+            </div>
 
             <div className="collection--graph--title">
                 <MarketLogo />

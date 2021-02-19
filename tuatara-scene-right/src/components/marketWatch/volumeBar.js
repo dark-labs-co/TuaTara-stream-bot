@@ -35,7 +35,7 @@ const VolumeBar = ({ data /* see data tab */ }) => (
         padding={0.25}
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
-        colors={{ scheme: 'nivo' }}
+        colors={{ scheme: 'greens' }}
         defs={[
             {
                 id: 'dots',
@@ -73,22 +73,8 @@ const VolumeBar = ({ data /* see data tab */ }) => (
         borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
         axisTop={null}
         axisRight={null}
-        axisBottom={{
-            tickSize: 5,
-            tickPadding: 5,
-            tickRotation: 0,
-            legend: 'country',
-            legendPosition: 'middle',
-            legendOffset: 32
-        }}
-        axisLeft={{
-            tickSize: 5,
-            tickPadding: 5,
-            tickRotation: 0,
-            legend: 'food',
-            legendPosition: 'middle',
-            legendOffset: -40
-        }}
+        axisBottom={null}
+        axisLeft={null}
         axisLeft={null}
         axisBottom={null}
         labelSkipWidth={12}
@@ -122,6 +108,7 @@ const VolumeBar = ({ data /* see data tab */ }) => (
         motionStiffness={90}
         motionDamping={15}
         enableGridY={false}
+        enableLabel={false}
     />
 
 )

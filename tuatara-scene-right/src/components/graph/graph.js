@@ -46,7 +46,7 @@ const Graph = ({ coinDat, color, height, tickVals }) => {
                 keys={["ETH"]}
                 height={height}
                 order='ascending'
-                margin={{ top: 10, right: 100, bottom: 10, left: 10 }}
+                margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
                 axisTop={null}
                 axisBottom={null}
                 axisRight={{
@@ -54,6 +54,7 @@ const Graph = ({ coinDat, color, height, tickVals }) => {
                     tickRotation: 0,
                     tickValues: { tickVals }
                 }}
+                axisRight={null}
                 offsetType="none"
                 colors="none"
                 fillOpacity={0.85}

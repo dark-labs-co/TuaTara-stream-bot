@@ -5,15 +5,16 @@ global.fetch = fetch
 global.Headers = fetch.Headers
 var fs = require('fs')
 
-module.exports = function GraphCollection(currency, symbol) {
+module.exports = function GraphCollection(currency, symbol, days) {
 
     // function GraphCollection(timeRange, intervalRange) {
 
+    //TODO Refactor to keep data in ranges
     let PriceLogger = async () => {
         const CoinGeckoClient = new CoinGecko();
         try {
             // let dataEth = await CoinGeckoClient.coins.fetch('ethereum', {});
-            let dataCoin = await CoinGeckoClient.coins.fetchMarketChart(symbol, { days: 2 })
+            let dataCoin = await CoinGeckoClient.coins.fetchMarketChart(currency, { days: days })
             return dataCoin;
         } catch (e) {
             console.log(e);
@@ -31,30 +32,163 @@ module.exports = function GraphCollection(currency, symbol) {
     let datMarketCaps = []
 
     function processRes(res) {
-        console.log(res);
-        for (let index = 0; index < res.data.prices.length; index++) {
-            if (res.data.prices[index] && res.data.market_caps[index][1]) {
-                const element = res.data.prices[index][1];
-                datPrices.push(JSON.stringify({ "ETH": element }))
+
+        //** Refactor to 1 day hrly */
+        if (days === 1) {
+            for (let index = 0; index < res.data.prices.length; index += 7) {
+                if (res.data.prices[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.prices[index][1];
+                    datPrices.push(JSON.stringify({ "ETH": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.total_volumes.length; index += 7) {
+                if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.total_volumes[index][1];
+                    let indexItm = "ETH" + index
+
+                    datVolume.push(JSON.stringify({ "symbol": indexItm, "datas": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.market_caps.length; index += 7) {
+                if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.market_caps[index][1];
+                    datMarketCaps.push(JSON.stringify({ "ETH": element }))
+                }
             }
         }
 
-        for (let index = 0; index < res.data.total_volumes.length; index++) {
-            if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
-                const element = res.data.total_volumes[index][1];
-                let indexItm = "ETH" + index
+        //** Refactor to 7 day */
+        if (days === 7) {
+            for (let index = 0; index < res.data.prices.length; index += 7) {
+                if (res.data.prices[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.prices[index][1];
+                    datPrices.push(JSON.stringify({ "ETH": element }))
+                }
+            }
 
-                datVolume.push(JSON.stringify({ "symbol": indexItm, "datas": element }))
+            for (let index = 0; index < res.data.total_volumes.length; index += 7) {
+                if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.total_volumes[index][1];
+                    let indexItm = "ETH" + index
+
+                    datVolume.push(JSON.stringify({ "symbol": indexItm, "datas": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.market_caps.length; index += 7) {
+                if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.market_caps[index][1];
+                    datMarketCaps.push(JSON.stringify({ "ETH": element }))
+                }
             }
         }
 
-        for (let index = 0; index < res.data.market_caps.length; index++) {
-            if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
-                const element = res.data.market_caps[index][1];
-                datMarketCaps.push(JSON.stringify({ "ETH": element }))
+        //** Refactor to 30 day */
+        if (days === 30) {
+            for (let index = 0; index < res.data.prices.length; index += 20) {
+                if (res.data.prices[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.prices[index][1];
+                    datPrices.push(JSON.stringify({ "ETH": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.total_volumes.length; index += 20) {
+                if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.total_volumes[index][1];
+                    let indexItm = "ETH" + index
+
+                    datVolume.push(JSON.stringify({ "symbol": indexItm, "datas": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.market_caps.length; index += 20) {
+                if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.market_caps[index][1];
+                    datMarketCaps.push(JSON.stringify({ "ETH": element }))
+                }
             }
         }
-        fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/dataLinkMarketWatch.json', `{ "prices": [${datPrices}], "volume":[${datVolume}], "market_caps":[${datMarketCaps}]}`, function (err) {
+
+        //** Refactor to 90 day */
+        if (days === 90) {
+            for (let index = 0; index < res.data.prices.length; index += 60) {
+                if (res.data.prices[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.prices[index][1];
+                    datPrices.push(JSON.stringify({ "ETH": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.total_volumes.length; index += 60) {
+                if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.total_volumes[index][1];
+                    let indexItm = "ETH" + index
+
+                    datVolume.push(JSON.stringify({ "symbol": indexItm, "datas": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.market_caps.length; index += 60) {
+                if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.market_caps[index][1];
+                    datMarketCaps.push(JSON.stringify({ "ETH": element }))
+                }
+            }
+        }
+
+        //** Refactor to 365 day */
+        if (days === 365) {
+            for (let index = 0; index < res.data.prices.length; index += 20) {
+                if (res.data.prices[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.prices[index][1];
+                    datPrices.push(JSON.stringify({ "ETH": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.total_volumes.length; index += 20) {
+                if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.total_volumes[index][1];
+                    let indexItm = "ETH" + index
+
+                    datVolume.push(JSON.stringify({ "symbol": indexItm, "datas": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.market_caps.length; index += 20) {
+                if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.market_caps[index][1];
+                    datMarketCaps.push(JSON.stringify({ "ETH": element }))
+                }
+            }
+        }
+
+        //** Refactor to max day */
+        if (days === 'max') {
+            for (let index = 0; index < res.data.prices.length; index += 20) {
+                if (res.data.prices[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.prices[index][1];
+                    datPrices.push(JSON.stringify({ "ETH": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.total_volumes.length; index += 20) {
+                if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.total_volumes[index][1];
+                    let indexItm = "ETH" + index
+
+                    datVolume.push(JSON.stringify({ "symbol": indexItm, "datas": element }))
+                }
+            }
+
+            for (let index = 0; index < res.data.market_caps.length; index += 20) {
+                if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
+                    const element = res.data.market_caps[index][1];
+                    datMarketCaps.push(JSON.stringify({ "ETH": element }))
+                }
+            }
+        }
+        fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/dataLinkMarketWatch.json', `{ "prices": [${datPrices}], "volume":[${datVolume}], "market_caps":[${datMarketCaps}],"days":"${days}" }`, function (err) {
             if (err) throw err;
             console.log('Saved-marketWatch-Graph-max');
         });
