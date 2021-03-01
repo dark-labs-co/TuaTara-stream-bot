@@ -63,14 +63,14 @@ function AaveRateCell({ dataLink }) {
                         <h1 className="rate--symbol-text">{rateData.symbol}</h1>
                     </div>
                     <div className="rateData--cell-item">
-                        <h2 className="rate--dactaItem-text vbr">{(parseFloat(rateData.vbr).toFixed(3))}%</h2>
+                        <h2 className="rate--dactaItem-text vbr">{(parseFloat(rateData.vbr * 100).toFixed(3))}%</h2>
                     </div>
                     <div className="rateData--cell-item">
-                        <h2 className="rate--dataItem-text vbr">{(parseFloat(rateData.liquidityRate).toFixed(3))}%</h2>
+                        <h2 className="rate--dataItem-text vbr">{(parseFloat(rateData.liquidityRate * 100).toFixed(3))}%</h2>
                     </div>
-                    <div className="rateData--cell-item">
-                        <h2 className="rate--dataItem-text vbr">{(parseFloat(rateData.vsEth.priceInEth).toFixed(3))}ETH</h2>
-                    </div>
+                    {/* <div className="rateData--cell-item">
+                        <h2 className="rate--dataItem-text vbr">{(parseFloat(rateData.vsEth.priceInEth * 100).toFixed(3))}ETH</h2>
+                    </div> */}
                 </animated.div>
             </div>
         )}
@@ -92,7 +92,7 @@ export default function AaveRates() {
                 <img className={'aave-logo--item'} src={AaveLogoImg} />
             </div>
             <div className="rateData--cell-wrapper">
-                <h1 className="rateData--lending-title">Liquidity Rates</h1>
+                <h1 className="rateData--lending-title">DEFI Rates</h1>
                 <div className="rateData--title-container">
                     <div className="rateData--cellTitle-container">
                     </div>
@@ -100,14 +100,14 @@ export default function AaveRates() {
                         <h1 className="rate--symbol-title-text">Token</h1>
                     </div>
                     <div className="rateData--cellTitle-container">
-                        <h2 className="rate--dactaItem-text vbr">VBR</h2>
+                        <h2 className="rate--dactaItem-text vbr">Variable Borrow Rate</h2>
                     </div>
                     <div className="rateData--cellTitle-container">
                         <h2 className="rate--dataItem-text vbr">Liquidity Rate</h2>
                     </div>
-                    <div className="rateData--cellTitle-container">
+                    {/* <div className="rateData--cellTitle-container">
                         <h2 className="rate--dataItem-text vbr">Price in ETH</h2>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

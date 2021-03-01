@@ -5,6 +5,7 @@ import CoinGecko from 'coingecko-api';
 import Segment1 from "./segment1.json"
 import CountdownAnimation from "./components/countdownAnimation";
 import MarketLogo from "./components/graph/marketLogo";
+import CountDown from "./components/marketWatch/countDown";
 
 const Icon = ({ name }) => {
     const ImportedIconRef = useRef(null);
@@ -100,6 +101,7 @@ function MarketGraph() {
 
             <div className="collection--graph--title">
                 <MarketLogo />
+                <CountDown />
             </div>
             <Collection
                 coinDat={CoinDat}

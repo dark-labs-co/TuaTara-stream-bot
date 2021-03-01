@@ -9,7 +9,6 @@ module.exports = function GraphCollection(currency, symbol, days) {
 
     // function GraphCollection(timeRange, intervalRange) {
 
-    //TODO Refactor to keep data in ranges
     let PriceLogger = async () => {
         const CoinGeckoClient = new CoinGecko();
         try {
@@ -30,6 +29,7 @@ module.exports = function GraphCollection(currency, symbol, days) {
     let datPrices = []
     let datVolume = []
     let datMarketCaps = []
+    let pricesCalc = []
 
     function processRes(res) {
 
@@ -39,6 +39,7 @@ module.exports = function GraphCollection(currency, symbol, days) {
                 if (res.data.prices[index] && res.data.market_caps[index][1]) {
                     const element = res.data.prices[index][1];
                     datPrices.push(JSON.stringify({ "ETH": element }))
+                    pricesCalc.push(element)
                 }
             }
 
@@ -46,7 +47,6 @@ module.exports = function GraphCollection(currency, symbol, days) {
                 if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
                     const element = res.data.total_volumes[index][1];
                     let indexItm = "ETH" + index
-
                     datVolume.push(JSON.stringify({ "symbol": indexItm, "datas": element }))
                 }
             }
@@ -65,6 +65,7 @@ module.exports = function GraphCollection(currency, symbol, days) {
                 if (res.data.prices[index] && res.data.market_caps[index][1]) {
                     const element = res.data.prices[index][1];
                     datPrices.push(JSON.stringify({ "ETH": element }))
+                    pricesCalc.push(element)
                 }
             }
 
@@ -87,14 +88,15 @@ module.exports = function GraphCollection(currency, symbol, days) {
 
         //** Refactor to 30 day */
         if (days === 30) {
-            for (let index = 0; index < res.data.prices.length; index += 20) {
+            for (let index = 0; index < res.data.prices.length; index += 12) {
                 if (res.data.prices[index] && res.data.market_caps[index][1]) {
                     const element = res.data.prices[index][1];
                     datPrices.push(JSON.stringify({ "ETH": element }))
+                    pricesCalc.push(element)
                 }
             }
 
-            for (let index = 0; index < res.data.total_volumes.length; index += 20) {
+            for (let index = 0; index < res.data.total_volumes.length; index += 12) {
                 if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
                     const element = res.data.total_volumes[index][1];
                     let indexItm = "ETH" + index
@@ -103,7 +105,7 @@ module.exports = function GraphCollection(currency, symbol, days) {
                 }
             }
 
-            for (let index = 0; index < res.data.market_caps.length; index += 20) {
+            for (let index = 0; index < res.data.market_caps.length; index += 12) {
                 if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
                     const element = res.data.market_caps[index][1];
                     datMarketCaps.push(JSON.stringify({ "ETH": element }))
@@ -113,14 +115,15 @@ module.exports = function GraphCollection(currency, symbol, days) {
 
         //** Refactor to 90 day */
         if (days === 90) {
-            for (let index = 0; index < res.data.prices.length; index += 60) {
+            for (let index = 0; index < res.data.prices.length; index += 24) {
                 if (res.data.prices[index] && res.data.market_caps[index][1]) {
                     const element = res.data.prices[index][1];
                     datPrices.push(JSON.stringify({ "ETH": element }))
+                    pricesCalc.push(element)
                 }
             }
 
-            for (let index = 0; index < res.data.total_volumes.length; index += 60) {
+            for (let index = 0; index < res.data.total_volumes.length; index += 24) {
                 if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
                     const element = res.data.total_volumes[index][1];
                     let indexItm = "ETH" + index
@@ -129,7 +132,7 @@ module.exports = function GraphCollection(currency, symbol, days) {
                 }
             }
 
-            for (let index = 0; index < res.data.market_caps.length; index += 60) {
+            for (let index = 0; index < res.data.market_caps.length; index += 24) {
                 if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
                     const element = res.data.market_caps[index][1];
                     datMarketCaps.push(JSON.stringify({ "ETH": element }))
@@ -139,14 +142,15 @@ module.exports = function GraphCollection(currency, symbol, days) {
 
         //** Refactor to 365 day */
         if (days === 365) {
-            for (let index = 0; index < res.data.prices.length; index += 20) {
+            for (let index = 0; index < res.data.prices.length; index += 12) {
                 if (res.data.prices[index] && res.data.market_caps[index][1]) {
                     const element = res.data.prices[index][1];
                     datPrices.push(JSON.stringify({ "ETH": element }))
+                    pricesCalc.push(element)
                 }
             }
 
-            for (let index = 0; index < res.data.total_volumes.length; index += 20) {
+            for (let index = 0; index < res.data.total_volumes.length; index += 12) {
                 if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
                     const element = res.data.total_volumes[index][1];
                     let indexItm = "ETH" + index
@@ -155,7 +159,7 @@ module.exports = function GraphCollection(currency, symbol, days) {
                 }
             }
 
-            for (let index = 0; index < res.data.market_caps.length; index += 20) {
+            for (let index = 0; index < res.data.market_caps.length; index += 12) {
                 if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
                     const element = res.data.market_caps[index][1];
                     datMarketCaps.push(JSON.stringify({ "ETH": element }))
@@ -165,14 +169,15 @@ module.exports = function GraphCollection(currency, symbol, days) {
 
         //** Refactor to max day */
         if (days === 'max') {
-            for (let index = 0; index < res.data.prices.length; index += 20) {
+            for (let index = 0; index < res.data.prices.length; index += 24) {
                 if (res.data.prices[index] && res.data.market_caps[index][1]) {
                     const element = res.data.prices[index][1];
                     datPrices.push(JSON.stringify({ "ETH": element }))
+                    pricesCalc.push(element)
                 }
             }
 
-            for (let index = 0; index < res.data.total_volumes.length; index += 20) {
+            for (let index = 0; index < res.data.total_volumes.length; index += 24) {
                 if (res.data.total_volumes[index] && res.data.market_caps[index][1]) {
                     const element = res.data.total_volumes[index][1];
                     let indexItm = "ETH" + index
@@ -181,14 +186,14 @@ module.exports = function GraphCollection(currency, symbol, days) {
                 }
             }
 
-            for (let index = 0; index < res.data.market_caps.length; index += 20) {
+            for (let index = 0; index < res.data.market_caps.length; index += 24) {
                 if (res.data.market_caps[index] && res.data.market_caps[index][1]) {
                     const element = res.data.market_caps[index][1];
                     datMarketCaps.push(JSON.stringify({ "ETH": element }))
                 }
             }
         }
-        fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/dataLinkMarketWatch.json', `{ "prices": [${datPrices}], "volume":[${datVolume}], "market_caps":[${datMarketCaps}],"days":"${days}" }`, function (err) {
+        fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/dataLinkMarketWatch.json', `{ "prices": [${datPrices}], "volume":[${datVolume}], "market_caps":[${datMarketCaps}],"days":"${days}","min": ${Math.min(...pricesCalc)},"max":${Math.max(...pricesCalc)},"ave":${pricesCalc.reduce((a, v, i) => (a * i + v) / (i + 1))}}`, function (err) {
             if (err) throw err;
             console.log('Saved-marketWatch-Graph-max');
         });

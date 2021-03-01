@@ -21,7 +21,7 @@ const Collection = () => {
                 </div>
             </div>
             <div className="collection--container">
-                <h3 className="collection--text">Prices</h3>
+                <h3 className="collection--text">Prices (USD)</h3>
 
 
                 <div className="collection--graph-container">
@@ -34,9 +34,11 @@ const Collection = () => {
                         bottom={10}
                     />
                 </div>
-                <div>
-                    Min: Average: Max:
-                        {/* <div>
+                <div className="collection--priceStat-container">
+                    <div>Min: {MarketWatchData.min.toFixed(2)}</div>
+                    <div>Average: {MarketWatchData.ave.toFixed(2)}</div>
+                    <div> Max:{MarketWatchData.max.toFixed(2)}</div>
+                    {/* <div>
                             <h2>Total Liquidity</h2>
                         </div> */}
                 </div>

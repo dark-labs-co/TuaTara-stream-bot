@@ -8,7 +8,6 @@
 }
 
 #root {
-  background: #0000;
   color: #e6e6e6e3;
   width: 50vw;
   height: 1000px;
@@ -45,11 +44,14 @@ h4{
 
 .App {
   text-align:left;
-  background: transparent;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   font-family: 'Helvetica Neue';
+}
+
+.app--wrapper{
+  background: #0000009a;
 }
 
 .body{
@@ -155,15 +157,16 @@ h4{
   display: flex;
   justify-content:space-around;
   background: linear-gradient(90deg, #fff 0%, #fff 50%, #fff 100%); 
-  background: rgba(0, 0, 0, 0.733);
+  background: #383d51;
   color: #000;
 }
 
 .coinPrice--title-text {
-  font-size: 3rem;
-  padding: 1rem;
-  padding-left: 20px;
+  font-size: 4rem;
   margin: 0;
+  padding-left: 20px;
+  padding: 1rem;
+  line-height:4rem;
   background: linear-gradient(90deg, #d5f545 0%, #1daf30 50%, #d5f545 100%); 
   color: #000;
   text-transform:capitalize;

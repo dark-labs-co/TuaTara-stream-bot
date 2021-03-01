@@ -22,7 +22,6 @@ module.exports = function PostProcess() {
                 stream.on('error', console.error);
                 stream.write(JSON.stringify({ "segment": currentSegment }));
                 stream.end();
-                console.log(4)
 
             }, 10000);
         }
@@ -32,7 +31,6 @@ module.exports = function PostProcess() {
                 stream.on('error', console.error);
                 stream.write(JSON.stringify({ "segment": currentSegment }));
                 stream.end();
-                console.log(5)
 
             }, 10000);
         }
@@ -42,8 +40,6 @@ module.exports = function PostProcess() {
                 stream.on('error', console.error);
                 stream.write(JSON.stringify({ "segment": currentSegment }));
                 stream.end();
-                console.log(6)
-
             }, 9000);
         }
 
@@ -53,4 +49,3 @@ module.exports = function PostProcess() {
 
     }
 }
-// PostProcess()

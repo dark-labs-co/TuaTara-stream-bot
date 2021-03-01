@@ -30,7 +30,7 @@ const Graph = ({ coinDat, color, height, tickVals }) => {
         },
         grid: {
             line: {
-                stroke: "white"
+                stroke: "none"
             }
         }
     };
@@ -74,11 +74,11 @@ const Graph = ({ coinDat, color, height, tickVals }) => {
                 defs={[
                     linearGradientDef('red', [
                         { offset: 0, color: '#fff' },
-                        { offset: 100, color: '#d5f545', opacity: .95 },
+                        { offset: 100, color: '#fff', opacity: .95 },
                     ]),
                     linearGradientDef('green', [
                         { offset: 0, color: '#fff' },
-                        { offset: 100, color: '#d5f545', opacity: .95 },
+                        { offset: 100, color: '#fff', opacity: .95 },
                     ])
                 ]}
                 fill={[

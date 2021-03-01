@@ -6,6 +6,7 @@ var feedSegment = require("./feedSegment.json")
 const MarketWatch = require('./marketWatch/marketWatch')
 const PostProcess = require('./postProcess')
 const AaveScript = require('./aave/AaveScript')
+const Zora = require('./zora/zora')
 const { parse } = require('path')
 
 module.exports = function Run() {
@@ -27,8 +28,6 @@ module.exports = function Run() {
 
         let curSegment = dat.nextSegment
 
-
-
         //? Reset Segment Index
         if (segI <= (segments.length - 1)) {
             segIndex = segI
@@ -37,7 +36,6 @@ module.exports = function Run() {
             segIndex = 0
         }
         let nextSegment = dat.segments[segIndex]
-
 
 
         //? Write to tuatara-right
@@ -82,6 +80,12 @@ module.exports = function Run() {
 
         writePause(curSegment, nextSegment, segIndex, segments)
 
+        //? Add New Segments Here
+        if (curSegment === 'intro') {
+            console.log('Intro')
+            PostProcess()
+        }
+
 
         if (curSegment === 'aave') {
             AaveScript()
@@ -96,6 +100,11 @@ module.exports = function Run() {
             PostProcess()
         }
 
+        if (curSegment === 'zora') {
+            console.log('Zora')
+            Zora()
+            PostProcess()
+        }
 
     }
 }

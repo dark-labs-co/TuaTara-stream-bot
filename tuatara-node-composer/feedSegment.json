@@ -1,11 +1,1 @@
-{
-    "segI": 0,
-    "curSegment": "intro",
-    "nextSegment": "aave",
-    "segments": [
-        "intro",
-        "marketWatch",
-        "marketWatch",
-        "aave"
-    ]
-}
+{"segI":1,"curSegment":"aave","nextSegment":"intro","segments":["intro","marketWatch","zora","zora","aave"]}

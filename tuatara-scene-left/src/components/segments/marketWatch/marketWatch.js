@@ -38,7 +38,7 @@ export default function MarketWatch() {
             <group
                 rotation-x={Math.PI / .1}
                 dispose={null}
-                position={[-1, -2.5, 0]}
+                position={[6, 1.7, 0]}
                 scale={[.15, .15, .15]}
                 ref={meshG}
             >
@@ -85,7 +85,7 @@ export default function MarketWatch() {
         return (
             <>
                 <positionalAudio ref={sound} args={[listener]} />
-                { DataLink.segment === 'marketWatch' && <RhinoAnalyzer sound={sound} />}
+                {/* { DataLink.segment === 'marketWatch' && <RhinoAnalyzer sound={sound} />} */}
                 { DataLink.segment === 'aave' && <GhostAnalyzer sound={sound} />}
             </>
         );
@@ -106,6 +106,7 @@ export default function MarketWatch() {
                 <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={true} />
             </Canvas>
             { DataLink.segment === 'marketWatch' && <MainArea />}
+            { DataLink.segment === 'intro' && <MainArea />}
         </>
     )
 }

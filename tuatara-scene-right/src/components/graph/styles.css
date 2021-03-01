@@ -1,6 +1,4 @@
 #root{
-    background: rgba(255, 255, 255, 0.65);
-    background: #383d51cc;
     height: 100vh;
 }
 
@@ -44,6 +42,7 @@
 .collection--container:nth-of-type(2){
     grid-area: mid-r;
     height: 100%;
+    min-height: 260px;
     margin: 0;
     padding: 0;
     width: 91%;
@@ -62,6 +61,7 @@
     height: 100%;
     width:  50%;
 }
+
 .grid--container{
     height: 100%;
     width: 100%;
@@ -112,7 +112,12 @@
     padding: 0 1rem;
     margin: auto;
 }
-
+.collection--priceStat-container{
+    font-size: 2rem;
+    line-height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+}
 .collection--change{
     padding: 0;
     margin: 0;
@@ -148,6 +153,7 @@
     color: #343636;
     text-align: center;
     width: 30%;
+    margin-left: -90px;
   }
   
   .collection--timeTicker-wrapper{

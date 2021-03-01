@@ -38,13 +38,13 @@ const HeaderScroll = ({ text }) => {
 
             <div className={"header--wrapper"} >
                 <HeaderScrollInfo />
-                <div className={`header--wrapper ${text.price_change_percentage_24h >= 0 ? 'up' : 'down'}`} >
+                {/* <div className={`header--wrapper ${text.price_change_percentage_24h >= 0 ? 'up' : 'down'}`} >
                     <animated.div key={key1} style={scrolling}>
                         <ScrollDat
                             move={text.price_change_percentage_24h >= 0 ? 'up' : 'down'}
                             datIn={(text.market_cap_change_percentage_24h_in_currency)} />
                     </animated.div>
-                </div>
+                </div> */}
             </div > {/* 
 
             <div className={`header--wrapper ${text.price_change_percentage_30d >= 0 ? 'up' : 'down'}`} key={key}>

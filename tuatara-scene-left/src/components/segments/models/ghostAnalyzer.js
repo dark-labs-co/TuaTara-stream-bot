@@ -26,18 +26,19 @@ export default function RhinoAnalyzer({ sound }) {
             if (data >= 10) {
                 // mesh1.current.material.color.setRGB(100, 10, 0)
                 // mesh0.current.material.color.setRGB(7, 0, 8)
-                meshGroup.current.position.y = (1 + Math.sin(t / 1.5)) / data
-                meshGroup.current.position.x = (1 + Math.sin(t / 2)) / data
+                // meshGroup.current.position.y = (1 + Math.sin(t / 1.5)) / data
+                // meshGroup.current.position.x = (1 + Math.sin(t / 2)) / data
 
                 // meshGroup.current.position.y = 10
                 // meshGroup.current.position.x = 10
+                meshGroup.current.position.y = (1 + Math.sin(t / 1.5)) / 3
                 // meshGroup.current.position.z = 100
             }
             if (data <= 10) {
                 // mesh1.current.material.color.setRGB(100, 10, 0)
                 // mesh0.current.material.color.setRGB(0, 0, 7)
                 meshGroup.current.position.y = (1 + Math.sin(t / 1.5)) / 3
-                meshGroup.current.position.x = (1 + Math.sin(t / 2)) / 7
+                // meshGroup.current.position.x = (1 + Math.sin(t / 2)) / 7
 
                 // meshGroup.current.position.y = 10
                 // meshGroup.current.position.x = 10
