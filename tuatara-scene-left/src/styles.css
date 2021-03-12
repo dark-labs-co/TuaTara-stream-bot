@@ -43,7 +43,7 @@ h1 {
   position: absolute;
   top: 100px;
   width: 100%;
-  height: calc(100% - 145px);
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -57,29 +57,31 @@ h1 {
 
 .display--container{
   grid-area: main-area;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%); 
-  background: rgba(0, 0, 0, 0.8); 
+  height: 120%;
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%); 
+  background: rgba(0, 0, 0, 0.8);  */
   color: #fff;
-  margin-top: 200px;
+  margin-top: 175px;
   display: flex;
   flex-direction: column;
   text-align:left;
   justify-content:end;
 }
 
+
 .display--title-container{
   color: #383d51cc;
 }
+
 .display--title-text{
   position: relative;
   left:15px;
-  top:-10px;
-  margin: 1vh 0;
+  top:0px;
+  margin: 2vh 0;
   padding:0vh 0;
-  color: #383d51cc;
-  font-size: 4.5rem;
+  color: #fffffff5;
+  font-size: 3rem;
+  letter-spacing:1px;
   font-style: italic;
 }
 
@@ -88,21 +90,24 @@ h1 {
   width: calc (100% - 4rem);
   justify-content: space-between;
   height: min-content;
-  padding: .0rem 2rem;
+  padding: .3rem 2rem;
   margin: .2rem 1rem;
-  background: rgba(255, 255, 255, 0.7); 
+  background: #00000030;
   /* border: solid 1px #dfdfdf; */
   color: #dfdfdf;
+  line-height: 2.5rem;
 }
 
 .display--hero-item.up{
   /* border: solid 1px #1daf30; */
-  color: #1daf30;
+  color: #dfdfdf;
+  /* color: #1daf30; */
 }
 
 .display--hero-item.down {
   /* border: solid 1px #d245f5; */
-  color: #d245f5; 
+  color: #dfdfdf;
+  /* color: #d245f5;  */
 }
 
 .display--hero-title{
@@ -133,20 +138,20 @@ h1 {
 .display-title{
   margin: auto;
   width: 40%;
-font-size: 2.5rem;
+font-size: 2rem;
 }
 
 .display-percent{
   margin: auto;
   width: 50%;
   text-align: left;
-font-size: 2.5rem;
+font-size: 2rem;
 }
 
 .display-arrow{
   margin: auto;
   width: 100%;
-font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .display-item{
@@ -157,4 +162,7 @@ font-size: 2.5rem;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.8); 
+}
+
+.display--container {
 }

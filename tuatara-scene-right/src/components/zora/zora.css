@@ -36,6 +36,7 @@
     display: flex;
     justify-content: start;
     flex-direction: column;
+    text-align: center;
 }
 
 .zora--container-right{
@@ -44,18 +45,21 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    max-width: 500px;
 }
 
 .zora--artwork--item{
-    width:100%;
     height:auto;
-    max-height:70vh;
-    width:70vh;
+    /* max-height:50vh; */
+    width:80%;
+    height:100vh;
     margin:auto;
     object-fit: contain;
-    opacity: 1;
+    object-position: 50% 50%; /* default value: image is centered*/  opacity: 1;
     transition: width 2s, height 2s, transform 2s;
+    position: absolute;
+    top:0;
+    left: 20%;
+    z-index: 1;
 }
   
 .qrCode--zora-container{
@@ -68,11 +72,11 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    font-family: monospace;
 }
 
 .qrCode--zora-item{
     margin: 1rem auto;
+    padding-bottom: 50px;
 }
 
 .cryptoMediaLogo--container{
@@ -89,7 +93,7 @@
 }
 
 .artwork--text-name{
-    font-family:monospace;
+    font-family:sans-serif;
     color: #000;
 }
 
@@ -99,14 +103,13 @@
     margin:auto;
     display: flex;
     flex-direction: column;
-    justify-content:center;
     text-align: center;
 }
 
 .zora--bidItems-container{
     display: flex;
     flex-direction: column;
-    font-size:1rem;
+    font-size:1.5rem;
     padding: 1rem 0;
     padding-left: 1rem;
 }
@@ -131,8 +134,11 @@
 }
 
 .transition--graphic-container{
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
     padding-top: 20vh;
     display: flex;
     justify-content: center;
+    z-index: 100;
 }

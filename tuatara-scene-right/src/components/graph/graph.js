@@ -3,7 +3,7 @@ import { ResponsiveStream } from "@nivo/stream";
 import { linearGradientDef } from '@nivo/core'
 import './styles.css'
 
-const Graph = ({ coinDat, color, height, tickVals }) => {
+const Graph = ({ coinDat, color, height, tickVals, curVal, averageVal }) => {
     const [highestValArr, setHighestValArr] = useState([])
     const [highestVal, setHighestVal] = useState(0)
 
@@ -70,19 +70,22 @@ const Graph = ({ coinDat, color, height, tickVals }) => {
                 enableGridX={false}
                 motionStiffness={90}
                 motionDamping={15}
-
+                borderWidth={5}
+                // borderColor={curVal <= averageVal ? "#d245f5" : "#1daf30"}
                 defs={[
                     linearGradientDef('red', [
-                        { offset: 0, color: '#fff' },
+                        { offset: 0, color: '#d245f5' },
+                        { offset: 50, color: '#fff', opacity: .95 },
                         { offset: 100, color: '#fff', opacity: .95 },
                     ]),
                     linearGradientDef('green', [
-                        { offset: 0, color: '#fff' },
+                        { offset: 0, color: '#1daf30' },
+                        { offset: 50, color: '#fff', opacity: .95 },
                         { offset: 100, color: '#fff', opacity: .95 },
                     ])
                 ]}
                 fill={[
-                    { match: { id: 'ETH' }, id: `${color}` }
+                    { match: { id: 'ETH' }, id: `${averageVal <= curVal ? 'green' : 'red'}` }
                 ]}
                 stroke="red"
                 tooltipLabel={{

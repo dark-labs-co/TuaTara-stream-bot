@@ -1,0 +1,1956 @@
+{
+    "coin": [
+        {
+            "rank": 16,
+            "current_price_usd": 234.21,
+            "current_price_btc": 0.00410956,
+            "current_price_eth": 0.12888685,
+            "ath_usd": 1493.59,
+            "ath_btc": 0.11254554,
+            "ath_eth": 5.611519,
+            "ath_change_percentage_usd": -84.33902,
+            "ath_change_percentage_btc": -96.35482,
+            "ath_change_percentage_eth": -97.70248,
+            "ath_date_usd": "2017-12-20T00:00:00.000Z",
+            "ath_date_btc": "2017-03-18T00:00:00.000Z",
+            "ath_date_eth": "2015-10-20T00:00:00.000Z",
+            "atl_usd": 0.213899,
+            "atl_btc": 0.00034001,
+            "atl_eth": 0.06830366,
+            "atl_change_percentage_usd": 109255.79326,
+            "atl_change_percentage_btc": 1106.56394,
+            "atl_change_percentage_eth": 88.75382,
+            "atl_date_usd": "2014-02-14T00:00:00.000Z",
+            "atl_date_btc": "2014-02-14T00:00:00.000Z",
+            "atl_date_eth": "2021-02-04T20:12:00.838Z",
+            "market_cap_usd": 2343645690,
+            "market_cap_btc": 41104,
+            "market_cap_eth": 1291758,
+            "total_volume_usd": 1198609691,
+            "total_volume_eth": 659611,
+            "total_volume_btc": 21032,
+            "high_24h_usd": 243.28,
+            "high_24h_eth": 0.13580519,
+            "high_24h_btc": 0.00436716,
+            "low_24h_usd": 226.46,
+            "low_24h_eth": 0.12827936,
+            "low_24h_btc": 0.00403716,
+            "price_change_24h_in_currency_usd": 0.306115,
+            "price_change_24h_in_currency_eth": -0.0015532092,
+            "price_change_24h_in_currency_btc": -0.0000574948,
+            "price_change_percentage_1h_in_currency_usd": -1.10654,
+            "price_change_percentage_1h_in_currency_eth": -1.41831,
+            "price_change_percentage_1h_in_currency_btc": -0.38492,
+            "price_change_percentage_24h_in_currency_usd": 0.13087,
+            "price_change_percentage_24h_in_currency_eth": -1.19075,
+            "price_change_percentage_24h_in_currency_btc": -1.37975,
+            "price_change_percentage_7d_in_currency_usd": 10.12484,
+            "price_change_percentage_7d_in_currency_eth": -6.37937,
+            "price_change_percentage_7d_in_currency_btc": -6.21787,
+            "price_change_percentage_14d_in_currency_usd": 6.85285,
+            "price_change_percentage_14d_in_currency_eth": -13.66345,
+            "price_change_percentage_14d_in_currency_btc": -11.00644,
+            "price_change_percentage_30d_in_currency_usd": 73.49654,
+            "price_change_percentage_30d_in_currency_eth": 69.25301,
+            "price_change_percentage_30d_in_currency_btc": 41.84797,
+            "price_change_percentage_60d_in_currency_usd": 57.49317,
+            "price_change_percentage_60d_in_currency_eth": 9.96071,
+            "price_change_percentage_60d_in_currency_btc": 6.28918,
+            "price_change_percentage_200d_in_currency_usd": 157.81012,
+            "price_change_percentage_200d_in_currency_eth": -44.443,
+            "price_change_percentage_200d_in_currency_btc": -47.27287,
+            "price_change_percentage_1y_in_currency_usd": 224.50478,
+            "price_change_percentage_1y_in_currency_eth": -65.3915,
+            "price_change_percentage_1y_in_currency_btc": -54.82358,
+            "market_cap_change_24h_in_currency_usd": -3263095.42129183,
+            "market_cap_change_24h_in_currency_eth": -15011.9101966941,
+            "market_cap_change_24h_in_currency_btc": -645.5458585432,
+            "market_cap_change_percentage_24h_in_currency_usd": -0.13904,
+            "market_cap_change_percentage_24h_in_currency_eth": -1.14878,
+            "market_cap_change_percentage_24h_in_currency_btc": -1.54622
+        }
+    ],
+    "markets": [
+        {
+            "volume": 400253.61048656,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "YoBit"
+        },
+        {
+            "volume": 173802.82354963289,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Binance"
+        },
+        {
+            "volume": 146175.76559207443,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Huobi Global"
+        },
+        {
+            "volume": 116994.051236,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "OKEx"
+        },
+        {
+            "volume": 114679.73561197358,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Sistemkoin"
+        },
+        {
+            "volume": 106108,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Dcoin"
+        },
+        {
+            "volume": 101994.343,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "Bitcoin.com Exchange"
+        },
+        {
+            "volume": 85280.9474,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Digifinex"
+        },
+        {
+            "volume": 82056.62702364,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "TRY",
+            "market": "BtcTurk PRO"
+        },
+        {
+            "volume": 78437.17,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "SXC",
+            "market": "XT"
+        },
+        {
+            "volume": 78109.7,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "ZB"
+        },
+        {
+            "volume": 62190.8943,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "BKEX"
+        },
+        {
+            "volume": 60702.874,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "XT"
+        },
+        {
+            "volume": 54315.461,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "BW.com"
+        },
+        {
+            "volume": 50307.764,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "BitMart"
+        },
+        {
+            "volume": 49751.26634,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Coineal"
+        },
+        {
+            "volume": 48758.98777,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "BigONE"
+        },
+        {
+            "volume": 48515.16943,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "BigONE"
+        },
+        {
+            "volume": 46815.45469009273,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Binance"
+        },
+        {
+            "volume": 43369.97312596111,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Catex"
+        },
+        {
+            "volume": 41738.726,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "BitMart"
+        },
+        {
+            "volume": 40062.461467694455,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Catex"
+        },
+        {
+            "volume": 38496.375200505514,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Catex"
+        },
+        {
+            "volume": 34664.976,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "XT"
+        },
+        {
+            "volume": 34055.6322,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Digifinex"
+        },
+        {
+            "volume": 33488.63222413,
+            "base": "DSH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "Bitfinex"
+        },
+        {
+            "volume": 30035.984,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "XRP",
+            "market": "Bitrue"
+        },
+        {
+            "volume": 29115.91731,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Vindax"
+        },
+        {
+            "volume": 29012.73553858,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "Coinbase Pro"
+        },
+        {
+            "volume": 27911.5038,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "ZBG"
+        },
+        {
+            "volume": 27554.706,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "BitMart"
+        },
+        {
+            "volume": 26973.917,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "QC",
+            "market": "ZB"
+        },
+        {
+            "volume": 23017.34842989,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "CoinEx"
+        },
+        {
+            "volume": 21550.33630706,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "CoinTiger"
+        },
+        {
+            "volume": 17897.079374,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "OKEx"
+        },
+        {
+            "volume": 17335.286,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Bitcoin.com Exchange"
+        },
+        {
+            "volume": 16093.784488,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "MXC"
+        },
+        {
+            "volume": 12980.239606874788,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "LATOKEN"
+        },
+        {
+            "volume": 12406.0829,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "BiKi"
+        },
+        {
+            "volume": 10492.88947428,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "BtcTurk PRO"
+        },
+        {
+            "volume": 9982.669359310512,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "LATOKEN"
+        },
+        {
+            "volume": 9628.889,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "WhiteBIT"
+        },
+        {
+            "volume": 9617.443472395422,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BUSD",
+            "market": "Binance"
+        },
+        {
+            "volume": 9543.5821,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "BKEX"
+        },
+        {
+            "volume": 8200.2039341765,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Gate.io"
+        },
+        {
+            "volume": 7052.42758283,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "KuCoin"
+        },
+        {
+            "volume": 5679.142831233951,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Huobi Global"
+        },
+        {
+            "volume": 5456,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Bibox"
+        },
+        {
+            "volume": 5351.7372373,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "EUR",
+            "market": "Kraken"
+        },
+        {
+            "volume": 5212.73085096,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "Kraken"
+        },
+        {
+            "volume": 5203.93363679,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Coinbase Pro"
+        },
+        {
+            "volume": 4756.24969901,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "B2BX"
+        },
+        {
+            "volume": 4431.7936,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Digifinex"
+        },
+        {
+            "volume": 4301.438397036452,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Decoin"
+        },
+        {
+            "volume": 4270.60144,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "WhiteBIT"
+        },
+        {
+            "volume": 4097.8204,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "LBank"
+        },
+        {
+            "volume": 3610.863,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Bitcoin.com Exchange"
+        },
+        {
+            "volume": 3435,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Bibox"
+        },
+        {
+            "volume": 3185.32806,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "P2PB2B"
+        },
+        {
+            "volume": 3161.431297,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "OKEx"
+        },
+        {
+            "volume": 3086.34021092,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "CNC",
+            "market": "AEX"
+        },
+        {
+            "volume": 3070.73535,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "P2PB2B"
+        },
+        {
+            "volume": 2667.25985447,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "EXMO"
+        },
+        {
+            "volume": 2648.496028551478,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Binance"
+        },
+        {
+            "volume": 2467.4914081379957,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "Binance US"
+        },
+        {
+            "volume": 2285.87474537,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "EXMO"
+        },
+        {
+            "volume": 2200.94167,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "WhiteBIT"
+        },
+        {
+            "volume": 2095.1015131293734,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Hoo.com"
+        },
+        {
+            "volume": 1921.50072066,
+            "base": "DSH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Bitfinex"
+        },
+        {
+            "volume": 1635.7379,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "C2CX"
+        },
+        {
+            "volume": 1591.959205811138,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BNB",
+            "market": "Binance"
+        },
+        {
+            "volume": 1345.5724,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Hotbit"
+        },
+        {
+            "volume": 1330.905,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "P2PB2B"
+        },
+        {
+            "volume": 1325.958,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Vindax"
+        },
+        {
+            "volume": 1244,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Bibox"
+        },
+        {
+            "volume": 1088.41206635,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "KRW",
+            "market": "Bithumb"
+        },
+        {
+            "volume": 1083.70216826,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Poloniex"
+        },
+        {
+            "volume": 1044.016,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "BitMax"
+        },
+        {
+            "volume": 1005.52128483,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "XBT",
+            "market": "Kraken"
+        },
+        {
+            "volume": 817.69696874,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Poloniex"
+        },
+        {
+            "volume": 758.5342349812239,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Nominex"
+        },
+        {
+            "volume": 620.9436806,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "AEX"
+        },
+        {
+            "volume": 617.13770448,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Coindeal"
+        },
+        {
+            "volume": 487.936,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "CoinTiger"
+        },
+        {
+            "volume": 484.08896,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Atomars"
+        },
+        {
+            "volume": 444.38,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Atomars"
+        },
+        {
+            "volume": 437.40468,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USD",
+            "market": "Exrates"
+        },
+        {
+            "volume": 358.765092,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Exrates"
+        },
+        {
+            "volume": 354.0351,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Hotbit"
+        },
+        {
+            "volume": 328.49422525,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Dex-Trade"
+        },
+        {
+            "volume": 202.368828676,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Nominex"
+        },
+        {
+            "volume": 189.9199,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Hotbit"
+        },
+        {
+            "volume": 170.008,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Exrates"
+        },
+        {
+            "volume": 125.64,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "Dex-Trade"
+        },
+        {
+            "volume": 59.88,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Atomars"
+        },
+        {
+            "volume": 57.6675,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "BTC",
+            "market": "C2CX"
+        },
+        {
+            "volume": 42.877533,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Float SV"
+        },
+        {
+            "volume": 18.19,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "Stormgain"
+        },
+        {
+            "volume": 11.300864467162329,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "ETH",
+            "market": "Nominex"
+        },
+        {
+            "volume": 4.995,
+            "base": "DASH",
+            "coinId": "dash",
+            "target": "USDT",
+            "market": "CoinAll"
+        }
+    ],
+    "marketStats": [
+        {
+            "volumeTotal": 400253.61048656,
+            "exchange": "YoBit"
+        },
+        {
+            "volumeTotal": 234476.17694648367,
+            "exchange": "Binance"
+        },
+        {
+            "volumeTotal": 173805.02,
+            "exchange": "XT"
+        },
+        {
+            "volumeTotal": 151854.90842330837,
+            "exchange": "Huobi Global"
+        },
+        {
+            "volumeTotal": 138052.561907,
+            "exchange": "OKEx"
+        },
+        {
+            "volumeTotal": 123768.3732,
+            "exchange": "Digifinex"
+        },
+        {
+            "volumeTotal": 122940.49199999998,
+            "exchange": "Bitcoin.com Exchange"
+        },
+        {
+            "volumeTotal": 121928.80979416108,
+            "exchange": "Catex"
+        },
+        {
+            "volumeTotal": 119601.196,
+            "exchange": "BitMart"
+        },
+        {
+            "volumeTotal": 114679.73561197358,
+            "exchange": "Sistemkoin"
+        },
+        {
+            "volumeTotal": 106108,
+            "exchange": "Dcoin"
+        },
+        {
+            "volumeTotal": 105083.617,
+            "exchange": "ZB"
+        },
+        {
+            "volumeTotal": 97274.1572,
+            "exchange": "BigONE"
+        },
+        {
+            "volumeTotal": 92549.51649792,
+            "exchange": "BtcTurk PRO"
+        },
+        {
+            "volumeTotal": 71734.4764,
+            "exchange": "BKEX"
+        },
+        {
+            "volumeTotal": 54315.461,
+            "exchange": "BW.com"
+        },
+        {
+            "volumeTotal": 49751.26634,
+            "exchange": "Coineal"
+        },
+        {
+            "volumeTotal": 35410.13294479,
+            "exchange": "Bitfinex"
+        },
+        {
+            "volumeTotal": 34216.66917537,
+            "exchange": "Coinbase Pro"
+        },
+        {
+            "volumeTotal": 30441.87531,
+            "exchange": "Vindax"
+        },
+        {
+            "volumeTotal": 30035.984,
+            "exchange": "Bitrue"
+        },
+        {
+            "volumeTotal": 27911.5038,
+            "exchange": "ZBG"
+        },
+        {
+            "volumeTotal": 23017.34842989,
+            "exchange": "CoinEx"
+        },
+        {
+            "volumeTotal": 22962.9089661853,
+            "exchange": "LATOKEN"
+        },
+        {
+            "volumeTotal": 22038.27230706,
+            "exchange": "CoinTiger"
+        },
+        {
+            "volumeTotal": 16100.43211,
+            "exchange": "WhiteBIT"
+        },
+        {
+            "volumeTotal": 16093.784488,
+            "exchange": "MXC"
+        },
+        {
+            "volumeTotal": 12406.0829,
+            "exchange": "BiKi"
+        },
+        {
+            "volumeTotal": 11569.98937309,
+            "exchange": "Kraken"
+        },
+        {
+            "volumeTotal": 10135,
+            "exchange": "Bibox"
+        },
+        {
+            "volumeTotal": 8200.2039341765,
+            "exchange": "Gate.io"
+        },
+        {
+            "volumeTotal": 7586.9684099999995,
+            "exchange": "P2PB2B"
+        },
+        {
+            "volumeTotal": 7052.42758283,
+            "exchange": "KuCoin"
+        },
+        {
+            "volumeTotal": 4953.134599839999,
+            "exchange": "EXMO"
+        },
+        {
+            "volumeTotal": 4756.24969901,
+            "exchange": "B2BX"
+        },
+        {
+            "volumeTotal": 4301.438397036452,
+            "exchange": "Decoin"
+        },
+        {
+            "volumeTotal": 4097.8204,
+            "exchange": "LBank"
+        },
+        {
+            "volumeTotal": 3707.28389152,
+            "exchange": "AEX"
+        },
+        {
+            "volumeTotal": 2467.4914081379957,
+            "exchange": "Binance US"
+        },
+        {
+            "volumeTotal": 2095.1015131293734,
+            "exchange": "Hoo.com"
+        },
+        {
+            "volumeTotal": 1901.3991369999999,
+            "exchange": "Poloniex"
+        },
+        {
+            "volumeTotal": 1889.5274000000002,
+            "exchange": "Hotbit"
+        },
+        {
+            "volumeTotal": 1693.4054,
+            "exchange": "C2CX"
+        },
+        {
+            "volumeTotal": 1088.41206635,
+            "exchange": "Bithumb"
+        },
+        {
+            "volumeTotal": 1044.016,
+            "exchange": "BitMax"
+        },
+        {
+            "volumeTotal": 988.3489599999999,
+            "exchange": "Atomars"
+        },
+        {
+            "volumeTotal": 972.2039281243863,
+            "exchange": "Nominex"
+        },
+        {
+            "volumeTotal": 966.177772,
+            "exchange": "Exrates"
+        },
+        {
+            "volumeTotal": 617.13770448,
+            "exchange": "Coindeal"
+        },
+        {
+            "volumeTotal": 454.13422525,
+            "exchange": "Dex-Trade"
+        },
+        {
+            "volumeTotal": 42.877533,
+            "exchange": "Float SV"
+        },
+        {
+            "volumeTotal": 18.19,
+            "exchange": "Stormgain"
+        },
+        {
+            "volumeTotal": 4.995,
+            "exchange": "CoinAll"
+        }
+    ],
+    "exchanges": [
+        {
+            "name": "Bitfinex",
+            "pairItems": [
+                {
+                    "volume": 33488.63222413,
+                    "base": "DSH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "Bitfinex"
+                },
+                {
+                    "volume": 1921.50072066,
+                    "base": "DSH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Bitfinex"
+                }
+            ]
+        },
+        {
+            "name": "Coineal",
+            "pairItems": [
+                {
+                    "volume": 49751.26634,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Coineal"
+                }
+            ]
+        },
+        {
+            "name": "ZBG",
+            "pairItems": [
+                {
+                    "volume": 27911.5038,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "ZBG"
+                }
+            ]
+        },
+        {
+            "name": "XT",
+            "pairItems": [
+                {
+                    "volume": 78437.17,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "SXC",
+                    "market": "XT"
+                },
+                {
+                    "volume": 60702.874,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "XT"
+                },
+                {
+                    "volume": 34664.976,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "XT"
+                }
+            ]
+        },
+        {
+            "name": "Huobi Global",
+            "pairItems": [
+                {
+                    "volume": 146175.76559207443,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Huobi Global"
+                },
+                {
+                    "volume": 5679.142831233951,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Huobi Global"
+                }
+            ]
+        },
+        {
+            "name": "Binance",
+            "pairItems": [
+                {
+                    "volume": 173802.82354963289,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Binance"
+                },
+                {
+                    "volume": 46815.45469009273,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Binance"
+                },
+                {
+                    "volume": 9617.443472395422,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BUSD",
+                    "market": "Binance"
+                },
+                {
+                    "volume": 2648.496028551478,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Binance"
+                },
+                {
+                    "volume": 1591.959205811138,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BNB",
+                    "market": "Binance"
+                }
+            ]
+        },
+        {
+            "name": "WhiteBIT",
+            "pairItems": [
+                {
+                    "volume": 9628.889,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "WhiteBIT"
+                },
+                {
+                    "volume": 4270.60144,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "WhiteBIT"
+                },
+                {
+                    "volume": 2200.94167,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "WhiteBIT"
+                }
+            ]
+        },
+        {
+            "name": "Digifinex",
+            "pairItems": [
+                {
+                    "volume": 85280.9474,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Digifinex"
+                },
+                {
+                    "volume": 34055.6322,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Digifinex"
+                },
+                {
+                    "volume": 4431.7936,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Digifinex"
+                }
+            ]
+        },
+        {
+            "name": "Bitcoin.com Exchange",
+            "pairItems": [
+                {
+                    "volume": 101994.343,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "Bitcoin.com Exchange"
+                },
+                {
+                    "volume": 17335.286,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Bitcoin.com Exchange"
+                },
+                {
+                    "volume": 3610.863,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Bitcoin.com Exchange"
+                }
+            ]
+        },
+        {
+            "name": "BtcTurk PRO",
+            "pairItems": [
+                {
+                    "volume": 82056.62702364,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "TRY",
+                    "market": "BtcTurk PRO"
+                },
+                {
+                    "volume": 10492.88947428,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "BtcTurk PRO"
+                }
+            ]
+        },
+        {
+            "name": "ZB",
+            "pairItems": [
+                {
+                    "volume": 78109.7,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "ZB"
+                },
+                {
+                    "volume": 26973.917,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "QC",
+                    "market": "ZB"
+                }
+            ]
+        },
+        {
+            "name": "Decoin",
+            "pairItems": [
+                {
+                    "volume": 4301.438397036452,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Decoin"
+                }
+            ]
+        },
+        {
+            "name": "Coinbase Pro",
+            "pairItems": [
+                {
+                    "volume": 29012.73553858,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "Coinbase Pro"
+                },
+                {
+                    "volume": 5203.93363679,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Coinbase Pro"
+                }
+            ]
+        },
+        {
+            "name": "Kraken",
+            "pairItems": [
+                {
+                    "volume": 5351.7372373,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "EUR",
+                    "market": "Kraken"
+                },
+                {
+                    "volume": 5212.73085096,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "Kraken"
+                },
+                {
+                    "volume": 1005.52128483,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "XBT",
+                    "market": "Kraken"
+                }
+            ]
+        },
+        {
+            "name": "OKEx",
+            "pairItems": [
+                {
+                    "volume": 116994.051236,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "OKEx"
+                },
+                {
+                    "volume": 17897.079374,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "OKEx"
+                },
+                {
+                    "volume": 3161.431297,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "OKEx"
+                }
+            ]
+        },
+        {
+            "name": "CoinTiger",
+            "pairItems": [
+                {
+                    "volume": 21550.33630706,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "CoinTiger"
+                },
+                {
+                    "volume": 487.936,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "CoinTiger"
+                }
+            ]
+        },
+        {
+            "name": "BW.com",
+            "pairItems": [
+                {
+                    "volume": 54315.461,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "BW.com"
+                }
+            ]
+        },
+        {
+            "name": "B2BX",
+            "pairItems": [
+                {
+                    "volume": 4756.24969901,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "B2BX"
+                }
+            ]
+        },
+        {
+            "name": "BKEX",
+            "pairItems": [
+                {
+                    "volume": 62190.8943,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "BKEX"
+                },
+                {
+                    "volume": 9543.5821,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "BKEX"
+                }
+            ]
+        },
+        {
+            "name": "P2PB2B",
+            "pairItems": [
+                {
+                    "volume": 3185.32806,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "P2PB2B"
+                },
+                {
+                    "volume": 3070.73535,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "P2PB2B"
+                },
+                {
+                    "volume": 1330.905,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "P2PB2B"
+                }
+            ]
+        },
+        {
+            "name": "Float SV",
+            "pairItems": [
+                {
+                    "volume": 42.877533,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Float SV"
+                }
+            ]
+        },
+        {
+            "name": "YoBit",
+            "pairItems": [
+                {
+                    "volume": 400253.61048656,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "YoBit"
+                }
+            ]
+        },
+        {
+            "name": "CoinAll",
+            "pairItems": [
+                {
+                    "volume": 4.995,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "CoinAll"
+                }
+            ]
+        },
+        {
+            "name": "Dcoin",
+            "pairItems": [
+                {
+                    "volume": 106108,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Dcoin"
+                }
+            ]
+        },
+        {
+            "name": "Nominex",
+            "pairItems": [
+                {
+                    "volume": 758.5342349812239,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Nominex"
+                },
+                {
+                    "volume": 202.368828676,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Nominex"
+                },
+                {
+                    "volume": 11.300864467162329,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Nominex"
+                }
+            ]
+        },
+        {
+            "name": "Bitrue",
+            "pairItems": [
+                {
+                    "volume": 30035.984,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "XRP",
+                    "market": "Bitrue"
+                }
+            ]
+        },
+        {
+            "name": "LBank",
+            "pairItems": [
+                {
+                    "volume": 4097.8204,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "LBank"
+                }
+            ]
+        },
+        {
+            "name": "C2CX",
+            "pairItems": [
+                {
+                    "volume": 1635.7379,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "C2CX"
+                },
+                {
+                    "volume": 57.6675,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "C2CX"
+                }
+            ]
+        },
+        {
+            "name": "MXC",
+            "pairItems": [
+                {
+                    "volume": 16093.784488,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "MXC"
+                }
+            ]
+        },
+        {
+            "name": "Exrates",
+            "pairItems": [
+                {
+                    "volume": 437.40468,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "Exrates"
+                },
+                {
+                    "volume": 358.765092,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Exrates"
+                },
+                {
+                    "volume": 170.008,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Exrates"
+                }
+            ]
+        },
+        {
+            "name": "Sistemkoin",
+            "pairItems": [
+                {
+                    "volume": 114679.73561197358,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Sistemkoin"
+                }
+            ]
+        },
+        {
+            "name": "Vindax",
+            "pairItems": [
+                {
+                    "volume": 29115.91731,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Vindax"
+                },
+                {
+                    "volume": 1325.958,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Vindax"
+                }
+            ]
+        },
+        {
+            "name": "BiKi",
+            "pairItems": [
+                {
+                    "volume": 12406.0829,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "BiKi"
+                }
+            ]
+        },
+        {
+            "name": "Binance US",
+            "pairItems": [
+                {
+                    "volume": 2467.4914081379957,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "Binance US"
+                }
+            ]
+        },
+        {
+            "name": "Catex",
+            "pairItems": [
+                {
+                    "volume": 43369.97312596111,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Catex"
+                },
+                {
+                    "volume": 40062.461467694455,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Catex"
+                },
+                {
+                    "volume": 38496.375200505514,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Catex"
+                }
+            ]
+        },
+        {
+            "name": "Bibox",
+            "pairItems": [
+                {
+                    "volume": 5456,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Bibox"
+                },
+                {
+                    "volume": 3435,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Bibox"
+                },
+                {
+                    "volume": 1244,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Bibox"
+                }
+            ]
+        },
+        {
+            "name": "Bithumb",
+            "pairItems": [
+                {
+                    "volume": 1088.41206635,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "KRW",
+                    "market": "Bithumb"
+                }
+            ]
+        },
+        {
+            "name": "Gate.io",
+            "pairItems": [
+                {
+                    "volume": 8200.2039341765,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Gate.io"
+                }
+            ]
+        },
+        {
+            "name": "Poloniex",
+            "pairItems": [
+                {
+                    "volume": 1083.70216826,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Poloniex"
+                },
+                {
+                    "volume": 817.69696874,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Poloniex"
+                }
+            ]
+        },
+        {
+            "name": "AEX",
+            "pairItems": [
+                {
+                    "volume": 3086.34021092,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "CNC",
+                    "market": "AEX"
+                },
+                {
+                    "volume": 620.9436806,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "AEX"
+                }
+            ]
+        },
+        {
+            "name": "Atomars",
+            "pairItems": [
+                {
+                    "volume": 484.08896,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Atomars"
+                },
+                {
+                    "volume": 444.38,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Atomars"
+                },
+                {
+                    "volume": 59.88,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Atomars"
+                }
+            ]
+        },
+        {
+            "name": "Dex-Trade",
+            "pairItems": [
+                {
+                    "volume": 328.49422525,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Dex-Trade"
+                },
+                {
+                    "volume": 125.64,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Dex-Trade"
+                }
+            ]
+        },
+        {
+            "name": "EXMO",
+            "pairItems": [
+                {
+                    "volume": 2667.25985447,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "EXMO"
+                },
+                {
+                    "volume": 2285.87474537,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USD",
+                    "market": "EXMO"
+                }
+            ]
+        },
+        {
+            "name": "Hotbit",
+            "pairItems": [
+                {
+                    "volume": 1345.5724,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Hotbit"
+                },
+                {
+                    "volume": 354.0351,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "Hotbit"
+                },
+                {
+                    "volume": 189.9199,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Hotbit"
+                }
+            ]
+        },
+        {
+            "name": "BitMax",
+            "pairItems": [
+                {
+                    "volume": 1044.016,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "BitMax"
+                }
+            ]
+        },
+        {
+            "name": "Hoo.com",
+            "pairItems": [
+                {
+                    "volume": 2095.1015131293734,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Hoo.com"
+                }
+            ]
+        },
+        {
+            "name": "BigONE",
+            "pairItems": [
+                {
+                    "volume": 48758.98777,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "BigONE"
+                },
+                {
+                    "volume": 48515.16943,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "BigONE"
+                }
+            ]
+        },
+        {
+            "name": "KuCoin",
+            "pairItems": [
+                {
+                    "volume": 7052.42758283,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "KuCoin"
+                }
+            ]
+        },
+        {
+            "name": "BitMart",
+            "pairItems": [
+                {
+                    "volume": 50307.764,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "ETH",
+                    "market": "BitMart"
+                },
+                {
+                    "volume": 41738.726,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "BitMart"
+                },
+                {
+                    "volume": 27554.706,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "BitMart"
+                }
+            ]
+        },
+        {
+            "name": "LATOKEN",
+            "pairItems": [
+                {
+                    "volume": 12980.239606874788,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "LATOKEN"
+                },
+                {
+                    "volume": 9982.669359310512,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "LATOKEN"
+                }
+            ]
+        },
+        {
+            "name": "Stormgain",
+            "pairItems": [
+                {
+                    "volume": 18.19,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "Stormgain"
+                }
+            ]
+        },
+        {
+            "name": "CoinEx",
+            "pairItems": [
+                {
+                    "volume": 23017.34842989,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "USDT",
+                    "market": "CoinEx"
+                }
+            ]
+        },
+        {
+            "name": "Coindeal",
+            "pairItems": [
+                {
+                    "volume": 617.13770448,
+                    "base": "DASH",
+                    "coinId": "dash",
+                    "target": "BTC",
+                    "market": "Coindeal"
+                }
+            ]
+        }
+    ]
+}

@@ -98,10 +98,10 @@ export default function MarketWatch() {
                 <ambientLight intensity={.15} color="white" />
                 <spotLight intensity={0.3} angle={0.1} color="white" penumbra={1} position={[5, 25, 20]} />
                 <Suspense fallback={null}>
-                    <PlaySound />
-                    <Environment files="royal_esplanade_1k.hdr" />
-                    <EthThreeD />
-                    <ContactShadows rotation-x={Math.PI / 2} position={[0, -1.1, 0]} opacity={0.25} width={10} height={10} blur={2} far={1} />
+                    {/* <PlaySound /> */}
+                    {/* <Environment files="royal_esplanade_1k.hdr" /> */}
+                    {/* <EthThreeD /> */}
+                    {/* <ContactShadows rotation-x={Math.PI / 2} position={[0, -1.1, 0]} opacity={0.25} width={10} height={10} blur={2} far={1} /> */}
                 </Suspense>
                 <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={true} />
             </Canvas>

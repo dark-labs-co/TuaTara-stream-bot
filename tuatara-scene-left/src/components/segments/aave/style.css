@@ -1,6 +1,15 @@
 
-.display--container{
-    background:rgba(255, 255, 255, 0.0);
+.aave-display--container{
+    grid-area: main-area;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%); 
+    background: rgba(0, 0, 0, 0); 
+    color: #fff;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    justify-content:end;
 }
 
 .aave-bar--wrapper{
@@ -80,7 +89,7 @@ text{
     color: rgba(255, 255, 255, 0.596);
     color: #b6509e;
     border-top: solid 4px #b6509e;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .aave--coinName-data1{
@@ -90,12 +99,14 @@ text{
 
 .footer--wrapper{
     display: flex;
+    position: absolute;
     justify-content: space-around;
-    background:rgba(255, 255, 255, .4);
+    background:rgba(0, 0, 0, 0);
     font-size:2rem;
     font-weight:bold;
-    color: #b6509e;
-    margin-top:110px ;
+    color: #fafafa;
+    top:-10px ;
+    right:20px ;
 }
 
 .aave-section--title{

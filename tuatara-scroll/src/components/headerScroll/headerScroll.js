@@ -18,26 +18,30 @@ function ScrollDat({ datIn, move }) {
     )
 }
 
-const HeaderScroll = ({ text }) => {
-    const [key1, setKey1] = useState(1);
+const HeaderScroll = ({ text, slow, medium, fast }) => {
+    // const [key1, setKey1] = useState(1);
 
-    const scrolling = useSpring({
-        from: { transform: "translate(0%,0)" },
-        to: { transform: "translate(-1000%,0)" },
-        config: { duration: 250000 },
-        reset: true,
-        // reverse: key1 % 2 == 0,
-        onRest: () => {
-            setKey1(key1 + 1);
-        }
-    });
+    // const scrolling = useSpring({
+    //     from: { transform: "translate(0%,0)" },
+    //     to: { transform: "translate(-1000%,0)" },
+    //     config: { duration: 250000 },
+    //     reset: true,
+    //     // reverse: key1 % 2 == 0,
+    //     onRest: () => {
+    //         setKey1(key1 + 1);
+    //     }
+    // });
 
 
     return (
         <>
 
             <div className={"header--wrapper"} >
-                <HeaderScrollInfo />
+                <HeaderScrollInfo
+                    slow={slow}
+                    medium={medium}
+                    fast={fast}
+                />
                 {/* <div className={`header--wrapper ${text.price_change_percentage_24h >= 0 ? 'up' : 'down'}`} >
                     <animated.div key={key1} style={scrolling}>
                         <ScrollDat

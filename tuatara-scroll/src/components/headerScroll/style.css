@@ -1,9 +1,24 @@
 .header--wrapper {
     padding: 1.2rem 0;
+    padding-left: 20px;
     position: relative;
-    background:rgba(0, 0, 0, 0.79);
-    color:rgb(220, 220, 220);
+    background:#ffffff30;
+    color:#00000060;
     font-size:2rem;
+    background:#ff000000;
+    /* background-image: url('./out.gif'); */
+    background-position: 0 10; /* Center the image */
+    background-repeat: no-repeat; ; /* Do not repeat the image */
+    opacity: 0.6;
+    background-size: 15% auto ;
+}
+.topLeft--title-container{
+    text-align: right;
+    margin-right: 72vw;
+    font-size:1.5rem;
+    color:#fffffffa;
+    font-weight: bold;
+    padding: .3rem 0;
 }
 
 .up{

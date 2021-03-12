@@ -21,30 +21,29 @@
     min-height: 200px;
     flex-direction: row;
     display: flex;
+    background: #00000030;
+    padding:1rem 2rem;
 }
 
 .collection--container{
     flex-direction: column;
     max-height: 200px;
     min-height: 200px;
+    width: 91%;
+    display: flex;
+    margin: 0;
+    padding: 2rem 0;
 }
+
 
 .collection--container:nth-of-type(1){
     grid-area: top-r;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 90%;
-    display: flex;
     min-height: 0;
+    padding: 0rem 0;
 }
 
 .collection--container:nth-of-type(2){
     grid-area: mid-r;
-    height: 100%;
-    min-height: 260px;
-    margin: 0;
-    padding: 0;
     width: 91%;
     display: flex;
 }
@@ -52,11 +51,13 @@
 .collection--container:nth-of-type(3){
     grid-area: bottom-r;
     height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 91%;
+    width: 49vw;
     display: flex;
+    position: absolute;
+    bottom: 90px;
+    left: 50vw;
 }
+
 .collection--container-half{
     height: 100%;
     width:  50%;
@@ -68,17 +69,22 @@
     overflow: hidden;
     background: rgba(0, 0, 0, 0.0);
 }
+.collection--volume-wrapper{
+    position: abosolute;
+    height: 20vh;
+    width: 40vw;
+}
 
 .collection--text{
-    margin-top: 0px;
+    margin-top: -110px;
     margin-bottom: 0;
     padding: 5px 0;
     font-weight: bold;
-    text-align: center;
-    color: rgba(26, 26, 26, 0.8);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 2.5rem;
+    text-align:left;
+    color: #fffffff5;
+    font-size: 3rem;
     font-style: italic;
+    position: absolute;
 }
 
 .collection--text--wrapper{
@@ -150,16 +156,23 @@
     padding: 20px 0;
     font-size: 4rem;
     /* color: #e6e6e6e3; */
-    color: #343636;
     text-align: center;
-    width: 30%;
-    margin-left: -90px;
-  }
+    width:20%;
+    height:10%;
+    background:rgba(255, 255, 255, 0.74);
+    background-image: url('./out.gif');
+    background-position: right; /* Center the image */
+    background-repeat: repeat; /* Do not repeat the image */
+    background-size:auto; /* Resize the background image to cover the entire container */
+    opacity: 0.6;
+    background-position: 30% 50%; 
+    background-size: 140% auto ;
+}
   
   .collection--timeTicker-wrapper{
       display: flex;
-      justify-content:flex-end;
-      margin-top: -500px;
+      justify-content:space-around;
+      margin-top: -390px;
     }
   
   .collection--timeTicker-title{
@@ -170,17 +183,18 @@
   }
 
   .collection--timeTicker-text{
-    padding: 0 2rem;
-    font-size:3rem;
+    padding: .0rem 0rem;
+    font-size:2rem;
     font-weight: bolder;
-    background: #00000030;
-    color: #ffffff30;
-    margin:1rem;
-    margin-top: 490px;
+    background: #c5adad30;
+    color: #ffffffd7;
+    margin:1rem 0;
+    margin-top: 463px;
+    width:20%;
+    text-align:center;
 }
 
-  .timeTicker-selected{
-    color: #ffffffaf;
-    border:solid 4px rgba(255, 255, 255, 0.603);
-    background: #ffffff30;
+.timeTicker-selected{
+    color: #ffffffd7;
+    background: #00000030;
   }

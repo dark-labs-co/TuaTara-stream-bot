@@ -100,10 +100,6 @@
         "symbol": "ALGO"
     },
     {
-        "currency": "omg-network",
-        "symbol": "OMG"
-    },
-    {
         "currency": "basic-attention-token",
         "symbol": "BAT"
     },

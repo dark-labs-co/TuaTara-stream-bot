@@ -47,7 +47,7 @@ export default function MainArea() {
 
     return (
         <div className="display--wrapper">
-            <div className="display--container">
+            <div className="aave-display--container">
                 <AaveBar
                     serviceName={'Lending'}
                     serviceType={'lendingData'}

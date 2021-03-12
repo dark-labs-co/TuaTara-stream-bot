@@ -2,7 +2,7 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import "./style.css"
 import AaveDataLink from "../../../dataLinkAaveRaw.json"
-
+import { numberWithCommas } from "./numberHelper"
 
 const theme = {
     axis: {
@@ -14,6 +14,8 @@ const theme = {
         }
     }
 }
+
+
 export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinIndex3 }) => (
     <>
         <h1 className='aave-section--title'>{serviceName}</h1>
@@ -214,11 +216,11 @@ export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinI
                     {AaveDataLink.lendingData[coinIndex0].symbol}
                 </div>
                 <div className="aave--coinName-data0">
-                    {AaveDataLink.lendingData[coinIndex0].deposit}
+                    {numberWithCommas(AaveDataLink.lendingData[coinIndex0].deposit)}
                     <br />
 
                     <div className="aave--coinName-data1">
-                        {AaveDataLink.lendingData[coinIndex0].borrow}
+                        {numberWithCommas(AaveDataLink.lendingData[coinIndex0].borrow)}
                     </div>
                 </div>
             </div>
@@ -228,11 +230,11 @@ export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinI
                     {AaveDataLink.lendingData[coinIndex1].symbol}
                 </div>
                 <div className="aave--coinName-data0">
-                    {AaveDataLink.lendingData[coinIndex1].deposit}
+                    {numberWithCommas(AaveDataLink.lendingData[coinIndex1].deposit)}
                     <br />
 
                     <div className="aave--coinName-data1">
-                        {AaveDataLink.lendingData[coinIndex1].borrow}
+                        {numberWithCommas(AaveDataLink.lendingData[coinIndex1].borrow)}
                     </div>
                 </div>
             </div>
@@ -242,10 +244,10 @@ export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinI
                     {AaveDataLink.lendingData[coinIndex2].symbol}
                 </div>
                 <div className="aave--coinName-data0">
-                    {AaveDataLink.lendingData[coinIndex2].deposit}
+                    {numberWithCommas(AaveDataLink.lendingData[coinIndex2].deposit)}
                     <br />
                     <div className="aave--coinName-data1">
-                        {AaveDataLink.lendingData[coinIndex2].borrow}
+                        {numberWithCommas(AaveDataLink.lendingData[coinIndex2].borrow)}
                     </div>
                 </div>
             </div>
@@ -254,11 +256,11 @@ export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinI
                     {AaveDataLink.lendingData[coinIndex3].symbol}
                 </div>
                 <div className="aave--coinName-data0">
-                    {AaveDataLink.lendingData[coinIndex3].deposit}
+                    {numberWithCommas(AaveDataLink.lendingData[coinIndex3].deposit)}
                     <br />
 
                     <div className="aave--coinName-data1">
-                        {AaveDataLink.lendingData[coinIndex3].borrow}
+                        {numberWithCommas(AaveDataLink.lendingData[coinIndex3].borrow)}
                     </div>
                 </div>
             </div>
@@ -403,9 +405,7 @@ export const AaveBar = ({ serviceName, coinIndex0, coinIndex1, coinIndex2, coinI
             </g>
         </svg>
         <div className="footer--wrapper">
-            <div>Totals Calculated in ETHER</div>
-            <div>Borrow</div>
-            <div>Deposit</div>
+            <div>Bars in ETH</div>
         </div>
     </>
 )

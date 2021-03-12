@@ -3,7 +3,7 @@ import './App.css';
 import CoinGecko from 'coingecko-api';
 import HeaderScroll from './components/headerScroll/headerScroll'
 import SegmentData from "./segment2.json"
-import GasStation from "./components/gasStation/gasStation";
+import GasStationHead from "./components/gasStation/gasStationHead";
 import MarketWatchTransition from "./components/transitions/marketWatchTransition";
 import TuaTaraLogo from "./components/logo/tuaTaraLogo";
 
@@ -59,13 +59,24 @@ export default function App() {
       {CoinDat.code === 200 && <>
         <HeaderScroll
           text={CoinDat.data.market_data}
+          slow={gasDatSlow}
+          medium={gasDatMed}
+          fast={gasDatFast}
         />
         <TuaTaraLogo />
         <MarketWatchTransition />
       </>
       }
-
       {
+        gasDatFast.gas >= 10 && <>
+          <GasStationHead
+            slow={gasDatSlow}
+            medium={gasDatMed}
+            fast={gasDatFast}
+          />
+        </>
+      }
+      {/* {
         gasDatFast.gas >= 10 && <>
           <GasStation
             slow={gasDatSlow}
@@ -73,7 +84,7 @@ export default function App() {
             fast={gasDatFast}
           />
         </>
-      }
+      } */}
     </>
   )
 }

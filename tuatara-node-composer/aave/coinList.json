@@ -4,6 +4,10 @@
         "name": "Ethereum"
     },
     {
+        "symbol": "BTC",
+        "name": "Bitcoin"
+    },
+    {
         "name": "DAI",
         "symbol": "DAI"
     },

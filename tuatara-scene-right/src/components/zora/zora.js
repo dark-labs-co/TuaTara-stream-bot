@@ -70,7 +70,6 @@ export default function Zora() {
     function ZoraGallerySlideshow({ datType, datIndex }) {
         const item = artworksDat[datType][datIndex];
 
-
         return (
             <div className="zora--name-container">
                 {item.metaData.mimeType.includes('image') && <img src={item.contentUri} className="zora--artwork--item" />}
@@ -107,10 +106,10 @@ export default function Zora() {
                         {/* {index + 1} */}
                     </div >
                     <div className="zora--bidItem-index">
-                        {item.bidder.id.substring(0, 6)}...
+                        {item.amount / 1000000000000000000} {item.currency.symbol}
                     </div >
                     <div className="zora--bidItem-index">
-                        {item.amount / 1000000000000000000} {item.currency.symbol}
+                        {item.bidder.id.substring(0, 6)}...
                     </div >
                     <div className="zora--bidItem-index">
                         {timeConverter(item.createdAtTimestamp)}

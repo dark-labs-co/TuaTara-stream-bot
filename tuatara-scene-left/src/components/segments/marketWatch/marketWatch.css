@@ -1,71 +1,174 @@
 
 .pairGallery--wrapper{
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-  }
-  
-  .pairGallery--container{
-    display: flex;
-    flex-direction:column;
-    background: #00000030;
-    min-width: 28%;
-    max-width: 28%;
-    padding:0 1rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    justify-content:start;
-    text-align: left;
-  }
-  
-  .pairGallery--exchangeTitle-container{
-    padding-top: 2rem;
-    height: 150px;
-    text-align:center;
-  }
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
 
-  .pairGallery--exchange-title{
-    line-height: 2.5rem;
-    margin: 0;
-    padding: 0;
-  }
+.pairGallery--container{
+  display: flex;
+  flex-direction:column;
+  background: #00000030;
+  min-width: 28%;
+  max-width: 28%;
+  padding:0 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  justify-content:start;
+  text-align: left;
+}
+/* 
+.pairGallery--container.Binance{
+  background: linear-gradient(yellow, black);
+}
+
+.pairGallery--container.Huobi.Global{
+  background: red;
+}
+
+.pairGallery--container.bidesk{
+  background: blue;
+}
+
+.pairGallery--container.Coinbase{
+  background: blue;
+}
+
+.pairGallery--container.Coinbase.Pro{
+  background: darkblue;
+}
+
+.pairGallery--container.OKEx{
+  background: lightblue;
+}
+
+.pairGallery--container.XT{
+  background: lightblue;
+}
+
+.pairGallery--container.VCC.Exchange{
+  background: lightblue;
+}
+
+.pairGallery--container.Oceanix{
+  background: lightblue;
+}
+
+.pairGallery--container.HBTC{
+  background: lightblue;
+}
+.pairGallery--container.Bidesk{
+  background: lightblue;
+}
+.pairGallery--container.BiONE{
+  background: lightblue;
+}
+
+.pairGallery--container.YoBit{
+  background: lightblue;
+}
+
+.pairGallery--container.HitBTC{
+  background: lightblue;
+}
+
+.pairGallery--container.Digifinex{
+  background: lightblue;
+}
+
+.pairGallery--container.BKEX{
+  background: lightblue;
+}
+.pairGallery--container.Uniswap{
+  background: pink;
+}
+
+.pairGallery--container.BitMart{
+  background: pink;
+}
+
+.pairGallery--container.Sistemkoin{
+  background: pink;
+}
+
+.pairGallery--container.ZG{
+  background: pink;
+} */
+
+.pairGallery--exchangeTitle-container{
+  padding-top: 2rem;
+  height: 150px;
+  text-align:center;
+}
+
+
+.pairGallery--exchange-title{
+  line-height: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.pairGallery--item-container{
+  display: flex;
+  justify-content:space-evenly;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-top: 0;
+}
+
+.pairGallery--item-number{
+  margin: auto 0;
+}
+
+.pairGallery--item-target{
+  margin: auto 0;
+}
+
+.display--priceStats--wrapper{
+  position: absolute;
+  width: 46.5vw;
+  bottom:137px;
+  left:20px;
   
-  .pairGallery--item-container{
-    display: flex;
-    justify-content:space-evenly;
-    width: 100%;
-    text-align: center;
-    margin: auto;
-    margin-top: 0;
-  }
-  
-  .pairGallery--item-number{
-    margin: auto 0;
-  }
-  
-  .pairGallery--item-target{
-    margin: auto 0;
-  }
-  
-  .coinStats--container{
-    margin: 1rem 0;
-    padding: .5rem 1rem;
-    background:#00000030;
+}
+
+.coinStats--container{
+  margin: 1rem 0;
+  padding: .5rem 1rem;
+  background:#00000030;
 }
 
 .coinStats--pair-container{
-    width: 100%;
-    line-height:2.5rem;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  line-height:2.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .coinStats--pair-text{
-    font-size: 2rem;
+  font-size: 2rem;
 }
 .coinStats--pair-volume{
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
+  
 }
 
+.coinRank{
+    position:absolute;
+    font-size:50px;
+    top:50px;
+    left:30px;
+    color:#00000090;
+    background:silver;
+    height:150px;
+    width:150px;
+    text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-radius:150px;
+  font-style:bold;
+}

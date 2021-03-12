@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import Graph from "./graph";
 import './styles.css'
 import MarketWatchData from "../../dataLinkMarketWatch.json"
+import CoinData from "../../coinData.json"
 import VolumeBar from "../marketWatch/volumeBar";
+import CoinStatsSlider from "./coinStatsSlider";
 
 const Collection = () => {
     let calcHeight = 200;
@@ -15,7 +17,7 @@ const Collection = () => {
                     <h3 className={`collection--timeTicker-text ${MarketWatchData.days === "1" && "timeTicker-selected"}`}>1d</h3>
                     <h3 className={`collection--timeTicker-text ${MarketWatchData.days === "7" && "timeTicker-selected"}`}>7d</h3>
                     <h3 className={`collection--timeTicker-text ${MarketWatchData.days === "30" && "timeTicker-selected"}`}>30d</h3>
-                    <h3 className={`collection--timeTicker-text ${MarketWatchData.days === "90" && "timeTicker-selected"}`}>90d</h3>
+                    {/* <h3 className={`collection--timeTicker-text ${MarketWatchData.days === "90" && "timeTicker-selected"}`}>90d</h3> */}
                     <h3 className={`collection--timeTicker-text ${MarketWatchData.days === "365" && "timeTicker-selected"}`}>1y</h3>
                     <h3 className={`collection--timeTicker-text ${MarketWatchData.days === "max" && "timeTicker-selected"}`}>max</h3>
                 </div>
@@ -32,15 +34,17 @@ const Collection = () => {
                         height={calcHeight}
                         top={0}
                         bottom={10}
+                        curVal={CoinData.coin[0].current_price_usd}
+                        averageVal={MarketWatchData.ave}
                     />
                 </div>
                 <div className="collection--priceStat-container">
-                    <div>Min: {MarketWatchData.min.toFixed(2)}</div>
-                    <div>Average: {MarketWatchData.ave.toFixed(2)}</div>
-                    <div> Max:{MarketWatchData.max.toFixed(2)}</div>
-                    {/* <div>
-                            <h2>Total Liquidity</h2>
-                        </div> */}
+                    <CoinStatsSlider
+                        coinCurrent={CoinData.coin[0].current_price_usd.toFixed(2)}
+                        coinMin={MarketWatchData.min.toFixed(2)}
+                        coinMax={MarketWatchData.max.toFixed(2)}
+                        coinAverage={MarketWatchData.ave.toFixed(2)}
+                    />
                 </div>
             </div>
 
@@ -50,24 +54,8 @@ const Collection = () => {
                     <VolumeBar
                         data={MarketWatchData.volume}
                     />
-
-                    {/* <div>
-                        <div>
-                            <h2>Volume (24hrs)</h2>
-                        </div>
-                    </div> */}
                 </div>
             </div>
-            {/* <div className="collection--container">
-                <h3 className="collection--text">Market Caps</h3>
-                <Graph
-                    coinDat={MarketWatchData.market_caps}
-                    color={'red'}
-                    height={150}
-                    top={0}
-                    bottom={0}
-                />
-            </div> */}
         </div >
     )
 }

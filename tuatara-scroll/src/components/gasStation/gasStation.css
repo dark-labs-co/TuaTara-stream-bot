@@ -1,16 +1,13 @@
-.gasStation--wrapper{
+.gasStation--wrapper-head{
     position: absolute;
-    bottom:-18px;
+    top:0px;
     right:0;
     width: 70%;
     display: flex;
     background:hsla(0, 0%, 0%, 0.424);
-    border-top: solid 4px #d245f5;
-    border-left: solid 4px #d245f5;
-    border-left: solid 4px #d245f5;
-    outline: 5px solid  #d245f5;
-    outline-offset: 7px; /* box-shadow: 200px 80px 50px 0px rgba(46, 119, 216, 0.637); */
+    background:#00000030;
     opacity: .8;
+    font-style: italic;
 }
 
 .gasStation--logo-container{
@@ -18,7 +15,7 @@
     margin: auto;
     text-align: center;
     margin: 0;
-    margin-top: -17px;
+    margin-top: -8px;
     padding: 0;
 }
 
@@ -27,7 +24,7 @@
     padding: 0 0rem;
     padding-right: 1.5rem;
     color:rgba(243, 108, 18, 0.897);
-    color:#d245f5;
+    color:#bebebe;
     font-size:2rem;
     margin: auto;
     margin-left: 0px;
@@ -39,43 +36,45 @@
     display: flex;
     justify-content:space-between;
     font-size: 4rem;
-    border-right: solid 4px #d245f5;
+    border-right: solid 4px #fefaff;
     /* box-shadow: 200px 80px 30px 0px #0ff; */
-    box-shadow: 320px 85px 60px 0px #d245f5;
+    /* box-shadow: 320px 85px 60px 0px #d245f5; */
     position: relative;
     margin: auto;
     color: #4d4d4d;
     color: #e0e0e0;
-    padding:1rem auto;
     font-style: italic;
     font-weight: 700;
+    line-height: 3rem;
 }
 
 .gasStation--item-container:nth-of-type(1){
-    box-shadow: 320px 85px 60px 0px rgb(255, 100, 0);
-    background:rgba(255, 255, 255, 0.6);
+    /* box-shadow: 320px 85px 60px 0px rgb(255, 100, 0); */
     padding:1rem;
     margin:0;
     width: 100px;
 }
 
 .gasStation--item-container:nth-of-type(2){
-    box-shadow: 320px 85px 60px 0px rgb(255, 102, 0);
-    background:rgba(0,0,0,0.6);
+    /* box-shadow: 320px 85px 60px 0px rgb(255, 102, 0); */
+        background:#00000030;
+
     margin:0;
     padding:1rem;
 }
 
 .gasStation--item-container:nth-of-type(3){
-    box-shadow: 320px 85px 60px 0px red;
-    background:rgba(0,0,0,0.6);
+    /* box-shadow: 320px 85px 60px 0px red; */
+        background:#00000030;
+
     margin:0;
     padding:1rem;
 }
 
 .gasStation--item-container:nth-of-type(4){
-    box-shadow: 320px 85px 60px 0px red;
-    background:rgba(0,0,0,0.6);
+    /* box-shadow: 320px 85px 60px 0px red; */
+        background:#00000030;
+
     margin:0;
     padding:1rem;
 }
