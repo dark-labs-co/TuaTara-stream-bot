@@ -256,7 +256,7 @@ h4{
 }
 
 .coinPrice--title-text.the-graph{
-  background: linear-gradient(5f37cd 4782e4 0%,#5f37cd 90%, #4782e4 100%);
+  background: linear-gradient(90deg, #5f37cd 0%,#5f37cd 90%, #4782e4 100%);
   color: #fff;
 }
 
@@ -316,7 +316,7 @@ h4{
 }
 
 .coinPrice--title-text.enjin-coin{
-  background: linear-gradient(90deg #8959e2 0%, #8959e2 90%,#e0e0e0 100%);
+  background: linear-gradient(90deg, #8959e2 0%, #8959e2 90%,#e0e0e0 100%);
   color: #fff;
 }
 
@@ -370,41 +370,41 @@ h4{
 }
 
 .coinPrice--title-text.monero{
-  background: linear-gradient(90deg #f2681c 0%, #f2681c 90%, #4c4c4c 100%);
+  background: linear-gradient(90deg, #f2681c 0%, #f2681c 90%, #4c4c4c 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.ontology{
-  background: linear-gradient(90deg #46a5ff 0%, #46a5ff 90%, #fff 100%);
+  background: linear-gradient(90deg, #46a5ff 0%, #46a5ff 90%, #fff 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.qtum{
-  background: linear-gradient(90deg #2ea7de 0%, #2ea7de 90%, #e1e1e1 100%);
+  background: linear-gradient(90deg, #2ea7de 0%, #2ea7de 90%, #e1e1e1 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.reserve-rights-token{
-  background: linear-gradient(90deg #000000 0%, #000000 90%, #e1e1e1 100%);
+  background: linear-gradient(90deg, #000000 0%, #000000 90%, #e1e1e1 100%);
   color: #fff;
 }
 .coinPrice--title-text.yearn-finance{
-  background: linear-gradient(90deg #0064cc 0%, #0064cc 90%, #e1e1e1 100%);
+  background: linear-gradient(90deg, #0064cc 0%, #0064cc 90%, #e1e1e1 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.omg-network{
-  background: linear-gradient(90deg #000 0%, #000 90%, #ffffff 100%);
+  background: linear-gradient(90deg, #000 0%, #000 90%, #ffffff 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.bittorrent{
-  background: linear-gradient(90deg #000 0%, #000 90%, #ffffff 100%);
+  background: linear-gradient(90deg, #000 0%, #000 90%, #ffffff 100%);
   color: #fff;
 }
 
 .coinPrice--title-text.inch{
-  background: linear-gradient(90deg #000 0%, #000 90%, #ffffff 100%);
+  background: linear-gradient(90deg, #000 0%, #000 90%, #ffffff 100%);
   color: #fff;
 }
 

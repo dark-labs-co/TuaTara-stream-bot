@@ -1,10 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from "react";
 import DataLink from '../../../dataLinkRaw.json'
 import MarketCell from './marketCell'
 import CoinData from '../../../coinData.json'
 import "./marketWatch.css"
-
+import RankThreeCoin from './rankThreeCoin/rankThreeCoin'
+import Seg from "../../../segment1.json"
 export default function MainArea() {
+
+    const Icon = ({ name }) => {
+        const ImportedIconRef = useRef(null);
+        const [loading, setLoading] = useState(false);
+
+
+        useEffect(() => {
+            setLoading(true);
+            const importIcon = async () => {
+                try {
+                    ImportedIconRef.current = (await import(`../../../assets/icons/${name.toLowerCase()}.png`))
+                } catch (err) {
+                    // Your own error handling logic, throwing error for the sake of
+                    // simplicity
+                    console.log(err)
+                    throw err;
+                } finally {
+                    setLoading(false);
+                }
+            };
+            importIcon();
+        }, [name]);
+
+        if (!loading && ImportedIconRef.current) {
+            const { current: ImportedIcon } = ImportedIconRef;
+            console.log(ImportedIconRef)
+            return <>
+                <RankThreeCoin
+                    currencyImg={ImportedIcon.default}
+                    rankImg={ImportedIcon.default}
+                    coinColor=""
+                />
+                {/* <img src={ImportedIcon.default} className="coinPrice--icon-img0" /><img src={ImportedIcon.default} className="coinPrice--icon-img1" /> */}
+            </>
+        }
+
+        return null;
+    };
 
     function numberWithCommas(x) {
         if (x >= 1000) {
@@ -64,7 +103,8 @@ export default function MainArea() {
     return (
         <>
             <div className="coinRank">
-                #{CoinData.coin[0].rank + 1}
+                {/* #{CoinData.coin[0].rank + 1} */}
+                <Icon name={Seg.currency} fill="red" />
             </div>
 
             <div className="display--wrapper">
