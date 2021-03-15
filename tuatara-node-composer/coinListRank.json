@@ -1,1 +1,348 @@
-{"coinAgg":[{"name":{"currency":"bitcoin","symbol":"BTC"},"volume":64072938055.59565,"rank":0},{"name":{"currency":"ethereum","symbol":"ETH"},"volume":30955993202.461483,"rank":1},{"name":{"currency":"litecoin","symbol":"LTC"},"volume":6163841851.165565,"rank":2},{"name":{"currency":"bitcoin-cash","symbol":"BCH"},"volume":5695445461.4501295,"rank":3},{"name":{"currency":"binance-usd","symbol":"BUSD"},"volume":4400358618.6045475,"rank":4},{"name":{"currency":"cardano","symbol":"ADA"},"volume":3690039464.488681,"rank":5},{"name":{"currency":"huobi-token","symbol":"HT"},"volume":3673841710.234983,"rank":6},{"name":{"currency":"ripple","symbol":"XRP"},"volume":2907661901.3046737,"rank":7},{"name":{"currency":"eos","symbol":"EOS"},"volume":2903148967.555868,"rank":8},{"name":{"currency":"zcash","symbol":"ZEC"},"volume":1695742332.042689,"rank":9},{"name":{"currency":"chainlink","symbol":"LINK"},"volume":1654229301.5566711,"rank":10},{"name":{"currency":"polkadot","symbol":"DOT"},"volume":1637611013.6493182,"rank":11},{"name":{"currency":"tron","symbol":"TRX"},"volume":1616159833.5064843,"rank":12},{"name":{"currency":"usd-coin","symbol":"USDC"},"volume":1509666713.008944,"rank":13},{"name":{"currency":"dogecoin","symbol":"DOGE"},"volume":1395442190.7620208,"rank":14},{"name":{"currency":"ethereum-classic","symbol":"ETC"},"volume":1374051866.426595,"rank":15},{"name":{"currency":"dash","symbol":"DASH"},"volume":1277627617.6985822,"rank":16},{"name":{"currency":"zilliqa","symbol":"ZIL"},"volume":1151492872.7580667,"rank":17},{"name":{"currency":"uniswap","symbol":"UNI"},"volume":946046151.7959352,"rank":18},{"name":{"currency":"cosmos","symbol":"ATOM"},"volume":897203881.5783929,"rank":19},{"name":{"currency":"sushi","symbol":"SUSHI"},"volume":883584113.6569972,"rank":20},{"name":{"currency":"neo","symbol":"NEO"},"volume":860656305.1718595,"rank":21},{"name":{"currency":"vechain","symbol":"VET"},"volume":832484846.0627115,"rank":22},{"name":{"currency":"stellar","symbol":"XLM"},"volume":817626813.1586773,"rank":23},{"name":{"currency":"aave","symbol":"AAVE"},"volume":804460269.92615,"rank":24},{"name":{"currency":"monero","symbol":"XMR"},"volume":561313579.7220026,"rank":25},{"name":{"currency":"qtum","symbol":"QTUM"},"volume":500151790.25458354,"rank":26},{"name":{"currency":"algorand","symbol":"ALGO"},"volume":497981707.19161254,"rank":27},{"name":{"currency":"basic-attention-token","symbol":"BAT"},"volume":492850971.5030506,"rank":28},{"name":{"currency":"ontology","symbol":"ONT"},"volume":470698701.90061486,"rank":29},{"name":{"currency":"the-graph","symbol":"GRT"},"volume":454387241.90412563,"rank":30},{"name":{"currency":"dai","symbol":"DAI"},"volume":353045936.66963995,"rank":31},{"name":{"currency":"yearn-finance","symbol":"YFI"},"volume":327946955.7770867,"rank":32},{"name":{"currency":"tezos","symbol":"XTZ"},"volume":320308185.94282913,"rank":33},{"name":{"currency":"okb","symbol":"OKB"},"volume":303045663.6395722,"rank":34},{"name":{"currency":"filecoin","symbol":"FIL"},"volume":263590212.02855626,"rank":35},{"name":{"currency":"iota","symbol":"MIOTA"},"volume":255831530.87748706,"rank":36},{"name":{"currency":"reserve-rights-token","symbol":"RSR"},"volume":250078863.93078253,"rank":37},{"name":{"currency":"wrapped-bitcoin","symbol":"WBTC"},"volume":222470608.3774061,"rank":38},{"name":{"currency":"curve-dao-token","symbol":"CRV"},"volume":175848666.35510123,"rank":39},{"name":{"currency":"icon","symbol":"ICX"},"volume":154389555.36994782,"rank":40},{"name":{"currency":"balancer","symbol":"BAL"},"volume":112879749.07934521,"rank":41},{"name":{"currency":"avalanche","symbol":"AVAX"},"volume":412990.41267974506,"rank":42}]}
+{
+    "coinAgg": [
+        {
+            "name": {
+                "currency": "bitcoin",
+                "symbol": "BTC"
+            },
+            "volume": 64072938055.59565,
+            "rank": 0
+        },
+        {
+            "name": {
+                "currency": "ethereum",
+                "symbol": "ETH"
+            },
+            "volume": 30955993202.461483,
+            "rank": 1
+        },
+        {
+            "name": {
+                "currency": "litecoin",
+                "symbol": "LTC"
+            },
+            "volume": 6163841851.165565,
+            "rank": 2
+        },
+        {
+            "name": {
+                "currency": "bitcoin-cash",
+                "symbol": "BCH"
+            },
+            "volume": 5695445461.4501295,
+            "rank": 3
+        },
+        {
+            "name": {
+                "currency": "binance-usd",
+                "symbol": "BUSD"
+            },
+            "volume": 4400358618.6045475,
+            "rank": 4
+        },
+        {
+            "name": {
+                "currency": "cardano",
+                "symbol": "ADA"
+            },
+            "volume": 3690039464.488681,
+            "rank": 5
+        },
+        {
+            "name": {
+                "currency": "huobi-token",
+                "symbol": "HT"
+            },
+            "volume": 3673841710.234983,
+            "rank": 6
+        },
+        {
+            "name": {
+                "currency": "ripple",
+                "symbol": "XRP"
+            },
+            "volume": 2907661901.3046737,
+            "rank": 7
+        },
+        {
+            "name": {
+                "currency": "eos",
+                "symbol": "EOS"
+            },
+            "volume": 2903148967.555868,
+            "rank": 8
+        },
+        {
+            "name": {
+                "currency": "zcash",
+                "symbol": "ZEC"
+            },
+            "volume": 1695742332.042689,
+            "rank": 9
+        },
+        {
+            "name": {
+                "currency": "chainlink",
+                "symbol": "LINK"
+            },
+            "volume": 1654229301.5566711,
+            "rank": 10
+        },
+        {
+            "name": {
+                "currency": "polkadot",
+                "symbol": "DOT"
+            },
+            "volume": 1637611013.6493182,
+            "rank": 11
+        },
+        {
+            "name": {
+                "currency": "tron",
+                "symbol": "TRX"
+            },
+            "volume": 1616159833.5064843,
+            "rank": 12
+        },
+        {
+            "name": {
+                "currency": "usd-coin",
+                "symbol": "USDC"
+            },
+            "volume": 1509666713.008944,
+            "rank": 13
+        },
+        {
+            "name": {
+                "currency": "dogecoin",
+                "symbol": "DOGE"
+            },
+            "volume": 1395442190.7620208,
+            "rank": 14
+        },
+        {
+            "name": {
+                "currency": "ethereum-classic",
+                "symbol": "ETC"
+            },
+            "volume": 1374051866.426595,
+            "rank": 15
+        },
+        {
+            "name": {
+                "currency": "dash",
+                "symbol": "DASH"
+            },
+            "volume": 1277627617.6985822,
+            "rank": 16
+        },
+        {
+            "name": {
+                "currency": "zilliqa",
+                "symbol": "ZIL"
+            },
+            "volume": 1151492872.7580667,
+            "rank": 17
+        },
+        {
+            "name": {
+                "currency": "uniswap",
+                "symbol": "UNI"
+            },
+            "volume": 946046151.7959352,
+            "rank": 18
+        },
+        {
+            "name": {
+                "currency": "cosmos",
+                "symbol": "ATOM"
+            },
+            "volume": 897203881.5783929,
+            "rank": 19
+        },
+        {
+            "name": {
+                "currency": "sushi",
+                "symbol": "SUSHI"
+            },
+            "volume": 883584113.6569972,
+            "rank": 20
+        },
+        {
+            "name": {
+                "currency": "neo",
+                "symbol": "NEO"
+            },
+            "volume": 860656305.1718595,
+            "rank": 21
+        },
+        {
+            "name": {
+                "currency": "vechain",
+                "symbol": "VET"
+            },
+            "volume": 832484846.0627115,
+            "rank": 22
+        },
+        {
+            "name": {
+                "currency": "stellar",
+                "symbol": "XLM"
+            },
+            "volume": 817626813.1586773,
+            "rank": 23
+        },
+        {
+            "name": {
+                "currency": "aave",
+                "symbol": "AAVE"
+            },
+            "volume": 804460269.92615,
+            "rank": 24
+        },
+        {
+            "name": {
+                "currency": "monero",
+                "symbol": "XMR"
+            },
+            "volume": 561313579.7220026,
+            "rank": 25
+        },
+        {
+            "name": {
+                "currency": "qtum",
+                "symbol": "QTUM"
+            },
+            "volume": 500151790.25458354,
+            "rank": 26
+        },
+        {
+            "name": {
+                "currency": "algorand",
+                "symbol": "ALGO"
+            },
+            "volume": 497981707.19161254,
+            "rank": 27
+        },
+        {
+            "name": {
+                "currency": "basic-attention-token",
+                "symbol": "BAT"
+            },
+            "volume": 492850971.5030506,
+            "rank": 28
+        },
+        {
+            "name": {
+                "currency": "ontology",
+                "symbol": "ONT"
+            },
+            "volume": 470698701.90061486,
+            "rank": 29
+        },
+        {
+            "name": {
+                "currency": "the-graph",
+                "symbol": "GRT"
+            },
+            "volume": 454387241.90412563,
+            "rank": 30
+        },
+        {
+            "name": {
+                "currency": "dai",
+                "symbol": "DAI"
+            },
+            "volume": 353045936.66963995,
+            "rank": 31
+        },
+        {
+            "name": {
+                "currency": "yearn-finance",
+                "symbol": "YFI"
+            },
+            "volume": 327946955.7770867,
+            "rank": 32
+        },
+        {
+            "name": {
+                "currency": "tezos",
+                "symbol": "XTZ"
+            },
+            "volume": 320308185.94282913,
+            "rank": 33
+        },
+        {
+            "name": {
+                "currency": "okb",
+                "symbol": "OKB"
+            },
+            "volume": 303045663.6395722,
+            "rank": 34
+        },
+        {
+            "name": {
+                "currency": "filecoin",
+                "symbol": "FIL"
+            },
+            "volume": 263590212.02855626,
+            "rank": 35
+        },
+        {
+            "name": {
+                "currency": "iota",
+                "symbol": "MIOTA"
+            },
+            "volume": 255831530.87748706,
+            "rank": 36
+        },
+        {
+            "name": {
+                "currency": "reserve-rights-token",
+                "symbol": "RSR"
+            },
+            "volume": 250078863.93078253,
+            "rank": 37
+        },
+        {
+            "name": {
+                "currency": "wrapped-bitcoin",
+                "symbol": "WBTC"
+            },
+            "volume": 222470608.3774061,
+            "rank": 38
+        },
+        {
+            "name": {
+                "currency": "curve-dao-token",
+                "symbol": "CRV"
+            },
+            "volume": 175848666.35510123,
+            "rank": 39
+        },
+        {
+            "name": {
+                "currency": "icon",
+                "symbol": "ICX"
+            },
+            "volume": 154389555.36994782,
+            "rank": 40
+        },
+        {
+            "name": {
+                "currency": "balancer",
+                "symbol": "BAL"
+            },
+            "volume": 112879749.07934521,
+            "rank": 41
+        },
+        {
+            "name": {
+                "currency": "avalanche",
+                "symbol": "AVAX"
+            },
+            "volume": 412990.41267974506,
+            "rank": 42
+        }
+    ]
+}

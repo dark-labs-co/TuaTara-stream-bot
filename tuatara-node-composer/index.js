@@ -38,26 +38,26 @@ function Index() {
         console.log(CoinList.length)
 
         // coingeckoVolume.coinAgg
-        for (let i = 30; i > 0; i--) {
-            await delay(10000)
+        for (let i = 29; i >= 0; i--) {
+            await delay(7000)
             GraphCollection(CoinList[i].name.currency, CoinList[i].name.symbol, 1)
             marketGraphSync(CoinList[i].name.currency, CoinList[i].name.symbol, 1)
             coinData(CoinList[i].name.currency, CoinList[i].name.symbol, CoinList[i].rank)
             //? Recall First function to solve some Effed up stuff with the first graph
-            await delay(5000)
+            await delay(500)
             GraphCollection(CoinList[i].name.currency, CoinList[i].name.symbol, 1)
             marketGraphSync(CoinList[i].name.currency, CoinList[i].name.symbol, 1)
 
-            await delay(10000)
+            await delay(7000)
             GraphCollection(CoinList[i].name.currency, CoinList[i].name.symbol, 7)
             marketGraphSync(CoinList[i].name.currency, CoinList[i].name.symbol, 7)
-            await delay(10000)
+            await delay(7000)
             GraphCollection(CoinList[i].name.currency, CoinList[i].name.symbol, 30)
             marketGraphSync(CoinList[i].name.currency, CoinList[i].name.symbol, 30)
-            await delay(10000)
+            await delay(7000)
             GraphCollection(CoinList[i].name.currency, CoinList[i].name.symbol, 365)
             marketGraphSync(CoinList[i].name.currency, CoinList[i].name.symbol, 365)
-            await delay(10000)
+            await delay(7000)
             GraphCollection(CoinList[i].name.currency, CoinList[i].name.symbol, 'max')
             marketGraphSync(CoinList[i].name.currency, CoinList[i].name.symbol, 'max')
 

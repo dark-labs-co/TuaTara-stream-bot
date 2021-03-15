@@ -7,7 +7,7 @@ import NumImg from '../ogImage.jpg'
 const Circle = ({ imgTex }) => {
     const height = useLoader(THREE.TextureLoader, imgTex);
     const ref0 = useRef()
-    useFrame(() => (ref0.current.rotation.y += 0.01))
+    useFrame(() => (ref0.current.rotation.y += 0.05))
     return (
         <mesh ref={ref0} position={[0, 0, 0]} rotation={[0, 0, 300]}>
             <cylinderBufferGeometry
@@ -30,7 +30,7 @@ const Circle = ({ imgTex }) => {
 const Circle1 = ({ imgTex }) => {
     const height = useLoader(THREE.TextureLoader, imgTex);
     const ref = useRef()
-    useFrame(() => (ref.current.rotation.y += 0.01))
+    useFrame(() => (ref.current.rotation.y += 0.05))
     return (
         <mesh ref={ref} rotation={[0, 0, 300]}>
             <cylinderBufferGeometry
@@ -43,11 +43,7 @@ const Circle1 = ({ imgTex }) => {
                 transparent
                 roughness={0.9}
                 metalness={0.1}
-                map={height}
                 alphaMap={height}
-
-
-
             />
         </mesh>
     )
@@ -55,7 +51,7 @@ const Circle1 = ({ imgTex }) => {
 
 const Circle2 = () => {
     const ref = useRef()
-    useFrame(() => (ref.current.rotation.y += 0.01))
+    useFrame(() => (ref.current.rotation.y += 0.05))
     return (
         <mesh ref={ref} position={[0, 0, 0]} rotation={[0, 0, 300]}>
             <cylinderBufferGeometry
@@ -66,7 +62,7 @@ const Circle2 = () => {
             />
             <meshStandardMaterial
                 attach="material"
-                color="gold"
+                color="orange"
                 roughness={0.9}
                 metalness={0.1}
             />
@@ -84,7 +80,6 @@ function KeyLight({ brightness, color }) {
             position={[-2, 0, 5]}
             lookAt={[0, 0, 0]}
             penumbra={1}
-            castShadow
         />
     );
 }
@@ -98,7 +93,6 @@ function FillLight({ brightness, color }) {
             position={[2, 1, 4]}
             lookAt={[0, 0, 0]}
             penumbra={2}
-            castShadow
         />
     );
 }
@@ -112,27 +106,26 @@ function RimLight({ brightness, color }) {
             color={color}
             position={[1, 4, -2]}
             rotation={[0, 180, 0]}
-            castShadow
         />
     );
 }
 
-const Scene = ({ currencyImg, rankImg }) => (
+const Scene = ({ currencyImg, rankImg, coinColor }) => (
     <Canvas
         onCreated={state => state.gl.setClearColor("#ff00", 0)}
         pixelRatio={window.devicePixelRatio}
         camera={{
             position: [5, 0, 0]
         }}>
-        <KeyLight brightness={5.6} color={"#ffc9f9"} />
-        <FillLight brightness={2.6} color={"#bdefff"} />
-        <RimLight brightness={54} color={"#fff"} />
+        <KeyLight brightness={2.9} color={'#fff'} />
+        <FillLight brightness={7.6} color={'#fff'} />
+        <RimLight brightness={154} color={'#fff'} />
         <Suspense fallback={null}>
             <Circle
-                imgTex={currencyImg}
+                imgTex={rankImg}
             />
             <Circle1
-                imgTex={rankImg}
+                imgTex={currencyImg}
             />
             <Circle2 />
         </Suspense>
@@ -151,6 +144,7 @@ export default function RankThreeCoin({ currencyImg, rankImg, coinColor }) {
             <Scene
                 currencyImg={currencyImg}
                 rankImg={rankImg}
+                coinColor={"transparent"}
             />
         </div>
     )

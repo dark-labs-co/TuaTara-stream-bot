@@ -30,7 +30,7 @@ var fs = require('fs');
 
 //function CoinData() {
 
-module.exports = function CoinData(currecny, symbol,rank) {
+module.exports = function CoinData(currecny, symbol, rank) {
     let PriceLogger = async () => {
         const CoinGeckoClient = new CoinGecko();
         try {
@@ -54,7 +54,7 @@ module.exports = function CoinData(currecny, symbol,rank) {
 
         //? Parse Coin Stats
         let coinStatDat = {
-            "rank":rank,
+            "rank": rank,
             "current_price_usd": marketData.current_price.usd,
             "current_price_btc": marketData.current_price.btc,
             "current_price_eth": marketData.current_price.eth,

@@ -33,7 +33,9 @@ const Icon = ({ name }) => {
     if (!loading && ImportedIconRef.current) {
         const { current: ImportedIcon } = ImportedIconRef;
         console.log(ImportedIconRef)
-        return <><img src={ImportedIcon.default} className="coinPrice--icon-img0" /><img src={ImportedIcon.default} className="coinPrice--icon-img1" /></>
+        return <>
+            {/* <img src={ImportedIcon.default} className="coinPrice--icon-img0" /> */}
+            <img src={ImportedIcon.default} className="coinPrice--icon-img1" /></>
     }
 
     return null;
@@ -85,7 +87,7 @@ function MarketGraph() {
 
     function numberWithCommas(x) {
         let y = x
-        
+
         if (x >= 1000) {
             y = parseFloat(x).toFixed(0)
             return y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

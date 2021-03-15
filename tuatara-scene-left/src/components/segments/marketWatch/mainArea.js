@@ -5,10 +5,12 @@ import CoinData from '../../../coinData.json'
 import "./marketWatch.css"
 import RankThreeCoin from './rankThreeCoin/rankThreeCoin'
 import Seg from "../../../segment1.json"
+
 export default function MainArea() {
 
-    const Icon = ({ name }) => {
+    const Icon = ({ name, rankNum }) => {
         const ImportedIconRef = useRef(null);
+        const ImportedNumRef = useRef(null);
         const [loading, setLoading] = useState(false);
 
 
@@ -17,6 +19,9 @@ export default function MainArea() {
             const importIcon = async () => {
                 try {
                     ImportedIconRef.current = (await import(`../../../assets/icons/${name.toLowerCase()}.png`))
+                    ImportedNumRef.current = (await import(`../../../assets/rank/rank.${rankNum}.png`))
+
+
                 } catch (err) {
                     // Your own error handling logic, throwing error for the sake of
                     // simplicity
@@ -27,16 +32,17 @@ export default function MainArea() {
                 }
             };
             importIcon();
-        }, [name]);
+        }, [name, rankNum]);
 
         if (!loading && ImportedIconRef.current) {
             const { current: ImportedIcon } = ImportedIconRef;
-            console.log(ImportedIconRef)
+            const { current: ImportedNum } = ImportedNumRef;
+
             return <>
                 <RankThreeCoin
                     currencyImg={ImportedIcon.default}
-                    rankImg={ImportedIcon.default}
-                    coinColor=""
+                    rankImg={ImportedNum.default}
+                    coinColor="orange"
                 />
                 {/* <img src={ImportedIcon.default} className="coinPrice--icon-img0" /><img src={ImportedIcon.default} className="coinPrice--icon-img1" /> */}
             </>
@@ -104,7 +110,10 @@ export default function MainArea() {
         <>
             <div className="coinRank">
                 {/* #{CoinData.coin[0].rank + 1} */}
-                <Icon name={Seg.currency} fill="red" />
+                <Icon
+                    name={Seg.currency}
+                    rankNum={CoinData.coin[0].rank + 1}
+                    fill="red" />
             </div>
 
             <div className="display--wrapper">
