@@ -1,0 +1,123 @@
+import React, { useEffect, useState } from "react";
+import { ResponsiveStream } from "@nivo/stream";
+import { linearGradientDef } from '@nivo/core'
+import './styles.css'
+
+const Graph = ({ coinDat, color, height, tickVals, curVal, averageVal }) => {
+    const [highestValArr, setHighestValArr] = useState([])
+    const [highestVal, setHighestVal] = useState(0)
+
+    const theme = {
+        // background: "#222222",
+        axis: {
+            fontSize: "16px",
+            tickColor: "#2D2F34",
+            ticks: {
+                line: {
+                    stroke: "none"
+                },
+                text: {
+                    fill: "white",
+                    fontSize: "26px",
+
+                }
+            },
+            legend: {
+                text: {
+                    fill: "white"
+                }
+            }
+        },
+        grid: {
+            line: {
+                stroke: "none"
+            }
+        }
+    };
+
+    {/*
+*/}
+
+
+    return (
+        <div className="grid--container">
+            <ResponsiveStream
+                data={coinDat}
+                keys={["ETH"]}
+                height={height}
+                order='ascending'
+                margin={{ top: 10, right: 0, bottom: 0, left: 0 }}
+                axisTop={null}
+                axisBottom={null}
+                axisRight={{
+                    enable: true,
+                    tickRotation: 0,
+                    tickValues: { tickVals }
+                }}
+                axisRight={null}
+                offsetType="none"
+                colors="none"
+                fillOpacity={0.85}
+                borderColor={{ theme: "background" }}
+                theme={theme}
+                borderWidth={1}
+                dotSize={8}
+                dotColor={{ from: "color" }}
+                dotBorderWidth={2}
+                dotBorderColor={{ from: "color", modifiers: [["darker", 0.7]] }}
+                animate={true}
+                enableGridY={true}
+                enableGridX={false}
+                motionStiffness={90}
+                motionDamping={15}
+                borderWidth={5}
+                // borderColor={curVal <= averageVal ? "#d245f5" : "#1daf30"}
+                defs={[
+                    linearGradientDef('red', [
+                        { offset: 0, color: '#d245f5' },
+                        { offset: 50, color: '#fff', opacity: .95 },
+                        { offset: 100, color: '#fff', opacity: .95 },
+                    ]),
+                    linearGradientDef('green', [
+                        { offset: 0, color: '#1daf30' },
+                        { offset: 50, color: '#fff', opacity: .95 },
+                        { offset: 100, color: '#fff', opacity: .95 },
+                    ])
+                ]}
+                fill={[
+                    { match: { id: 'ETH' }, id: `${averageVal <= curVal ? 'green' : 'red'}` }
+                ]}
+                stroke="red"
+                tooltipLabel={{
+                    tableCell: {
+                        background: 'red',
+                    },
+                    container: {
+                        backgroundColor: 'red',
+                        color: 'red',
+                        fill: 'red',
+                        background: 'red'
+                    }
+                }}
+                toolTip={{
+                    tableCell: {
+                        background: 'red',
+                        fill: 'red'
+                    },
+                    container: {
+                        backgroundColor: 'red',
+                        color: 'red',
+                        fill: 'red',
+                        background: 'red'
+                    }
+                }
+                }
+            />
+        </div >
+    );
+    return (
+        <div>Loading Conditions...</div>
+    )
+}
+
+export default Graph

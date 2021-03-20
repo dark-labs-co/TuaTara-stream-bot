@@ -1,0 +1,137 @@
+.zora--wrapper {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.zora--image-item{
+    max-width: 500px;
+}
+
+.zora--header-wrapper {
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    padding: 1rem 0;
+    padding-top: 130px;
+}
+
+.zora--header-tag{
+}
+
+.zora--header-logo{
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.zora--container-left {
+    width: 20%;
+    border-right: solid 1px #000;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    text-align: center;
+}
+
+.zora--container-right{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.zora--artwork--item{
+    width:100%;
+    height:100%;
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
+}
+  
+.qrCode--zora-container{
+    bottom: 0;
+    position: absolute;
+    width: 19.9%;
+    border: solid 1px black;
+    padding:.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.qrCode--zora-item{
+    margin: 1rem auto;
+    padding-bottom: 50px;
+}
+
+.cryptoMediaLogo--container{
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+}
+
+
+.cryptoMediaLogo--item{
+    width: 90px;
+    height: 90px;
+}
+
+.artwork--text-name{
+    font-family:sans-serif;
+    color: #000;
+}
+
+.zora--name-container{
+    padding:1rem 0;
+    font-family:monospace;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.zora--bidItems-container{
+    display: flex;
+    flex-direction: column;
+    font-size:1.5rem;
+    padding: 1rem 0;
+    padding-left: 1rem;
+}
+
+.zora--bidItems-container:nth-child(even){
+    background:lightgrey;
+}
+
+.zora--bidItem-index{
+    font-weight: 400;
+    text-align:left;
+}
+.zora--bidItem-index:nth-child(2){
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+
+.zora--ids-container{
+    display: flex;
+    margin: auto;
+}
+
+.transition--graphic-container{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    padding-top: 20vh;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}

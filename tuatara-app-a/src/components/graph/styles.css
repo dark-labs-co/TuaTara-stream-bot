@@ -1,0 +1,200 @@
+#root{
+    height: 100vh;
+}
+
+.collection--wrapper{
+    width: 100vw;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 80px 0px;
+    grid-template-areas:
+      "top-r main-area"
+      "mid-r main-area"
+      "bottom-r main-area";
+      padding: 0 1rem;
+}
+
+.collection--graph-container{
+    max-height: 200px;
+    min-height: 200px;
+    flex-direction: row;
+    display: flex;
+    background: #00000030;
+    padding:1rem 2rem;
+}
+
+.collection--container{
+    flex-direction: column;
+    max-height: 200px;
+    min-height: 200px;
+    width: 91%;
+    display: flex;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+
+.collection--container:nth-of-type(1){
+    grid-area: top-r;
+    min-height: 0;
+    padding: 0rem 0;
+}
+
+.collection--container:nth-of-type(2){
+    grid-area: mid-r;
+    width: 91%;
+    display: flex;
+}
+
+.collection--container:nth-of-type(3){
+    grid-area: bottom-r;
+    height: 100%;
+    width: 49vw;
+    display: flex;
+    position: absolute;
+    bottom: 90px;
+    left: 50vw;
+}
+
+.collection--container-half{
+    height: 100%;
+    width:  50%;
+}
+
+.grid--container{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.0);
+}
+.collection--volume-wrapper{
+    position: abosolute;
+    height: 20vh;
+    width: 40vw;
+}
+
+.collection--text{
+    margin-top: -110px;
+    margin-bottom: 0;
+    padding: 5px 0;
+    font-weight: bold;
+    text-align:left;
+    color: #fffffff5;
+    font-size: 3rem;
+    font-style: italic;
+    position: absolute;
+}
+
+.collection--text--wrapper{
+    display: inline-flex;
+    padding: 0;
+    justify-content: center;
+    text-align: left;
+    flex-direction: row;
+    max-width: 500px;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.collection--text--container {
+    text-align: left;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    height: 0;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.collection--text--item {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.collection--text--text {
+    padding: 0 1rem;
+    margin: auto;
+}
+.collection--priceStat-container{
+    font-size: 2rem;
+    line-height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.collection--change{
+    padding: 0;
+    margin: 0;
+}
+.coinPrice--subCur--text{
+    margin: 0;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    padding: 1rem;
+    font-size: 30px;
+    /* background-image: linear-gradient( #45f5e8, #d2ea32); */
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align:left;
+    z-index: 100;
+    position: relative;
+    color: #343636;
+    /* color: #e6e6e6e3; */
+    font-size: 1.5rem;
+  }
+  
+  .collection--graph--title{
+    margin-bottom: 0;
+    padding: 20px 0;
+    font-size: 4rem;
+    /* color: #e6e6e6e3; */
+    text-align: center;
+    width:20%;
+    height:10%;
+    background:rgba(255, 255, 255, 0.74);
+    background-image: url('./out.gif');
+    background-position: right; /* Center the image */
+    background-repeat: repeat; /* Do not repeat the image */
+    background-size:auto; /* Resize the background image to cover the entire container */
+    opacity: 0.6;
+    background-position: 30% 50%; 
+    background-size: 140% auto ;
+}
+  
+  .collection--timeTicker-wrapper{
+      display: flex;
+      justify-content:space-around;
+      margin-top: -390px;
+    }
+  
+  .collection--timeTicker-title{
+    font-size:5rem;
+    padding:0 1.5rem;   
+    text-align:right;
+    margin-top: 0px;
+  }
+
+  .collection--timeTicker-text{
+    padding: .0rem 0rem;
+    font-size:2rem;
+    font-weight: bolder;
+    background: #c5adad30;
+    color: #ffffffd7;
+    margin:1rem 0;
+    margin-top: 463px;
+    width:20%;
+    text-align:center;
+}
+
+.timeTicker-selected{
+    color: #ffffffd7;
+    background: #00000030;
+  }

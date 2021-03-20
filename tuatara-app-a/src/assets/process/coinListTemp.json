@@ -1,0 +1,222 @@
+[
+    {
+        "currency": "bitcoin",
+        "symbol": "BTC"
+    },
+    {
+        "currency": "ethereum",
+        "symbol": "ETH"
+    },
+    {
+        "currency": "cardano",
+        "symbol": "ADA"
+    },
+    {
+        "currency": "litecoin",
+        "symbol": "LTC"
+    },
+    {
+        "currency": "bitcoin-cash",
+        "symbol": "BCH"
+    },
+    {
+        "currency": "eos",
+        "symbol": "EOS"
+    },
+    {
+        "currency": "ripple",
+        "symbol": "XRP"
+    },
+    {
+        "currency": "dogecoin",
+        "symbol": "DOGE"
+    },
+    {
+        "currency": "binance-coin",
+        "symbol": "BNB"
+    },
+    {
+        "currency": "the-graph",
+        "symbol": "GRT"
+    },
+    {
+        "currency": "binance-usd",
+        "symbol": "BUSD"
+    },
+    {
+        "currency": "tron",
+        "symbol": "TRX"
+    },
+    {
+        "currency": "stellar",
+        "symbol": "XLM"
+    },
+    {
+        "currency": "polkadot",
+        "symbol": "DOT"
+    },
+    {
+        "currency": "zcash",
+        "symbol": "ZEC"
+    },
+    {
+        "currency": "chainlink",
+        "symbol": "LINK"
+    },
+    {
+        "currency": "usd-coin",
+        "symbol": "USDC"
+    },
+    {
+        "currency": "qtum",
+        "symbol": "QTUM"
+    },
+    {
+        "currency": "ethereum-classic",
+        "symbol": "ETC"
+    },
+    {
+        "currency": "neo",
+        "symbol": "NEO"
+    },
+    {
+        "currency": "yearnfinance",
+        "symbol": "YFI"
+    },
+    {
+        "currency": "dash",
+        "symbol": "DASH"
+    },
+    {
+        "currency": "cosmos",
+        "symbol": "ATOM"
+    },
+    {
+        "currency": "bitcoin-sv",
+        "symbol": "BSV"
+    },
+    {
+        "currency": "aave",
+        "symbol": "AAVE"
+    },
+    {
+        "currency": "algorand",
+        "symbol": "ALGO"
+    },
+    {
+        "currency": "omg-network",
+        "symbol": "OMG"
+    },
+    {
+        "currency": "basic-attention-token",
+        "symbol": "BAT"
+    },
+    {
+        "currency": "uniswap",
+        "symbol": "UNI"
+    },
+    {
+        "currency": "huobi-token",
+        "symbol": "HT"
+    },
+    {
+        "currency": "iota",
+        "symbol": "MIOTA"
+    },
+    {
+        "currency": "sushi",
+        "symbol": "SUSHI"
+    },
+    {
+        "currency": "ontology",
+        "symbol": "ONT"
+    },
+    {
+        "currency": "avalanche",
+        "symbol": "AVAX"
+    },
+    {
+        "currency": "vechain",
+        "symbol": "VET"
+    },
+    {
+        "currency": "monero",
+        "symbol": "XMR"
+    },
+    {
+        "currency": "filecoin",
+        "symbol": "FIL"
+    },
+    {
+        "currency": "tezos",
+        "symbol": "XTZ"
+    },
+    {
+        "currency": "enjin-coin",
+        "symbol": "ENJ"
+    },
+    {
+        "currency": "x",
+        "symbol": "ZRX"
+    },
+    {
+        "currency": "elrond",
+        "symbol": "EGLD"
+    },
+    {
+        "currency": "bittorrent",
+        "symbol": "BTT"
+    },
+    {
+        "currency": "zilliqa",
+        "symbol": "ZIL"
+    },
+    {
+        "currency": "inch",
+        "symbol": "INCH"
+    },
+    {
+        "currency": "synthetix-network-token",
+        "symbol": "SNX"
+    },
+    {
+        "currency": "terra",
+        "symbol": "LUNA"
+    },
+    {
+        "currency": "dai",
+        "symbol": "DAI"
+    },
+    {
+        "currency": "icon",
+        "symbol": "ICX"
+    },
+    {
+        "currency": "balancer",
+        "symbol": "BAL"
+    },
+    {
+        "currency": "curve-dao-token",
+        "symbol": "CRV"
+    },
+    {
+        "currency": "iost",
+        "symbol": "IOST"
+    },
+    {
+        "currency": "wrapped-bitcoin",
+        "symbol": "WBTC"
+    },
+    {
+        "currency": "polygon",
+        "symbol": "MATIC"
+    },
+    {
+        "currency": "reserve-rights-token",
+        "symbol": "RSR"
+    },
+    {
+        "currency": "okb",
+        "symbol": "OKB"
+    }
+]

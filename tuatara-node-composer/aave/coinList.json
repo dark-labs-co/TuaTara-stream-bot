@@ -1,0 +1,98 @@
+[
+    {
+        "symbol": "ETH",
+        "name": "Ethereum"
+    },
+    {
+        "symbol": "BTC",
+        "name": "Bitcoin"
+    },
+    {
+        "name": "DAI",
+        "symbol": "DAI"
+    },
+    {
+        "symbol": "USDC",
+        "name": "USD Coin"
+    },
+    {
+        "symbol": "TUSD",
+        "name": "TrueUSD"
+    },
+    {
+        "symbol": "USDT",
+        "name": "USDT Coin"
+    },
+    {
+        "symbol": "SUSD",
+        "name": "sUSD"
+    },
+    {
+        "symbol": "BUSD",
+        "name": "Binance USD"
+    },
+    {
+        "symbol": "GUSD",
+        "name": "Gemini Dollar"
+    },
+    {
+        "symbol": "WETH",
+        "name": "Wrapped ETH"
+    },
+    {
+        "symbol": "AAVE",
+        "name": "Aave"
+    },
+    {
+        "symbol": "UNI",
+        "name": "Uniswap"
+    },
+    {
+        "symbol": "YFI",
+        "name": "yearn.finance"
+    },
+    {
+        "symbol": "BAT",
+        "name": "Basic Attention Token"
+    },
+    {
+        "symbol": "REN",
+        "name": "REN"
+    },
+    {
+        "symbol": "ENJ",
+        "name": "EnjinCoin"
+    },
+    {
+        "symbol": "KNC",
+        "name": "Kyber Network"
+    },
+    {
+        "symbol": "LINK",
+        "name": "ChainLink"
+    },
+    {
+        "symbol": "MANA",
+        "name": "Decentraland"
+    },
+    {
+        "symbol": "MKR",
+        "name": "Maker"
+    },
+    {
+        "symbol": "SNX",
+        "name": "SNX"
+    },
+    {
+        "symbol": "WBTC",
+        "name": "WBTC Coin"
+    },
+    {
+        "symbol": "ZRX",
+        "name": "0x Coin"
+    },
+    {
+        "symbol": "CRV",
+        "name": "Curve DAO Token"
+    }
+]
