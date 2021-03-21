@@ -1,5 +1,5 @@
-<h1 style="color:blue"> TuaTara NFT TV</h1>
-## NFTHack 2021
+<h1> TuaTara NFT TV</h1>
+<h2>NFTHack 2021</h2>
 
 <img src="./assets/TuaTaraNFTTVCover.png"/>
-### DARK-labs
+<h3> DARK-labs</h3>
