@@ -8,10 +8,10 @@ export default function CryptoMediaFreshMints() {
         from: { opacity: 0 }
     })
     return (
-        <animated.div style={props}
+        <animated.div style={props} width="100vw" height="100vh"
         >
             <svg
-                viewBox="-70 0 650 400"
+                viewBox="-70 0 650 400" width="100%" height="100%"
             >
                 <path
                     d="m 197.84958,273.85584 -10.64315,5.7515 10.64315,5.78116 -1.71931,2.9054 -9.9617,-6.01833 v 11.17693 h -3.37965 v -11.17693 l -9.96133,6.01833 -1.7193,-2.9054 10.64315,-5.78116 -10.64315,-5.7515 1.7193,-2.93503 9.96133,6.01833 v -11.17693 h 3.37965 v 11.17693 l 9.9617,-6.01833 z"

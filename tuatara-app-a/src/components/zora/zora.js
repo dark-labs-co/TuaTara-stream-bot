@@ -6,8 +6,10 @@ import QRCode from 'qrcode.react'
 import CryptoMediaLogo from './assets/cryptoMediaLogo'
 import { useTransition, config, animated } from 'react-spring'
 import ZoraLogo from "./assets/zoraLogo.png"
-import CryptoMediaFreshMints from './assets/cryptoMediaFreshMints'
+import CryptoMediaFreshMintsTransition from './assets/cryptoMediaFreshMintsTransition'
 import CryptoMediaBids from './assets/cryptoMediaBids'
+import Avatar from '../avatar/avatar'
+import CryptoMediaAnalyze from '../cryptoMediaAnalyze/cryptoMediaAnalyze'
 
 export default function Zora() {
 
@@ -98,15 +100,14 @@ export default function Zora() {
 
 
     function CurrentBids({ datType, datIndex }) {
-        // !BUG TO FIX LIST BIDS below
         if (artworksDat[datType][datIndex] && artworksDat[datType][datIndex].currentBids && artworksDat[datType][datIndex].currentBids[0]) {
             const bidList = artworksDat[datType][datIndex].currentBids.map((item, index) =>
                 <div className="zora--bidItems-container">
+                    {item.ownerBidShare}
                     <div className="zora--bidItem-index">
-                        {/* {index + 1} */}
                     </div >
                     <div className="zora--bidItem-index">
-                        {item.amount / 1000000000000000000} {item.currency.symbol}
+                        {(item.amount / 1000000000000000000).toFixed(4)} {item.currency.symbol}
                     </div >
                     <div className="zora--bidItem-index">
                         {item.bidder.id.substring(0, 6)}...
@@ -119,6 +120,7 @@ export default function Zora() {
 
             return (
                 <>
+
                     {bidList}
                 </>
             )
@@ -147,10 +149,9 @@ export default function Zora() {
         <>
             <CryptoMediaLogo />
             <img className="zora--header-logo" src={ZoraLogo} height="100px" />
-
+            {segType === "transitionFreshMints" && <div className="transition--graphic-container"><CryptoMediaFreshMintsTransition /></div>}
             {segType === "transitionBids" && <div className="transition--graphic-container"><CryptoMediaBids /></div>}
-            {segType === "transitionFreshMints" && <div className="transition--graphic-container"><CryptoMediaFreshMints /></div>}
-            {segType === "transitionTransfers" && <div className="transition--graphic-container"><CryptoMediaFreshMints /></div>}
+            {segType === "transitionTransfers" && <div className="transition--graphic-container"><CryptoMediaFreshMintsTransition /></div>}
 
             {artworksDat[segType] && artworksDat[segType][time] && < >
                 <div className="zora--wrapper">
@@ -168,8 +169,15 @@ export default function Zora() {
                         <br />
                         {/* {bidList} */}
                     </div>
-                    <div className="zora--container-right">
+                    <div className="zora--container-center">
                         <TranstitionTest />
+                    </div >
+                    <div className="zora--container-right">
+                        <CryptoMediaAnalyze />
+                        <div className="avatar--container">
+                            <Avatar />
+                        </div>
+
                     </div >
                 </div >
             </ >

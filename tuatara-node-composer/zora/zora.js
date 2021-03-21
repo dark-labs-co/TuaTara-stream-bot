@@ -245,7 +245,7 @@ function parseReturn(r) {
 
   //? Save Local Data
   function writeF(datIn) {
-    fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-stream-bot/tuatara-scene-right/src/components/zora/zoraData.json', JSON.stringify(datIn), function (err) {
+    fs.writeFile('D:/Projects/TuraTara/Repo/TuaTara-NFT-TV/tuatara-app-a/src/components/zora/zoraData.json', JSON.stringify(datIn), function (err) {
       if (err) throw err;
       console.log('Saved!');
     });

@@ -1,0 +1,37 @@
+import React, { useEffect, useState, useRef } from "react";
+import videojs from 'video.js';
+import AaveVideoTransition from "../../assets/aaveTransition0.webm";
+import MWVideoTransition from "../../assets/marketWatchTransition.webm";
+import TuaTaraIntro from "../../assets/tuaTaraIntro.webm";
+import './transitions.css'
+import segment0 from "../../segment0.json"
+
+export default function MarketWatchTransition() {
+    const videoRef = useRef()
+    const [vidPlay, setVidPlay] = useState(false)
+    useEffect(() => {
+        const player = videojs(videoRef.current, { play: vidPlay, muted: true, play: true }, () => {
+            if (segment0.segment === 'introPause') {
+                player.src(TuaTaraIntro);
+                player.play();
+            }
+            if (segment0.segment === 'marketWatchPause') {
+                player.src(TuaTaraIntro);
+                player.play();
+            }
+            if (segment0.segment === 'aavePause') {
+                player.src(TuaTaraIntro);
+                player.play();
+            }
+            if (segment0.segment === 'zoraPause') {
+                player.src(TuaTaraIntro);
+                player.play();
+            }
+            setVidPlay(true);
+        });
+    }, [segment0, videoRef, vidPlay]);
+
+    return (
+        <video ref={videoRef} width="2200" className="video--item" />
+    )
+}

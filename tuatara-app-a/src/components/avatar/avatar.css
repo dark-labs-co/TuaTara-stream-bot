@@ -1,0 +1,4 @@
+.avatar--mov{
+    background: rgba(226, 236, 248, 0.7);
+    mix-blend-mode:multiply;
+}

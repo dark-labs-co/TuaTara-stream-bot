@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
     color: #000;
 }
 
@@ -15,7 +15,6 @@
 .zora--header-wrapper {
     top: 0;
     width: 100%;
-    border-bottom: 1px solid #000;
     padding: 1rem 0;
     padding-top: 130px;
 }
@@ -32,34 +31,40 @@
 
 .zora--container-left {
     width: 20%;
-    border-right: solid 1px #000;
     display: flex;
     justify-content: start;
     flex-direction: column;
     text-align: center;
 }
 
-.zora--container-right{
-    width: 80%;
+.zora--container-center{
+    width: 60%;
     text-align: center;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
+.zora--container-right{
+    width: 20%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(196, 200, 206, 0.7);
+}
+
 .zora--artwork--item{
     width:100%;
-    height:100%;
-    max-width: 600px;
-    max-height: 600px;
+    height:800px;
     margin: auto;
+    object-fit: contain;
 }
   
 .qrCode--zora-container{
     bottom: 0;
     position: absolute;
     width: 19.9%;
-    border: solid 1px black;
     padding:.5rem 0;
     display: flex;
     flex-direction: column;
@@ -88,6 +93,11 @@
 .artwork--text-name{
     font-family:sans-serif;
     color: #000;
+}
+
+.artwork--text-Description{
+    max-width: 600px;
+    margin: auto;
 }
 
 .zora--name-container{
@@ -129,9 +139,12 @@
 .transition--graphic-container{
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    top:0;
+    left:0;
+    position: relative;
     padding-top: 20vh;
     display: flex;
     justify-content: center;
     z-index: 100;
+    background: rgba(255, 255, 255, 0.7);
 }

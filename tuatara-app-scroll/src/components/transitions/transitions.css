@@ -1,0 +1,31 @@
+.video-js .vjs-mute-control { 
+    display: none !important; 
+}
+.video-js .vjs-volume-menu-button { 
+    display: none !important; 
+}
+.video-js .vjs-volume-bar { 
+    display: none !important; 
+}
+.video-js .vjs-progress-control { 
+    display: none !important; 
+}
+.vjs-control-bar{
+    display: none !important; 
+};
+
+.vjs-modal-dialog.vjs-hidden.vjs-text-track-settings {
+    display: none !important;
+}
+
+.vjs-modal-dialog, .vjs-loading-spinner, .vjs-big-play-button{
+    display: none;
+}
+.video--item{
+    width: 100vw;
+    height: 100vh;
+}
+
+#vjs_video_3_html5_api {
+    width: 100vw;
+}
